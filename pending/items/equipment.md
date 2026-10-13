@@ -1,6 +1,6 @@
 # Pending — items/equipment
 
-> **Candidates** (26) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (28) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Gloves of silence Hunter gate (ID 10075):** Active item row omits exact DB Hunter 54 requirement; ordinary equip checks no level when requirements are absent. Its pickpocket +5% and 62-failure wear-out are implemented. Candidate-only.
 
@@ -103,7 +103,14 @@
 ---
 
 - **Iron kiteshield 1191 SHIELD -2 vs DB -3 attack_ranged drift (WA21-04-21 rebalance, same family as Bronze 1189):** Active `item-gameplay.json:1193` Iron kiteshield 1191 SHIELD `[0,0,0,-8,-2,8,10,9,-1,9]` vs DB `items-json/1191.json` `attack_ranged -3` defence 8/10/9/-1/9 slot shield req null. Same 1-point -2 vs -3 drift as Bronze 1189; Adamant 1199 variant same family but filed separately; steel/mithril pending family CAND-199 distinct. Loader BonusManager index4. Wiki -2->-3 rebalance. No prior 1191 entry. Bounded candidate.
-- Continue the broad item, skill, combat, world/object, packet, dialogue, NPC option/service, shop, prayer, drop, and container audits using exact active data, runtime consumers, exact DB keys, current official mechanics where needed, and duplicate screening. See `00_INDEX.md` and `04_AuDHD_Friendly_Summary.md` for current navigation/status.
+- **Bronze scimitar 1321 defence_slash 0 vs DB/Wiki 1 (steel 1325/black 1327/mithril 1329/adamant 1331/rune 1333/dragon 4587 family clean control):** Active item-gameplay 1321 SCIMITAR bonuses [1,7,-2,0,0,0,0,0,0,0,6] vs DB items-json 1321.json equipment defence_slash 1 slot weapon req null. Wiki Infobox Bonuses dslash+1 via DB wiki_url https://oldschool.runescape.wiki/w/Bronze_scimitar + data/items/items-wiki-page-text.json only (no web_search). Loader copies bonuses verbatim; BonusManager defence_slash 0 vs 1 drift. Weight truncation 1 vs 1.814 informational; alch 19/12/32 byte-identical. Case-insensitive registry search 0 hits for 1321/bronze scimitar before filing; steel 1325/mithril 1329/adamant 1331/rune 1333/iron 1323 controls byte-identical vs DB family clean. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` and DB keys; IDs 1321, 1323, 1325, 1327, 1329, 1331, 1333, 4587, 1, 0, 6).
 
 ---
-*Last re-verified: Wave 40 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-40). Registry 40/215/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-40 for per-wave evidence.*
+
+- **Iron/Steel/Black/Mithril/Adamant/Rune warhammer 1335/1339/1341/1343/1345/1347 melee_strength 9/16/19/20/31/48 vs DB/Wiki 11/18/22/27/39/62 (bronze 1337 8 clean) + Adamant 1345 crush 33 vs 35 — Equipment Rebalance 2021-04-21 family:** Active item-gameplay WARHAMMER family 1335 Iron 9 vs DB 11, 1339 Steel 16 vs DB 18, 1341 Black 19 vs DB 22, 1343 Mithril 20 vs DB 27, 1345 Adamant 31 vs DB 39 (crush 33 vs DB 35 also), 1347 Rune 48 vs DB 62; Bronze 1337 8 vs DB 8 clean control. DB items-json 1335/1339/1341/1343/1345/1347 melee_strength vs active bonuses index10 strength; Wiki Changes 2021-04-21 confirms DB (Iron warhammer 9->11, Steel 16->18 family rebalance). Loader ItemDefinitionLoader copies bonuses verbatim -> BonusManager strength index10 -> DamageFormulas. Requirements strength null/5/10/20/30/40 correct. Weight 1-2 vs 1.814-2.041 truncation informational. One root 6 IDs distinct from plate -10/-15 and helm -2/-3 families. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` and DB keys; IDs 1335, 1339, 1341, 1343, 1345, 1347, 1337, 11, 18, 22, 27, 39, 62, 9, 16, 19, 20, 31, 48).
+
+---
+
+- Continue the broad item, skill, combat, world/object, packet, dialogue, NPC option/service, shop, prayer, drop, and container audits using exact active data, runtime consumers, exact DB keys, current official mechanics where needed, and duplicate screening. See `00_INDEX.md` and `04_AuDHD_Friendly_Summary.md` for current navigation/status.
+---
+*Last re-verified: Wave 41 — 2026-10-13 — 62 HOLD/HOLD DUP + 2 new CAND (Bronze scim 1321 defence_slash 0 vs 1 + Warhammer family 1335/1339/1341/1343/1345/1347 melee_strength 9/16/19/20/31/48 vs 11/18/22/27/39/62). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-41 for per-wave evidence.*

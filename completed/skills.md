@@ -193,4 +193,4 @@
 - **Magic shortbow chain 72/861 lvl80 83.3XP + longbow 70/859 lvl85 91.5XP via Fletching 1513 clean — ticket 64 is Maple u mislabel:** Active Fletching.plugin LOG_RECIPE MAGIC_LOGS->MAGIC_SHORTBOW_U_ 80/83.3 T3 + MAGIC_LONGBOW_U_ 85/91.5 T3 + STRINGING 80/83.3 + 85/91.5 T2 vs DB items-json 72/70/861/859 identities. Wiki Magic shortbow u 80/83.3 + longbow 85/91.5 clean. 64 is Maple shortbow u 50/50 not magic. Bounded clean check. — bounded clean check; files and DB keys in 05_Audit_Log.md; IDs 72, 70, 861, 859, 1513, 64, 80, 83.3.
 
 ---
-*Last re-verified: Wave 40 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-40). Registry 40/215/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-40 for per-wave evidence.*
+*Last re-verified: Wave 41 — 2026-10-13 — 62 HOLD/HOLD DUP + 2 new CAND (Bronze scim 1321 defence_slash 0 vs 1 + Warhammer family 1335/1339/1341/1343/1345/1347 melee_strength 9/16/19/20/31/48 vs 11/18/22/27/39/62). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-41 for per-wave evidence.*

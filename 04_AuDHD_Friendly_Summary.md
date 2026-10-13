@@ -1,6 +1,6 @@
 # Daily Audit Summary
 
-> **Agentic entry point is [00_INDEX.md](00_INDEX.md) + [registry.json](registry.json).** This file is the human working view — current priorities, quick wins, and what's next. Detail lives in `findings/`+`pending/`+`completed/` + `registry.json`. Tree lives in `00_INDEX.md`. Reorg v1.2 2026-10-13 (updated through Wave 40): 40/215/253.
+> **Agentic entry point is [00_INDEX.md](00_INDEX.md) + [registry.json](registry.json).** This file is the human working view — current priorities, quick wins, and what's next. Detail lives in `findings/`+`pending/`+`completed/` + `registry.json`. Tree lives in `00_INDEX.md`. Reorg v1.2 2026-10-13 (updated through Wave 41): 40/217/253.
 
 ## Quick Wins — Top 10 to fix first
 
@@ -21,7 +21,7 @@
 
 | Family | File | Count | Sample |
 |---|---|---|---|
-| Equipment bonus/requirement | pending/items/equipment.md | 26 | 1119 Steel plate -10 vs -15 |
+| Equipment bonus/requirement | pending/items/equipment.md | 28 | CAND-216 Bronze scim 1321 / CAND-217 Warhammer 1335-1347 |
 | NPCs/Options | pending/world/npcs.md | 21 | Disciple 7670 slot-5 Check |
 | Packets/Protocol | pending/protocol/packets.md | 20 | WIDGET_ACTION 219, OPNPC 50 |
 | Shops | pending/shops/general-stores.md | 15 | Lumbridge/Varrock 1102/1362 |
@@ -39,9 +39,8 @@
 - **Need shop?** → `pending/shops/general-stores.md` + `completed/shops.md`.
 - Tree + counts: 00_INDEX.md → document tree section.
 
-## Latest — Waves 22-40 (700+ scouts, through sapling/seed exhaustive beyond pending tier)
+## Latest — Waves 22-41 (770+ scouts, through melee weapon exhaustive beyond pending tier)
 
-700+ scouts drained offline since Wave 22 (all HOLD/HOLD DUP, 0 new CAND/CHK). Waves 36-40 covered sapling/seed Herblore-cleaning, farming tree, and allotment/bush families beyond CAND-215/CHK-253 tier (all mis-ID titles correctly flagged as HOLD DUP). 2 Wave 36 stream failures recovered in Wave 37. Registry 40/215/253. Reorg v1.2: findings/pending/completed per-domain with `file`+`domain` in registry. Legacy 01/02/03 frozen as provenance. See 05_Audit_Log.md for per-wave evidence and 00_INDEX.md for tree.
-
+770+ scouts drained offline since Wave 22 (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41). Waves 36-41 covered sapling/seed, Herblore-cleaning, farming tree, allotment/bush, and now melee weapon parity (scimitars/longswords/maces/warhammers/battleaxes/daggers/whip & specials) beyond CAND-215/CHK-253 tier. 2 Wave 36 stream failures recovered in Wave 37. New in Wave 41: **CAND-216 Bronze scimitar 1321 defence_slash 0 vs 1** + **CAND-217 Iron/Steel/Black/Mithril/Adamant/Rune warhammer family 1335-1347 melee_strength drift 9/16/19/20/31/48 vs 11/18/22/27/39/62 (bronze 1337 clean)**. Registry 40/217/253. Reorg v1.2: findings/pending/completed per-domain with `file`+`domain` in registry. Legacy 01/02/03 frozen as provenance. See 05_Audit_Log.md for per-wave evidence and 00_INDEX.md for tree.
 ---
 *Teams: fix from `findings/<domain>.md` + registry Open+High/Med first; investigate via `pending/<domain>/<sub>.md`. Full tables in `00_INDEX.md`.

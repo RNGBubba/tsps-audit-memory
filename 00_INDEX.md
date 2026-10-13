@@ -2,12 +2,12 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-40 fully HOLD re-verified offline — 40/215/253)
+## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-41 fully HOLD re-verified offline — 40/217/253)
 
 | Bucket | Count | Where |
 |---|---|---|
 | **Accepted findings** (bugs that are verified broken) | **40** — 2 High, 34 Medium, 4 Low | [`findings/`](findings/) + `findings[]` in `registry.json` |
-| **Candidates** (need verification before promotion) | **215** | [`pending/`](pending/) + `pending_candidates[]` (`CAND-001`…`CAND-215`) |
+| **Candidates** (need verification before promotion) | **217** | [`pending/`](pending/) + `pending_candidates[]` (`CAND-001…CAND-217`) |
 | **Verified clean** (bounded no-mismatch) | **253** | [`completed/`](completed/) + `completed_checks[]` (`CHK-001`…`CHK-253`) |
 | **No duplicate IDs** | 0 duplicated AUD/CAND/CHK IDs | See deduplication report below |
 
@@ -30,13 +30,13 @@ Memory/
 │   ├── protocol.md           2  — PacketSender, opcode 50
 │   ├── prayer-slayer.md      1
 │   └── items-equipment.md    1
-├── pending/                 ← 215 CAND (21 files)
+├── pending/                 ← 217 CAND (21 files)
 │   ├── world/
 │   │   ├── general.md       34  — Zeah shops, diaries, teleports, misc
 │   │   ├── npcs.md          21  — Talk-to slots, NPC handlers
 │   │   └── objects.md        3  — altars, ladders, portals
 │   ├── items/
-│   │   └── equipment.md     26  — platebody/chain/kite/helm Defence & bonus
+│   │   └── equipment.md     28  — platebody/chain/kite/helm/scimitar/warhammer bonus
 │   ├── protocol/
 │   │   └── packets.md       20  — WIDGET_ACTION, OPNPC, Trade, run modifier
 │   ├── shops/
@@ -94,12 +94,12 @@ Memory/
 | prayer-slayer | `findings/prayer-slayer.md` | AUD-021 | 1 |
 | items-equipment | `findings/items-equipment.md` | AUD-010 | 1 |
 
-## Candidates at a glance (215 CAND) — top files
+## Candidates at a glance (217 CAND) — top files
 
 | File | Candidates | Example IDs |
 |---|---|---|
 | `pending/world/general.md` | 34 | CAND-004 Dragonstone, CAND-006 Drew bucket… |
-| `pending/items/equipment.md` | 26 | CAND-117 Mithril plate 1121, CAND-199 Steel plate 1119… |
+| `pending/items/equipment.md` | 28 | CAND-216 Bronze scim 1321, CAND-217 Warhammer family 1335/1347… |
 | `pending/world/npcs.md` | 21 | CAND-014 Disciple 7670, CAND-019 Hairdresser… |
 | `pending/protocol/packets.md` | 20 | CAND-051 Chat, CAND-028 OPPlayer2… |
 | `pending/shops/general-stores.md` | 15 | CAND-110 Varrock, CAND-133 Edgeville… |
@@ -158,7 +158,7 @@ Memory/
 - **Incidental ID reuse is not duplication.** Pending item IDs 1047/113/2552 appear in 2 entries each but describe distinct aspects — kept as separate scoped entries.
 - **Summary layering is not duplication.** `00_INDEX.md` now holds only tree + tables; detail lives in `findings/`/`pending/`/`completed/` + `registry.json`.
 - **v1.2 reorg:** `findings/`/`pending/`/`completed/` now carry `file` + `domain` in `registry.json` (2026-10-13). Legacy `01`/`02`/`03` frozen as provenance.
-- **Result:** no entries removed; structural split of 40/215/253 entries into per-domain folders; deduplication still 0 duplicates.
+- **Result:** no entries removed; structural split of 40/217/253 entries into per-domain folders; deduplication still 0 duplicates.
 
 ## Quick start
 
@@ -174,4 +174,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-40: 700+ scouts drained offline (all HOLD/HOLD DUP, 0 new CAND/CHK, 2 failed-recoverable in Wave 36 now recovered in Wave 37). Registry 40/215/253. See `05_Audit_Log.md` for per-wave evidence.*
+*Waves 22-41: 770+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 2 failed-recoverable in Wave 36 now recovered). Registry 40/217/253. See `05_Audit_Log.md` for per-wave evidence.*
