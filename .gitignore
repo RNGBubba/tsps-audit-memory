@@ -7,5 +7,9 @@ Thumbs.db
 *.tmp
 *.log
 
+# Internal handoff / resume prompts — local only, not published
+GOAL_RESUME.md
+HANDOFF.md
+
 # Keep git internals tracked via hook
-!.git/hooks/post-commit
+ !.git/hooks/post-commit
