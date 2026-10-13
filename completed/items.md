@@ -77,4 +77,4 @@
 - **Mithril chainbody 1109 BODY 25/35/42 -3/27 Def20 byte-identical vs DB 1109 via items-json:** Active `item-gameplay 1109` BODY `[0,0,0,-15,0,25,35,42,-3,27]` Def20 vs DB `1109.json` byte-identical. Alloys cost1950 low780 high1170. Bounded clean check. — bounded clean check; files and DB keys in 05_Audit_Log.md; IDs 1109, 25, 35, 42, -3, 27, 20.
 
 ---
-*Last re-verified: Wave 41 — 2026-10-13 — 62 HOLD/HOLD DUP + 2 new CAND (Bronze scim 1321 defence_slash 0 vs 1 + Warhammer family 1335/1339/1341/1343/1345/1347 melee_strength 9/16/19/20/31/48 vs 11/18/22/27/39/62). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-41 for per-wave evidence.*
+*Last re-verified: Wave 42 — 2026-10-13 — 64 HOLD/HOLD DUP (ranged bows/crossbows/darts/knives/javelins/chinchompas + magic staves/powered staves). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-42 for per-wave evidence.*

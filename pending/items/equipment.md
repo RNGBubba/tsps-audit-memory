@@ -113,4 +113,4 @@
 
 - Continue the broad item, skill, combat, world/object, packet, dialogue, NPC option/service, shop, prayer, drop, and container audits using exact active data, runtime consumers, exact DB keys, current official mechanics where needed, and duplicate screening. See `00_INDEX.md` and `04_AuDHD_Friendly_Summary.md` for current navigation/status.
 ---
-*Last re-verified: Wave 41 — 2026-10-13 — 62 HOLD/HOLD DUP + 2 new CAND (Bronze scim 1321 defence_slash 0 vs 1 + Warhammer family 1335/1339/1341/1343/1345/1347 melee_strength 9/16/19/20/31/48 vs 11/18/22/27/39/62). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-41 for per-wave evidence.*
+*Last re-verified: Wave 42 — 2026-10-13 — 64 HOLD/HOLD DUP (ranged bows/crossbows/darts/knives/javelins/chinchompas + magic staves/powered staves). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-42 for per-wave evidence.*
