@@ -1,6 +1,6 @@
 # Daily Audit Summary
 
-> **Agentic entry point is [00_INDEX.md](00_INDEX.md) + [registry.json](registry.json).** This file is the human working view — current priorities, quick wins, and what's next. Detail lives in `findings/`+`pending/`+`completed/` + `registry.json`. Tree lives in `00_INDEX.md`. Reorg v1.2 2026-10-13: 40/215/253.
+> **Agentic entry point is [00_INDEX.md](00_INDEX.md) + [registry.json](registry.json).** This file is the human working view — current priorities, quick wins, and what's next. Detail lives in `findings/`+`pending/`+`completed/` + `registry.json`. Tree lives in `00_INDEX.md`. Reorg v1.2 2026-10-13 (updated through Wave 39): 40/215/253.
 
 ## Quick Wins — Top 10 to fix first
 
@@ -39,9 +39,9 @@
 - **Need shop?** → `pending/shops/general-stores.md` + `completed/shops.md`.
 - Tree + counts: 00_INDEX.md → document tree section.
 
-## Latest — Waves 22-35
+## Latest — Waves 22-39 (700+ scouts, through sapling/seed exhaustive beyond pending tier)
 
-500+ scouts drained offline since Wave 22 (all HOLD/HOLD DUP, 0 new CAND/CHK). Registry 40/215/253. Reorg v1.2: findings/pending/completed split into per-domain folders with `file`+`domain` in registry. Legacy 01/02/03 frozen as provenance. See 05_Audit_Log.md for per-wave evidence and 00_INDEX.md for tree.
+700+ scouts drained offline since Wave 22 (all HOLD/HOLD DUP, 0 new CAND/CHK). Waves 36-39 covered sapling/seed Herblore-cleaning, farming tree, and allotment/bush families beyond CAND-215/CHK-253 tier (all mis-ID titles correctly flagged as HOLD DUP). 2 Wave 36 stream failures recovered in Wave 37. Registry 40/215/253. Reorg v1.2: findings/pending/completed per-domain with `file`+`domain` in registry. Legacy 01/02/03 frozen as provenance. See 05_Audit_Log.md for per-wave evidence and 00_INDEX.md for tree.
 
 ---
 *Teams: fix from `findings/<domain>.md` + registry Open+High/Med first; investigate via `pending/<domain>/<sub>.md`. Full tables in `00_INDEX.md`.
