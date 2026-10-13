@@ -7,3 +7,6 @@ FULL_AUDIT_REPORT.md
 GOAL_RESUME.md
 HANDOFF.md
 AGENT.md
+
+.gitignore
+.git
