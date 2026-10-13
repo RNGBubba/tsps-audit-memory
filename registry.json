@@ -84,8 +84,8 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 210,
-    "completed_checks_total": 245,
+    "pending_candidates_total": 213,
+    "completed_checks_total": 249,
     "legacy_finding_blocks_frozen": 40
   },
   "agent_instructions": {
@@ -4220,6 +4220,61 @@
       "status": "candidate",
       "needs_verification": true,
       "slug": "broad-arrows-4160-52-150-missing-broader-fletching-300"
+    },
+    {
+      "candidate_id": "CAND-211",
+      "title": "Dragon sq shield 1187 attack_ranged -2 vs DB 0 drift — pre-2021 stale (WA21-04-21 rebalance), all other 13 bonuses/slot/Def60 clean",
+      "summary": "Active item-gameplay.json:1189 Dragon sq shield 1187 SHIELD bonuses [0,0,0,-6,-2,50,52,48,0,50,0,0,0,0] Def60 vs DB items-json 1187.json equipment attack_ranged 0 defence 50/52/48/0/50 slot shield Def60 cost500k high300k low200k. All other 13 bonuses + slot + req Def60 + alch byte-identical. Loader ItemDefinitionLoader copies bonuses verbatim; BonusManager index4 ATTACK_RANGE -2 vs 0. Wiki Changes 2021-04-21 ranged -2->0 confirms stale. No prior candidate for 1187; FULL_AUDIT_REPORT:1581 false clean contradicted. Bounded candidate.",
+      "ids_mentioned": [
+        "1187",
+        "1185",
+        "1189",
+        "-2",
+        "0",
+        "50",
+        "52",
+        "60"
+      ],
+      "source_file": "02_Pending_Audits.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "dragon-sq-shield-1187-minus2-vs-0-2021-rebalance"
+    },
+    {
+      "candidate_id": "CAND-212",
+      "title": "Earmuffs 4166 Slayer 15 requirement omitted (Banshee 414 clean, distinct from Facemask 4164 CAND-192 and Nose peg 4168 CAND-205)",
+      "summary": "Active item-gameplay.json:4168 Earmuffs HAT no requirements vs DB items-json 4166.json requirements {slayer:15} weight0.113 slot head. Banshee 414 monsters-complete 22hp max2 spectral weak vs DB 414.json 22hp byte-identical via NpcDefinitionLoader; 779/430 phantom IDs have no DB rows. Loader leaves zeros when raw.requirements absent -> EquipPacketListener bypass <15 can equip. Same family as CAND-192 (slayer10) and CAND-205 (slayer60) but distinct ID/threshold. No prior 4166 filing. Bounded candidate.",
+      "ids_mentioned": [
+        "4166",
+        "4164",
+        "4168",
+        "414",
+        "15",
+        "22",
+        "2"
+      ],
+      "source_file": "02_Pending_Audits.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "earmuffs-4166-slayer15-omitted-banshee-414-clean"
+    },
+    {
+      "candidate_id": "CAND-213",
+      "title": "Cockatrice 419/420 mirror shield damage gate absent — stats byte-identical but no shield check (distinct from Basilisk 417 CAND-207)",
+      "summary": "DB monsters-json 419.json Cockatrice 37hp max1 stab slayer25 vs active monsters-complete.json:187-188 byte-identical; 422 Rockslug 27hp is not cockatrice (ticket mislabels). Wiki Cockatrice requires mirror shield or stats drained/heavily reduced damage without shield; DB has no shield field; grep mirror server 0 handlers; no CombatFactory shield check; Mirror shield 4156 slayer25 defence20 stocked via Slayer Equipment 1324. No cockatrice pending exists; Basilisk 417 already CAND-207 distinct. Bounded candidate.",
+      "ids_mentioned": [
+        "419",
+        "420",
+        "422",
+        "4156",
+        "37",
+        "1",
+        "25"
+      ],
+      "source_file": "02_Pending_Audits.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "cockatrice-419-mirror-shield-gate-absent-vs-basilisk"
     }
   ],
   "completed_checks": [
@@ -8074,8 +8129,78 @@
       "source_file": "01_Completed_Audits.md",
       "status": "verified_no_mismatch",
       "slug": "rimmington-1300-13stock-triple-parity-clean"
+    },
+    {
+      "check_id": "CHK-246",
+      "title": "Crawling Hand 448 16hp max1 crush undead slayer5 byte-identical active vs DB 448 via monsters-complete (7386/397 phantom, distinct)",
+      "summary": "Active monsters-complete.json:214 Crawling Hand 448 vs DB monsters-json 448.json byte-identical 40+ fields (8cb 16hp max1 crush size1 undead slayer5 16xp turael/spria/mazchna/mortimer). 7386/397 are not Crawling Hand monsters. Loader NpcDefinitionLoader -> DamageFormulas maxHit1; spawns Slayer Tower 3412-3424. No prior 448 crawling audit. Bounded clean check.",
+      "ids_mentioned": [
+        "448",
+        "7386",
+        "397",
+        "16",
+        "1",
+        "5",
+        "8"
+      ],
+      "source_file": "01_Completed_Audits.md",
+      "status": "verified_no_mismatch",
+      "slug": "crawling-hand-448-16-max1-byte-identical-phantom-7386"
+    },
+    {
+      "check_id": "CHK-248",
+      "title": "Pyrefiend 433-436 45hp max4 melee+magic slayer30 + GWD 3139 48hp max5 vs DB 433/3139 byte-identical + drops pyrefiend 128-roll clean (440 Jelly mislabel)",
+      "summary": "Active monsters-complete 433 Pyrefiend 45hp max4 + 3139 GWD 48hp max5 vs DB monsters-json 433.json/3139 byte-identical 40 fields (melee+magic slayer30). 440 is Jelly 75/5 not pyrefiend; 9471 has no monster rows (Sister Senga). Drops pyrefiend 128-roll byte-identical both sides. Bounded clean check.",
+      "ids_mentioned": [
+        "433",
+        "434",
+        "435",
+        "436",
+        "3139",
+        "440",
+        "9471",
+        "45",
+        "4"
+      ],
+      "source_file": "01_Completed_Audits.md",
+      "status": "verified_no_mismatch",
+      "slug": "pyrefiend-433-45-max4-gwd-3139-48-max5-byte-identical"
+    },
+    {
+      "check_id": "CHK-249",
+      "title": "Magic shortbow chain 72/861 lvl80 83.3XP + longbow 70/859 lvl85 91.5XP via Fletching 1513 clean — ticket 64 is Maple u mislabel",
+      "summary": "Active Fletching.plugin LOG_RECIPE MAGIC_LOGS->MAGIC_SHORTBOW_U_ 80/83.3 T3 + MAGIC_LONGBOW_U_ 85/91.5 T3 + STRINGING 80/83.3 + 85/91.5 T2 vs DB items-json 72/70/861/859 identities. Wiki Magic shortbow u 80/83.3 + longbow 85/91.5 clean. 64 is Maple shortbow u 50/50 not magic. Bounded clean check.",
+      "ids_mentioned": [
+        "72",
+        "70",
+        "861",
+        "859",
+        "1513",
+        "64",
+        "80",
+        "83.3"
+      ],
+      "source_file": "01_Completed_Audits.md",
+      "status": "verified_no_mismatch",
+      "slug": "magic-shortbow-72-861-80-83-3-longbow-70-859-85-91-5-clean"
+    },
+    {
+      "check_id": "CHK-247",
+      "title": "Cave crawler 406 22hp max3 stab slayer10 byte-identical active vs DB 406 via monsters-complete (King 127 phantom, Right head)",
+      "summary": "Active monsters-complete.json:406 Cave crawler 22hp max3 stab 10/10/5/5 weak0/0 slayer10 vs DB monsters-json 406.json byte-identical 38 fields (22.0 vs 22 float equiv). 127 is Right head object not monster (no DB monster rows). Loader defence_ranged_standard 10 collapse moot (light 10/standard10/heavy10 identical). Drops cave_crawler 128 byte-identical. Bounded clean check.",
+      "ids_mentioned": [
+        "406",
+        "127",
+        "22",
+        "3",
+        "10",
+        "128"
+      ],
+      "source_file": "01_Completed_Audits.md",
+      "status": "verified_no_mismatch",
+      "slug": "cave-crawler-406-22-max3-byte-identical-king127-phantom"
     }
   ],
-  "pending_candidates_total": 210,
-  "completed_checks_total": 245
+  "pending_candidates_total": 213,
+  "completed_checks_total": 249
 }

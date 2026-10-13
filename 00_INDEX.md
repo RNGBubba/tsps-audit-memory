@@ -2,13 +2,13 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.1 — 2026-10-13 Wave 19: +11 candidates 200-210, +6 cleans 240-245 — registry 40/210/245)
+## Status snapshot (auto-synced to `registry.json` v1.1 — 2026-10-13 Wave 20 partial: +3 candidates 211-213, +4 cleans 246-249 — registry 40/213/249)
 
 | Bucket | Count | Where |
 |---|---|---|
 | **Accepted findings** (bugs that are verified broken) | **40** — 2 High, 34 Medium, 4 Low | [`03_Found_Bugs_and_Issues.md`](03_Found_Bugs_and_Issues.md) + `findings[]` in `registry.json` |
-| **Candidates** (need verification before promotion) | **210** | [`02_Pending_Audits.md`](02_Pending_Audits.md) + `pending_candidates[]` (`CAND-001`…`CAND-210`) |
-| **Verified clean** (bounded no-mismatch) | **245** | [`01_Completed_Audits.md`](01_Completed_Audits.md) + `completed_checks[]` (`CHK-001`…`CHK-245`) |
+| **Candidates** (need verification before promotion) | **213** | [`02_Pending_Audits.md`](02_Pending_Audits.md) + `pending_candidates[]` (`CAND-001`…`CAND-213`) |
+| **Verified clean** (bounded no-mismatch) | **249** | [`01_Completed_Audits.md`](01_Completed_Audits.md) + `completed_checks[]` (`CHK-001`…`CHK-249`) |
 | **Legacy snapshot (frozen)** | 40 blocks | [`FULL_AUDIT_REPORT.md`](FULL_AUDIT_REPORT.md) — do not edit |
 | **No duplicate IDs** | 0 duplicated AUD/CAND/CHK IDs | See deduplication report below |
 
