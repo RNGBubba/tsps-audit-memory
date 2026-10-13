@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-48 fully HOLD re-verified offline — 40/217/253)
+## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-49 fully HOLD re-verified offline — 40/217/253)
 
 | Bucket | Count | Where |
 |---|---|---|
@@ -174,4 +174,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-48: 1214+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 64 HOLD/HOLD DUP in Wave 45; 64 HOLD/HOLD DUP in Wave 46; 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming; 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy; 3 failed-recoverable W45-26/W48-34/W48-58 re-verified offline as HOLD DUP). Registry 40/217/253. See `05_Audit_Log.md` for per-wave evidence.*
+*Waves 22-49: 1278+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 64 HOLD/HOLD DUP in Wave 45; 64 HOLD/HOLD DUP in Wave 46; 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming; 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy; 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction; 8 failed-recoverable re-verified offline as HOLD DUP). Registry 40/217/253. See `05_Audit_Log.md` for per-wave evidence.*
