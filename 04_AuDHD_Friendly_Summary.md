@@ -1,6 +1,6 @@
 # Daily Audit Summary
 
-> **Agentic entry point is [00_INDEX.md](00_INDEX.md) + [registry.json](registry.json).** This file is the human working view — current priorities, quick wins, and what's next. Detail lives in `findings/`+`pending/`+`completed/` + `registry.json`. Tree lives in `00_INDEX.md`. Reorg v1.2 2026-10-13 (updated through Wave 44): 40/217/253.
+> **Agentic entry point is [00_INDEX.md](00_INDEX.md) + [registry.json](registry.json).** This file is the human working view — current priorities, quick wins, and what's next. Detail lives in `findings/`+`pending/`+`completed/` + `registry.json`. Tree lives in `00_INDEX.md`. Reorg v1.2 2026-10-13 (updated through Wave 45): 40/217/253.
 
 ## Quick Wins — Top 10 to fix first
 
@@ -41,6 +41,6 @@
 
 ## Latest — Waves 22-42 (770+ scouts, through melee weapon exhaustive beyond pending tier)
 
-958+ scouts drained offline since Wave 22 (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43 — arrows/bolts/ammo + jewellery + capes/gloves/boots; 64 HOLD/HOLD DUP in Wave 44 — shields/kites + helms + platelegs/plateskirts + chain/platebody parity beyond CAND-217/CHK-253). Waves 36-44 covered sapling/seed, Herblore, farming tree, melee weapons, ranged bows/staves, ammo/jewellery/capes, and now shields/kites/helms/legs/body parity. 2 earlier stream failures (W43 Adamant arrow 890 + Seers ring 6731 re-verified HOLD DUP offline). New in Wave 41: **CAND-216 Bronze scimitar 1321 defence_slash 0 vs 1** + **CAND-217 Iron/Steel/Black/Mithril/Adamant/Rune warhammer family 1335-1347 melee_strength drift 9/16/19/20/31/48 vs 11/18/22/27/39/62 (bronze 1337 clean)**. Registry 40/217/253. Reorg v1.2: findings/pending/completed per-domain with `file`+`domain` in registry. Legacy 01/02/03 frozen as provenance. See 05_Audit_Log.md for per-wave evidence and 00_INDEX.md for tree.
+1022+ scouts drained offline since Wave 22 (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43 — arrows/bolts/ammo + jewellery + capes/gloves/boots; 64 HOLD/HOLD DUP in Wave 44 — shields/kites + helms + legs/body; 64 HOLD/HOLD DUP in Wave 45 — dhides/mystic/infinity/barrows/proselyte/initiate/rogue/weight-reduction capes parity). Waves 36-45 covered sapling/seed, Herblore, farming tree, melee weapons, ranged bows/staves, ammo/jewellery/capes, shields/helms/legs/body, and now dhide/mystic/barrows parity. 2 earlier stream failures (W43 Adamant arrow 890 + Seers ring 6731 re-verified HOLD DUP offline). New in Wave 41: **CAND-216 Bronze scimitar 1321 defence_slash 0 vs 1** + **CAND-217 Iron/Steel/Black/Mithril/Adamant/Rune warhammer family 1335-1347 melee_strength drift 9/16/19/20/31/48 vs 11/18/22/27/39/62 (bronze 1337 clean)**. Registry 40/217/253. Reorg v1.2: findings/pending/completed per-domain with `file`+`domain` in registry. Legacy 01/02/03 frozen as provenance. See 05_Audit_Log.md for per-wave evidence and 00_INDEX.md for tree.
 ---
 *Teams: fix from `findings/<domain>.md` + registry Open+High/Med first; investigate via `pending/<domain>/<sub>.md`. Full tables in `00_INDEX.md`.
