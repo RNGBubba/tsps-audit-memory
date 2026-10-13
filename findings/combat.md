@@ -111,3 +111,6 @@ Code currently does: `Dawnbringer.SpecialAttack.js` registers Pulsate for item 2
 osrsreboxed-db says: Item key 22516 verifies Dawnbringer identity and equipment status; it does not encode special-attack semantics. Current Wiki documents Pulsate as a blast toward Verzik Vitur within Theatre of Blood. Exact cache target form and TSPS encounter/room mapping are unverified, so this finding does not claim which in-raid NPC IDs should pass or that Theatre encounter support is otherwise complete.
 Impact: Any reachable Dawnbringer Pulsate target passes combat eligibility, including targets outside the documented Theatre of Blood use; the intended encounter restriction is not enforced.
 Suggested fix direction (do NOT implement): Enforce the Theatre of Blood encounter/target condition using authoritative region and target identities; do not infer it from item ID alone.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

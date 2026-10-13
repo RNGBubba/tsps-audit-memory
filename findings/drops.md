@@ -107,3 +107,6 @@ Code currently does: `hits(entry)` reads only `entry.out_of`, rejects it if it i
 osrsreboxed-db says: The Unsired row is a 1/100 pre-roll. Its record represents a one-percent pre-roll independent of the main drop table; the numeric main table denominator is 139. Runtime TSPS vendored data has the same row shape. The schema defines `pre_roll` independently and gives `rarity_raw` for unresolved textual rate, but the live pre-roll helper ignores `rarity_raw`.
 Impact: Unsired cannot drop from the sampled Abyssal Sire table; each kill instead receives an ordinary main-table roll where a successful Unsired pre-roll would suppress it.
 Suggested fix direction (do NOT implement): Normalize numeric pre-roll rates into a usable numerator/denominator before `hits()` or provide a dedicated pre-roll parser that preserves rational rates.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

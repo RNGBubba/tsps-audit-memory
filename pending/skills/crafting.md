@@ -51,3 +51,6 @@
 ---
 
 - **Green d'hide crafting via needle 1733 + thread 1734 + leather 1745 -> body 1135 L63 x62 + tanning Ellis 3231 Tanner 5809 cost vs DB hide 1753/bundle vs leather 1745/needle thread no onItemOnItem vs ticket 1069 Steel platelegs not Green d'hide body:** Active Crafting only gem-cut vs tanning 1753 Green dragonhide -> 1745 leather via Lunar 1753->1745 free + Ellis/Tanner coin interface 1-20gp but no needle 1733+thread 1734 + 3x leather 1745 -> 1135 Green d'hide body L63 x62 handler missing vs DB items-json 1069 Steel platelegs vs 1135 Green d'hide body cost7800 vs active 4396 + needle 1733 + hide vs leather vs lunar free-tan distinct. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 1069, 1135, 1733, 1734, 1745, 1753, 63, 62).
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

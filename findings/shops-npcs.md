@@ -123,3 +123,6 @@ Code currently does: `repairEquipment` opens and claims the repair prompt. Barro
 osrsreboxed-db says: Aneirin 9157 exposes Repair slot 4. Dunstan 4105 exposes Talk-to only; Tindel Merchant 1358 exposes Talk-to and Give-Sword, not Repair.
 Impact: Talking to Dunstan or Tindel opens a repair prompt instead of their dialogue; no correctly labeled Repair option is available there.
 Suggested fix direction (do NOT implement): Bind repair only to verified Repair menu options after confirming which NPC cache records expose it.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

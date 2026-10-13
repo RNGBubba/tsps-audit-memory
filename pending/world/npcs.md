@@ -83,3 +83,6 @@
 ---
 
 - **Zalcano weak-phase 9050 + Tephra 23905/23906/23907 gameplay rows + tephra-wall/refine/imbue/throw/golem-spawn plugin logic absent — armoured 9049 + golem 9051 identities byte-identical clean but phases missing:** DB monsters-json 9051 Golem 64 hp14 + npcs-interactions 9049 Attack 9050 Mine+hidden 9051 Attack 9052 Talk-to + drops golem_zalcano Always 16-24 Imbued 23907 vs Active monsters-complete 9049 Zalcano 336/300/53 size5 + 9051 Golem 64/14 identical clean (no entry for 9050 weak 9052 instructor); Drops 88062 golem_zalcano identical; Spawns 9049 3031,6048 +9052 Rhiannon 3033,6067 no golem/weak dynamic expected; Animations 9049/9050/9051 present; ItemIds TEPHRA 23905/06/07 SHARD 23908 exist but item-gameplay grep Tephra 0 hits IDs 23905-23910 absent despite client ItemID/cache; Plugin search no Zalcano tephra-wall handler; 3-sample identities clean but phase/gameplay rows + plugin absent. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line and DB keys).
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

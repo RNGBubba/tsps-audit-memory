@@ -15,3 +15,6 @@ Code currently does: Local item rows 13280 and 13281 contain equipment slot and 
 osrsreboxed-db says: Both records' requirements maps assign 99 to each listed skill through Sailing (24 requirements); schema `data/schemas/schema-items.json:274-315` defines equipment requirements as a nullable skill-keyed map.
 Impact: Through the standard equipment packet path, a player without maxed skills can equip either item because the local definition supplies no requirement array. Other equip entry paths and Max variants were not audited.
 Suggested fix direction (do NOT implement): Add authoritative requirements to the active runtime definitions and represent requirements by skill key or an array covering every runtime skill; check alternate equip paths and related Max variants before expanding scope.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

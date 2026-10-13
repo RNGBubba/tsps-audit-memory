@@ -67,3 +67,6 @@
 ---
 
 - **Logout high-protocol opcode 203 len0 vs LOGOUT_RESPONSE 4 success+reason via ClientBinaryEncoder -> ClientProtocol -> NetworkBuilder vs native 14 is IF_BUTTON7 len8 not logout; forced disconnect is transport close not packet vs DB no logout contract:** ClientPacketId LOGOUT 203 len0 vs Server LOGOUT_RESPONSE 4 vs ClientBinaryEncoder encodeLogout toPacket 203 vs ClientProtocol decode logout vs NetworkBuilder emitCanLogout -> encodeLogoutResponse flush close1000 vs PacketSender dead 109 vs Player canLogout vs World queue_remove loop vs NativeClients 14 IF_BUTTON7 distinct vs CHK packet distinctions vs DB no logout table. — bounded clean check; files and DB keys in 05_Audit_Log.md; IDs 203, 4, 14, 73, 109, 1000, 3214, 73.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

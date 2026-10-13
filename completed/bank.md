@@ -27,3 +27,6 @@
 ---
 
 - **Bank placeholders varbit3755 leaveplaceholders vs 3755 placeholder vs 3959 insertMode 3958 withdrawAsNote via Bank 919/580 handleWidgetAction PLACEHOLDER_CHILD40 vs SWAP_INSERT23 per-item cache placeholderId via ItemContainer delete leavePlaceHolder distinct from item 16176 Pharaoh sceptre placeholder:** Bank.open varbits 3755 placeholders vs 3959 insert vs 3958 note vs 4171 tabs via sendVarbit + client CS2 bankmain_build + ObjType placeholder/placeholderTemplate -> ItemDefinition.placeholderId -> ItemContainer.delete leavePlaceHolder + Player.placeholders flag not persisted via PlayerSave banks Map only + DB schema placeholder boolean per item not varbit; 16176 itemID pharaoh sceptre placeholder not varbit vs wiki 2016 placeholders: correct 3755 vs 3959 distinct from Bank 1410 truncation CAND. — bounded clean check; files and DB keys in 05_Audit_Log.md; IDs 3755, 3959, 3958, 16176, 3755, 3959, 3958, 4171.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

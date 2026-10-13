@@ -803,3 +803,6 @@ Code currently does: Each active row's 14-element `bonuses` array has index 12 s
 osrsreboxed-db says: The exact records for all three IDs carry `magic_damage: 1.0`, with their separate attack/defence fields represented in the active arrays. Duplicate scan found no existing finding for these item IDs or this bonus mismatch.
 Impact: Each equipped piece contributes none of its recorded 1% Magic damage bonus to the inspected player magic-damage calculation; wearing all three omits the three piece bonuses together.
 Suggested fix direction (do NOT implement): Represent the three 1.0% bonuses in the active runtime item definitions using the existing Magic-damage bonus slot and verify adjacent magic gear separately.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

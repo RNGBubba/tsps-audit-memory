@@ -15,3 +15,6 @@
 ---
 
 - **Falador agility via Agility L50 total 586 active 10/17/45/20/20/45/40/25/10*5/180+lapBonus144 vs Wiki 11/22/61/27/26/61/53/30/14/13/13/14/241=586 redistribution + missing Hand-holds fail till66 3-8 vs DB objects only + Khan may already check similar distribution:** Active Falador Rooftop 14898-14925 13 indices via ObstacleRunner vs Agility buildIndex lapBonus144 vs Wiki Falador_Rooftop per-obstacle XP 11/22/61/27/26/61/53/30/14/13/13/14/241 vs ticket 14976 CRACKS_BLACK4 not Falador + Hand-Holds fail 66 vs no fail block in FaladorRooftop + no DB course table wiki authoritative via test agility L50. Distinct from Werewolf CHK-208 same runner vs Gnome 110.5. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 14898, 14925, 14976, 586, 144, 11, 22, 61).
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

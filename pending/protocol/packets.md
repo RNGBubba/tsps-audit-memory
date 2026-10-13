@@ -79,3 +79,6 @@
 ---
 
 - **Dragon full helm 11335 + g 12417 (vs ornament kit 12538 base 11335->12417) attack_ranged -2 vs DB -3 + Defence 60 requirement omitted vs DB 60 vs Kandarin 13137 not ornamented via loader BonusManager index4 drift + bypass equip gate:** Active item-gameplay 11335 FULL_HELMET vs 12417 g via ornament-kits 12538 + 13137 Kandarin headgear via loader + DB items-json 11335/12417 -6/-3 45/48/41/-1/46 Def60 slot head vs active -6/-2 45/48/41 vs equip gate missing Def60 due to no requirements field via EquipPacketListener bypass + BonusManager index4 -2 vs -3. Reclass of candidate-only audit log six-piece -1 drift + missing Def60. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 11335, 12417, 13137, 12538, -2, -3, 60, 45).
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

@@ -15,3 +15,6 @@ Code currently does: Both the boosted-stat decay threshold and timer restart at 
 osrsreboxed-db says: Prayer 25 says boosted stats last 50% longer and drain 3.0 Prayer points per minute; it neither records nor contradicts the 15-second delay.
 Impact: Activating Preserve shortly before a scheduled stat drain grants the 90-second interval immediately, including a benefit from flicking that OSRS rules disallow.
 Suggested fix direction (do NOT implement): Track continuous Preserve activation time and apply the extended interval only after the required warm-up; keep the DB finding scoped to the effect/rate it actually records.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

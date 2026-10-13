@@ -31,3 +31,6 @@
 ---
 
 - **Coal bag 12019 (Closed) container mechanics absent — DB identities match TSPS 764/12019 but no active Fill/Check/Empty/Open/Close /27/36 capacity / auto-fill on mining / smithing consumption / weight-zero / one-owned plugin vs Wiki holds up to 27 coal (36 with cape):** DB items-json 12019 Closed + 24480 Open weight10 cost100 trade false placeholder16249 examine 'You can carry coal' identity matches TSPS item-gameplay 764/12019 (FULL_HELMET drift vs equip false inert). But TSPS has no active coal-bag container plugin/capacity logic: base definition clean on DB keys; mechanic family 27/36 capacity open 24480 holds, Fill/Check/Empty/Open/Close destroy, auto-fill on mining, Smithing superheat consumption, weight-zero, one-owned/destroy/alchemy rules absent — candidate-grade omission parallel to gem-bag CAND-150 not DB value drift. Shop 6562 nugget shop superset stock vs DB. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 12019, 24480, 764, 766, 27, 36, 6562, 25533).
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

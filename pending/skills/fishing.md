@@ -11,3 +11,6 @@
 ---
 
 - **Keldagrim cart system Tickets + ticket purchase + Train cart travel 7027-7030/8924-8925 absent — Cart conductors 2385-2389/2392 spawn dialogue index present 14+ variants 150/75 fares Ring of Charos Fishing Contest gate but Keldagrim.plugin only ferrymen 4896/4897, zero Tickets/ticket grant/track routing handler:** Active Keldagrim.plugin only ferrymen 4896/4897 ferry 2 coins charos free + passages/stairs; npc-dialogue-index 2385-2392 Transcript Cart conductor tickets/ring variants + spawns 2385-2389 2906,10171 etc + ObjectIdentifiers 7027-7030 cart objects + item-gameplay 5020-5023 Minecart tickets but zero onObjectInteraction for 7027/8924 + zero shop for Tickets + NpcDialogues conditions coins/inventory/ring unanswered + npcs-interactions 2385 Talk-to+Tickets 2387 Talk-only 2389 Talk-only cache vs DB dialogue authoring; Transcript c33e dialogue defines 150/75 100/50 free fares Ring half Fishing Contest gate track routing but no receive/move/teleport action; Prior 04_Summary candidate reconfirmed. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line and DB keys).
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

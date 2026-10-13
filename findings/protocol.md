@@ -31,3 +31,6 @@ Code currently does: Opcode 50 passes declared packet-size lookup but is decoded
 osrsreboxed-db says: No DB mapping for native packet IDs or dispatch.
 Impact: A sender that emits the declared native OPNPC5 opcode 50 has its interaction silently ignored; current in-repo client option 5 still decodes by opcode 57.
 Suggested fix direction (do NOT implement): Align packet declarations, encoder, and decoder on the intended native opcode and migrate callers together; remove obsolete alias if any.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*

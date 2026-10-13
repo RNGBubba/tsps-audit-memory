@@ -104,3 +104,6 @@
 
 - **Iron kiteshield 1191 SHIELD -2 vs DB -3 attack_ranged drift (WA21-04-21 rebalance, same family as Bronze 1189):** Active `item-gameplay.json:1193` Iron kiteshield 1191 SHIELD `[0,0,0,-8,-2,8,10,9,-1,9]` vs DB `items-json/1191.json` `attack_ranged -3` defence 8/10/9/-1/9 slot shield req null. Same 1-point -2 vs -3 drift as Bronze 1189; Adamant 1199 variant same family but filed separately; steel/mithril pending family CAND-199 distinct. Loader BonusManager index4. Wiki -2->-3 rebalance. No prior 1191 entry. Bounded candidate.
 - Continue the broad item, skill, combat, world/object, packet, dialogue, NPC option/service, shop, prayer, drop, and container audits using exact active data, runtime consumers, exact DB keys, current official mechanics where needed, and duplicate screening. See `00_INDEX.md` and `04_AuDHD_Friendly_Summary.md` for current navigation/status.
+
+---
+*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*
