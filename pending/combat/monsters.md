@@ -17,4 +17,4 @@
 - **Cockatrice 419/420 mirror shield damage gate absent — stats byte-identical but no shield check (distinct from Basilisk 417 CAND-207):** DB `monsters-json/419.json` Cockatrice 37hp max1 stab slayer25 vs active `monsters-complete.json:187-188` byte-identical; 422 Rockslug 27hp is not cockatrice (ticket mislabels). Wiki Cockatrice requires mirror shield or stats drained/heavily reduced damage without shield; DB has no shield field; grep `mirror` server 0 handlers; no `CombatFactory` shield check; Mirror shield 4156 slayer25 defence20 stocked via Slayer Equipment 1324. No cockatrice pending exists; Basilisk 417 already CAND-207 distinct. Bounded candidate.
 
 ---
-*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*
+*Last re-verified: Wave 40 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-40). Registry 40/215/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-40 for per-wave evidence.*

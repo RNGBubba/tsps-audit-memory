@@ -17,4 +17,4 @@ Impact: Activating Preserve shortly before a scheduled stat drain grants the 90-
 Suggested fix direction (do NOT implement): Track continuous Preserve activation time and apply the extended interval only after the required warm-up; keep the DB finding scoped to the effect/rate it actually records.
 
 ---
-*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*
+*Last re-verified: Wave 40 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-40). Registry 40/215/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-40 for per-wave evidence.*

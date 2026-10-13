@@ -498,4 +498,4 @@ Impact: Successful Silk/Tea/Fur stall actions return coins instead of their resp
 Suggested fix direction (do NOT implement): Correct the stall reward IDs/quantities and update Fur stall XP against current rule data; verify the Tea stall's intended cache item ID before assigning its replacement.
 
 ---
-*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*
+*Last re-verified: Wave 40 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-40). Registry 40/215/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-40 for per-wave evidence.*

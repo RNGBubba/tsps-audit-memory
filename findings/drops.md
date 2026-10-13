@@ -109,4 +109,4 @@ Impact: Unsired cannot drop from the sampled Abyssal Sire table; each kill inste
 Suggested fix direction (do NOT implement): Normalize numeric pre-roll rates into a usable numerator/denominator before `hits()` or provide a dedicated pre-roll parser that preserves rational rates.
 
 ---
-*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*
+*Last re-verified: Wave 40 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-40). Registry 40/215/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-40 for per-wave evidence.*

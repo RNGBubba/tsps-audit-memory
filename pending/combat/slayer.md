@@ -29,4 +29,4 @@
 - **Earmuffs 4166 Slayer 15 requirement omitted (Banshee 414 clean, distinct from Facemask 4164 CAND-192 and Nose peg 4168 CAND-205):** Active `item-gameplay.json:4168` Earmuffs HAT no requirements vs DB `items-json/4166.json` requirements `{slayer:15}` weight0.113 slot head. Banshee 414 `monsters-complete.json` 22hp max2 spectral weak vs DB `414.json` 22hp byte-identical via loader; 779/430 phantom IDs have no DB rows. Loader leaves zeros when `raw.requirements` absent -> `EquipPacketListener` bypass <15 can equip. Same family as CAND-192 (slayer10) and CAND-205 (slayer60) but distinct ID/threshold. No prior 4166 filing. Bounded candidate.
 
 ---
-*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*
+*Last re-verified: Wave 40 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-40). Registry 40/215/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-40 for per-wave evidence.*

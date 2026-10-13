@@ -77,4 +77,4 @@
 - **Mithril chainbody 1109 BODY 25/35/42 -3/27 Def20 byte-identical vs DB 1109 via items-json:** Active `item-gameplay 1109` BODY `[0,0,0,-15,0,25,35,42,-3,27]` Def20 vs DB `1109.json` byte-identical. Alloys cost1950 low780 high1170. Bounded clean check. — bounded clean check; files and DB keys in 05_Audit_Log.md; IDs 1109, 25, 35, 42, -3, 27, 20.
 
 ---
-*Last re-verified: Wave 39 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-39). Registry 40/215/253. Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Waves 36-39 for per-wave evidence.*
+*Last re-verified: Wave 40 — 2026-10-13 — all HOLD/HOLD DUP, 0 new CAND/CHK (700+ scouts Waves 22-40). Registry 40/215/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-40 for per-wave evidence.*
