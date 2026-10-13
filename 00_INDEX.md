@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-43 fully HOLD re-verified offline — 40/217/253)
+## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-44 fully HOLD re-verified offline — 40/217/253)
 
 | Bucket | Count | Where |
 |---|---|---|
@@ -174,4 +174,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-43: 894+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 2 failed-recoverable now recovered). Registry 40/217/253. See `05_Audit_Log.md` for per-wave evidence.*
+*Waves 22-44: 958+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 1 failed-recoverable W44-60 re-verified offline as HOLD DUP 1177 Steel sq -2 vs 0). Registry 40/217/253. See `05_Audit_Log.md` for per-wave evidence.*

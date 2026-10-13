@@ -105,4 +105,4 @@
 - **Cave crawler 406 22hp max3 stab slayer10 byte-identical active vs DB 406 via monsters-complete (King 127 phantom, Right head):** Active monsters-complete 406 Cave crawler 22hp max3 stab 10/10/5/5 weak0/0 slayer10 vs DB monsters-json 406.json byte-identical 38 fields (22 vs 22.0 float). 127 is Right head object not monster. Loader defence_ranged_standard 10 collapse moot. Drops cave_crawler 128 byte-identical. Bounded clean check. — bounded clean check; files and DB keys in 05_Audit_Log.md; IDs 406, 127, 22, 3, 10, 128.
 
 ---
-*Last re-verified: Wave 43 — 2026-10-13 — 64 HOLD/HOLD DUP (arrows/bolts/ammo + jewellery + capes/gloves/boots parity; 2 stream-fails recovered). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-43 for per-wave evidence.*
+*Last re-verified: Wave 44 — 2026-10-13 — 64 HOLD/HOLD DUP (shields/kites + helms + platelegs/plateskirts + chain/platebody + sq shields parity; 1 stream-fail recovered). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-44 for per-wave evidence.*
