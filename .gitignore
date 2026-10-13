@@ -12,4 +12,10 @@ GOAL_RESUME.md
 HANDOFF.md
 
 # Keep git internals tracked via hook
- !.git/hooks/post-commit
+ 
+# Legacy frozen mirrors - provenance only, do not publish edits
+01_Completed_Audits.md
+02_Pending_Audits.md
+03_Found_Bugs_and_Issues.md
+
+!.git/hooks/post-commit
