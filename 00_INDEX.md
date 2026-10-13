@@ -57,8 +57,9 @@ Memory/
 │   │   ├── slayer.md         7  — konar/task selection/streaks
 │   │   └── monsters.md       4  — Kurask/Basilisk/facemask
 │   ├── prayer/
-│   ├── bank/
-│   │   └── bank.md           2  — placeholder, deposit-all
+│   │   └── prayers.md        9  — Rigour/Augury/Piety/Chivalry drain
+│   └── bank/
+│       └── bank.md           2  — placeholder, deposit-all
 ├── completed/               ← 253 CHK (7 files)
 │   ├── world.md             88  — Grace, Ordan, Pyromancer, Lumberjack
 │   ├── shops.md             48  — General Stores, Ordan, Gem stall
