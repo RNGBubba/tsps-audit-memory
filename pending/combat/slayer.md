@@ -1,0 +1,29 @@
+# Pending — combat/slayer
+
+> **Candidates** (7) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+
+- **Revenant Slayer task name match suppresses task credit and unique-rate bonus:** Active task matcher requires exact name `revenant`; active spawns and exact DB records use variant names. The shared matcher blocks Slayer XP/task decrement and the drop event bonus. Candidate-only; see original source evidence.
+
+---
+
+- **Rune pouches are retained instead of lost on PvP death (IDs 12791/24416/27281/27509):** Exact authoritative item records mark the normal, locked, divine, and locked-divine pouch IDs non-tradeable (`READ-ONLY-DB/docs/items-json/{12791,24416,27281,27509}.json:2-8`). The active `PlayerDeathTask` generic path treats any non-tradeable item as kept: it excludes `isLostOnDeath()` items from slot selection, then for each untradeable item pushes it into `itemsToKeep` (`PlayerDeath.ts:275-302,118-127`) and restores kept items after resetting inventory/equipment (`:154-175`). The RunePouch plugin stores rune contents as item metadata and registers no death hook (`RunePouch.plugin.js:64-85,226-235`); exact IDs identify the item variants, not death rules. Current official [Rune pouch](https://oldschool.runescape.wiki/w/Rune_pouch) says PvP death in any Wilderness level or PvP world loses the pouch unless locked by a trouver parchment, and that the parchment does not protect stored runes. No active trouver/pouch death handler was found in bounded plugin searches. Thus the generic non-tradeable keep path conflicts with the explicit PvP-loss rule; candidate is limited to the pouch item loss behavior, not any broader PvP death system. Duplicate-screened available Memory registers with no pouch-death candidate; the existing pouch menu/UI candidate is distinct. Static review only; no live death, tests/builds, or TSPS/READ-ONLY-DB edits.
+
+---
+
+- **Frost dragons Slayer task missing from active slayer-tasks.json and weight/quantity gating absent — Nieve 6797/7108/7109/7110 + Duradel 13622 absent vs DB weight 5 qty 60-100 (Nieve) / 70-120 (Duradel) ext 180-240; Wiki Chance of Heavy Frost 5->8 weight + I See Dragons 180-240 qty never applied:** Active slayer-tasks.json keys 6797/7108-7110/13622 have no frost-dragons slug; DB docs/slayer-tasks authoritative weight5 qty 60-100 ext180-240 (70-120 Duradel); Slayer.plugin.js 128-133 only gates slayerLevel>=task, 34-35 quantity = randomInclusive(quantity), 50-51 comment unlock state stays out; No extended_quantity or varp/varbit consumer. Wiki Slayer Rewards Chance of Heavy Frost 100pts weight 5->8 + I See Dragons 100pts qty 180-240. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line block). DB keys verify item/NPC/object identities; runtime dispatch traced; Wiki supplies missing rule where DB not authoritative. Candidate-only; 6797, 7108, 7109, 7110, 13622, 14922 sampled. Distinct root; dup screen vs registry findings/pending/completed 0 hits for primary terms. No live build/test or TSPS/DB edits.
+
+---
+
+- **Facemask 4164 Slayer 10 equipment requirement omitted vs DB 4164 slayer 10; EquipPacketListener gate bypassed due to missing requirements array (dust devil 423 family itself clean):** DB items-json 4164 Facemask slot head weight0.113 requirements {slayer:10} and items-skill-requirements 4164 slayer10 confirm gate. Active item-gameplay 4164 MASK HEAD_SLOT no requirements field (adjacent 4153 granite maul has requirements proving schema). ItemDefinition copy leaves zeros; EquipPacketListener 119-133 would check SLAYER idx18 only if array present -> bypass allows <10 to equip. Dust devil 423 (Smoke Dungeon 93/105/65 slayer_monster) itself is byte-identical active vs DB clean; global slayer damage check via getSlayerLevel is separate systemic gap not filed per scout. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 4164, 423, 43, 10, 65).
+
+---
+
+- **Nose peg 4168 Slayer 60 requirement omitted (Aberrant spectre 2 family itself clean, distinct from Facemask 4164 CAND-192):** Active `item-gameplay.json:4168` Nose peg HAT no requirements vs DB `items-json/4168.json:24` requirements `{slayer:60}` weight0.001 slot hat. Aberrant spectre 2/3/5 `monsters-complete.json` vs DB `monsters-json/2.json` 90hp max8 spectral weak1/50 defence 20 etc byte-identical clean via `NpcDefinitionLoader`. Loader copies absent requirements -> `EquipPacketListener` bypass (Skill SLAYER idx18). Facemask 4164 already CAND-192 dust devil 423 clean; this is distinct ID/threshold 60. Bounded candidate.
+
+---
+
+- **Basilisk 417 / Basilisk Knight 9293 mirror shield damage gate absent — stats byte-identical but no shield check:** Real basilisks 417 61/75/5 slash slayer40, Knight 9293 204/300/20 slash+magic slayer60 vs DB `monsters-json/417.json` / `9293.json` byte-identical via loader; ticket 300 Jailer mis-ID. Wiki Basilisk requires mirror shield or stats drained/heavily reduced damage while slaying. DB has no shield field; grep `mirror` server 0 hits; no `CombatFactory` shield check; plugins 0 basilisk handlers. Registry has 0 basilisk/mirror entries. Stats CLEAN parity; mirror-shield gate is distinct root. Bounded candidate.
+
+---
+
+- **Earmuffs 4166 Slayer 15 requirement omitted (Banshee 414 clean, distinct from Facemask 4164 CAND-192 and Nose peg 4168 CAND-205):** Active `item-gameplay.json:4168` Earmuffs HAT no requirements vs DB `items-json/4166.json` requirements `{slayer:15}` weight0.113 slot head. Banshee 414 `monsters-complete.json` 22hp max2 spectral weak vs DB `414.json` 22hp byte-identical via loader; 779/430 phantom IDs have no DB rows. Loader leaves zeros when `raw.requirements` absent -> `EquipPacketListener` bypass <15 can equip. Same family as CAND-192 (slayer10) and CAND-205 (slayer60) but distinct ID/threshold. No prior 4166 filing. Bounded candidate.
