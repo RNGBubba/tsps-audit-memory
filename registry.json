@@ -84,8 +84,8 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 213,
-    "completed_checks_total": 249,
+    "pending_candidates_total": 215,
+    "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
   "agent_instructions": {
@@ -4275,6 +4275,44 @@
       "status": "candidate",
       "needs_verification": true,
       "slug": "cockatrice-419-mirror-shield-gate-absent-vs-basilisk"
+    },
+    {
+      "candidate_id": "CAND-214",
+      "title": "Bronze kiteshield 1189 SHIELD -2 vs DB -3 attack_ranged drift (1-point less negative, WA21-04-21 rebalance family, gilded 12213/12223 clean control)",
+      "summary": "Active item-gameplay.json:1191 Bronze kiteshield 1189 SHIELD [0,0,0,-8,-2,5,7,6,-1,6] vs DB items-json 1189.json attack_ranged -3 defence 5/7/6/-1/6 slot shield req null byte-identical except index4 -2 vs -3. Loader copies verbatim via ItemDefinitionLoader onto BonusManager ATTACK_RANGE=4. Wiki Changes 2021-04-21 ranged -2->-3. No prior 1189 entry; gilded bronze 12213/12223 match control. Bounded candidate.",
+      "ids_mentioned": [
+        "1189",
+        "1191",
+        "-2",
+        "-3",
+        "5",
+        "7",
+        "6",
+        "1189"
+      ],
+      "source_file": "02_Pending_Audits.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "bronze-kiteshield-1189-minus2-vs-minus3"
+    },
+    {
+      "candidate_id": "CAND-215",
+      "title": "Iron kiteshield 1191 SHIELD -2 vs DB -3 attack_ranged drift (WA21-04-21 rebalance, same family as Bronze 1189)",
+      "summary": "Active item-gameplay.json:1193 Iron kiteshield 1191 SHIELD [0,0,0,-8,-2,8,10,9,-1,9] vs DB items-json 1191.json attack_ranged -3 defence 8/10/9/-1/9 slot shield req null. Same 1-point -2 vs -3 drift as Bronze 1189; Adamant 1199 variant same family but filed separately; steel/mithril pending family CAND-199 distinct. Loader BonusManager index4. Wiki -2->-3 rebalance. No prior 1191 entry. Bounded candidate.",
+      "ids_mentioned": [
+        "1191",
+        "1189",
+        "-2",
+        "-3",
+        "8",
+        "10",
+        "9",
+        "-1"
+      ],
+      "source_file": "02_Pending_Audits.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "iron-kiteshield-1191-minus2-vs-minus3"
     }
   ],
   "completed_checks": [
@@ -8199,8 +8237,78 @@
       "source_file": "01_Completed_Audits.md",
       "status": "verified_no_mismatch",
       "slug": "cave-crawler-406-22-max3-byte-identical-king127-phantom"
+    },
+    {
+      "check_id": "CHK-250",
+      "title": "Bronze chainbody 1103 BODY -15/0 7/11/13 -3/9 clean vs DB 1103 via items-json byte-identical",
+      "summary": "Active item-gameplay.json:1105 Bronze chainbody 1103 BODY bonuses [0,0,0,-15,0,7,11,13,-3,9] vs DB items-json 1103.json attack -15/0 defence 7/11/13/-3/9 slot body req null byte-identical via ItemDefinitionLoader -> BonusManager index4. Distinct from platebody -10/-15 drift. Bounded clean check.",
+      "ids_mentioned": [
+        "1103",
+        "-15",
+        "0",
+        "7",
+        "11",
+        "13",
+        "-3",
+        "9"
+      ],
+      "source_file": "01_Completed_Audits.md",
+      "status": "verified_no_mismatch",
+      "slug": "bronze-chainbody-1103-minus15-0-clean"
+    },
+    {
+      "check_id": "CHK-251",
+      "title": "Steel chainbody 1105 BODY -15/0 17/25/30 -3/19 Def5 byte-identical vs DB 1105 via items-json",
+      "summary": "Active item-gameplay.json:1107 Steel chainbody 1105 BODY [0,0,0,-15,0,17,25,30,-3,19] Def5 vs DB items-json 1105.json byte-identical 14 bonuses slot body req Def5. Loader BonusManager clean. Bounded clean check.",
+      "ids_mentioned": [
+        "1105",
+        "-15",
+        "0",
+        "17",
+        "25",
+        "30",
+        "-3",
+        "19"
+      ],
+      "source_file": "01_Completed_Audits.md",
+      "status": "verified_no_mismatch",
+      "slug": "steel-chainbody-1105-clean"
+    },
+    {
+      "check_id": "CHK-252",
+      "title": "Black chainbody 1107 BODY 22/32/39 -3/24 Def10 byte-identical vs DB 1107 via items-json",
+      "summary": "Active item-gameplay 1107 BODY [0,0,0,-15,0,22,32,39,-3,24] Def10 vs DB 1107.json byte-identical. Bounded clean check.",
+      "ids_mentioned": [
+        "1107",
+        "22",
+        "32",
+        "39",
+        "-3",
+        "24",
+        "10"
+      ],
+      "source_file": "01_Completed_Audits.md",
+      "status": "verified_no_mismatch",
+      "slug": "black-chainbody-1107-clean"
+    },
+    {
+      "check_id": "CHK-253",
+      "title": "Mithril chainbody 1109 BODY 25/35/42 -3/27 Def20 byte-identical vs DB 1109 via items-json",
+      "summary": "Active item-gameplay 1109 BODY [0,0,0,-15,0,25,35,42,-3,27] Def20 vs DB 1109.json byte-identical. Alloys cost1950 low780 high1170. Bounded clean check.",
+      "ids_mentioned": [
+        "1109",
+        "25",
+        "35",
+        "42",
+        "-3",
+        "27",
+        "20"
+      ],
+      "source_file": "01_Completed_Audits.md",
+      "status": "verified_no_mismatch",
+      "slug": "mithril-chainbody-1109-clean"
     }
   ],
-  "pending_candidates_total": 213,
-  "completed_checks_total": 249
+  "pending_candidates_total": 215,
+  "completed_checks_total": 253
 }
