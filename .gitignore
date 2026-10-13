@@ -1,3 +1,11 @@
 # OS
 Thumbs.db
 .DS_Store
+
+# Audit housekeeping — keep but exclude large generated artifacts if they creep in
+# (registry.json is tracked — do NOT ignore)
+*.tmp
+*.log
+
+# Keep git internals tracked via hook
+!.git/hooks/post-commit
