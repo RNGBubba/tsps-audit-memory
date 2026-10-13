@@ -353,4 +353,4 @@
 - **Crawling Hand 448 16hp max1 crush undead slayer5 byte-identical active vs DB 448 via monsters-complete (7386/397 phantom, distinct):** Active monsters-complete 448 Crawling Hand 8cb 16hp max1 crush undead slayer5 16xp vs DB monsters-json 448.json byte-identical 40+ fields. 7386/397 are not Crawling Hand monsters. Loader NpcDefinitionLoader -> DamageFormulas maxHit1; spawns Slayer Tower 3412-3424. No prior 448 crawling audit. Bounded clean check. — bounded clean check; files and DB keys in 05_Audit_Log.md; IDs 448, 7386, 397, 16, 1, 5, 8.
 
 ---
-*Last re-verified: Wave 42 — 2026-10-13 — 64 HOLD/HOLD DUP (ranged bows/crossbows/darts/knives/javelins/chinchompas + magic staves/powered staves). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-42 for per-wave evidence.*
+*Last re-verified: Wave 43 — 2026-10-13 — 64 HOLD/HOLD DUP (arrows/bolts/ammo + jewellery + capes/gloves/boots parity; 2 stream-fails recovered). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-43 for per-wave evidence.*
