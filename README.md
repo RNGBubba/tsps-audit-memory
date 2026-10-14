@@ -8,20 +8,24 @@
 >
 > % Done = (Findings + Verified) / Total — auto-updated every `Sync all MD: Wave N`
 
+**Overall — 293 / 565 done — 51.9%**
+
 | Category | Done | Total | % Done | Pending | ETA |
 |---|---:|---:|---:|---:|---|
-| Drops | 3 | 3 | 100% | 0 | done |
-| Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0 waves |
-| Shops / NPCs | 56 | 71 | 78.9% | 15 | ~0.2 waves |
-| World | 88 | 146 | 60.3% | 58 | ~0.9 waves |
-| Combat | 33 | 57 | 57.9% | 24 | ~0.4 waves |
-| Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 waves |
-| Skills | 60 | 126 | 47.6% | 66 | ~1.0 waves |
-| Items / Equipment | 20 | 96 | 17.2% | 76 | ~1.2 waves |
 | Prayer / Slayer | 1 | 12 | 8.3% | 11 | ~0.2 waves |
+| Items / Equipment | 20 | 96 | 17.2% | 76 | ~1.2 waves |
+| Skills | 60 | 126 | 47.6% | 66 | ~1.0 waves |
+| Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 waves |
+| Combat | 33 | 57 | 57.9% | 24 | ~0.4 waves |
+| World | 88 | 146 | 60.3% | 58 | ~0.9 waves |
+| Shops / NPCs | 56 | 71 | 78.9% | 15 | ~0.2 waves |
+| Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0 waves |
+| Drops | 3 | 3 | 100% | 0 | done |
 | **Overall** | **293** | **565** | **51.9%** | **272** | **~4.3 waves (~0.9 days)** |
 
-*ETA = Pending / 64 checks per wave · ~5 waves/day · trailing +1.4 new CAND/wave · updated automatically each wave*
+> **ETA** — Pending / 64 per wave · ~5 waves/day → ~0.9 days to re-scan the full pending queue · trailing **+1.4 new CAND / wave** · coverage to 80% needs ~157 net closes → ~2–3 weeks at current triage bandwidth.
+>
+> *Updated automatically from `registry.json` on every wave — this table is regenerated on each `Sync all MD: Wave N` push.*
 
 ## Document tree — find anything without opening files
 
