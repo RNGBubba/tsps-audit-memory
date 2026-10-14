@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave61",
+  "generated": "2026-10-14T Wave62",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 239,
+    "pending_candidates_total": 240,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5337,6 +5337,29 @@
       "slug": "corrupted-armadyl-godsword-28537-stub",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-240",
+      "title": "Halberd family Black 3196 / Mithril 3198 / Adamant 3200 / Rune 3202 / Dragon 3204 omit Strength 5/10/15/20/30 requirement — only Attack gate present (Steel 3194 Attack5 clean)",
+      "summary": "Active item-gameplay.json halberds 3196 Black [10,0,0...] / 3198 Mithril [20,0,0...] / 3200 Adamant [30,0,0...] / 3202 Rune [40,0,0...] / 3204 Dragon [60,0,0...] bonuses HOLD byte-identical vs DB items-json 3196.json req Attack10 Strength5 / 3198.json Attack20 Strength10 / 3200.json Attack30 Strength15 / 3202.json Attack40 Strength20 / 3204.json Attack60 Strength30 weapon speed7 polearm slot2h; Steel 3194 [5] vs DB Attack5 HOLD control and Bronze 3190/Iron 3192 null vs null HOLD. DB wiki_url https://oldschool.runescape.wiki/w/Black_halberd etc + data/items/items-wiki-page-text.json each requiring Attack+Strength per tier + data/items/items-skill-requirements.json 3196:10/5 3198:20/10 3200:30/15 3202:40/20 3204:60/30. Loader ItemDefinitionLoader copies requirements array only when present -> active Strength index2=0 bypasses EquipPacketListener Strength gate. One family root 5 IDs distinct from Bronze/Iron/Steel null. Scout W62-26 offline triple-verify; registry 3196/3198/3200/3202/3204 0 hits. Bounded candidate.",
+      "ids_mentioned": [
+        3196,
+        3198,
+        3200,
+        3202,
+        3204,
+        5,
+        10,
+        15,
+        20,
+        30
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "halberd-family-3196-3204-omit-strength-5-30",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -9839,6 +9862,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 239,
+  "pending_candidates_total": 240,
   "completed_checks_total": 253
 }
