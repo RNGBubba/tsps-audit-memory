@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave75",
+  "generated": "2026-10-14T Wave76",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 261,
+    "pending_candidates_total": 262,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5813,6 +5813,29 @@
       "slug": "blade-of-saeldor-25870-slash94-vs100-str89-vs93-req80-omitted",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-262",
+      "title": "Crystal halberd 23987 (Active) + 23989 (Inactive) omit Agility 50 -- TSPS [70,0,35]/null vs DB Attack70 Agility50 Strength35 (bonuses 85/110/118 HOLD)",
+      "summary": "Active item-gameplay.json:23987 Crystal halberd (Active) WEAPON/HALBERD bonuses [85,110,5,-4,0,-1,4,5,118] req [70,0,35] Attack70 Strength35 omit Agility50 vs DB items-json 23987.json equipment attack 85 slash110 crush5 defence -1/4/5 melee118 slot 2h requirements Attack70 Agility50 Strength35 wiki_url https://oldschool.runescape.wiki/w/Crystal_halberd#Active + 23989 Inactive bonuses same req null vs DB 23989.json same 70/50/35; placeholder 23978 Crystal body (inactive) linked_id_placeholder 23978 / 23988 weight2 bonuses null HOLD; controls Bonuses HOLD byte-identical. Loader ItemDefinitionLoader.plugin.js copies only present requirements -> EquipPacketListener Agility50 bypass at Skill AGILITY index16. Registry 0 hits 23987/23989 crystal halberd; distinct from CAND-092 sweep 0.75x and CAND-242 bows. Scout W76Ax03 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        23987,
+        23989,
+        23978,
+        23988,
+        70,
+        50,
+        35,
+        85,
+        110,
+        118
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "crystal-halberd-23987-23989-omit-agility50",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -10315,6 +10338,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 261,
+  "pending_candidates_total": 262,
   "completed_checks_total": 253
 }
