@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-51 fully HOLD re-verified offline — 40/217/253)
+## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-51b 1406+ scouts (62 HOLD + 2 new CAND-216/217 + 64 HOLD + 2 new CAND-218/219) re-verified offline — 40/219/253)
 
 | Bucket | Count | Where |
 |---|---|---|
@@ -30,7 +30,7 @@ Memory/
 │   ├── protocol.md           2  — PacketSender, opcode 50
 │   ├── prayer-slayer.md      1
 │   └── items-equipment.md    1
-├── pending/                 ← 217 CAND (21 files)
+├── pending/                 ← 219 CAND (21 files)
 │   ├── world/
 │   │   ├── general.md       34  — Zeah shops, diaries, teleports, misc
 │   │   ├── npcs.md          21  — Talk-to slots, NPC handlers
@@ -158,7 +158,7 @@ Memory/
 - **Incidental ID reuse is not duplication.** Pending item IDs 1047/113/2552 appear in 2 entries each but describe distinct aspects — kept as separate scoped entries.
 - **Summary layering is not duplication.** `00_INDEX.md` now holds only tree + tables; detail lives in `findings/`/`pending/`/`completed/` + `registry.json`.
 - **v1.2 reorg:** `findings/`/`pending/`/`completed/` now carry `file` + `domain` in `registry.json` (2026-10-13). Legacy `01`/`02`/`03` frozen as provenance.
-- **Result:** no entries removed; structural split of 40/217/253 entries into per-domain folders; deduplication still 0 duplicates.
+- **Result:** no entries removed; structural split of 40/219/253 entries into per-domain folders; deduplication still 0 duplicates.
 
 ## Quick start
 
@@ -174,4 +174,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-51: 1342+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 64 HOLD/HOLD DUP in Wave 45; 64 HOLD/HOLD DUP in Wave 46; 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming; 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy; 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction; 64 HOLD/HOLD DUP in Wave 50 agility/farming/mining + remaining parity; 5 stream-fail re-verified offline as HOLD DUP; 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows; 8 billing/stream-fail re-verified offline as HOLD). Registry 40/217/253. See `05_Audit_Log.md` for per-wave evidence.*
+*Waves 22-51b: 1406+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 64 HOLD/HOLD DUP in Wave 45; 64 HOLD/HOLD DUP in Wave 46; 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming; 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy; 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction; 64 HOLD/HOLD DUP in Wave 50 agility/farming/mining + remaining parity; 5 stream-fail re-verified offline as HOLD DUP; 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows; 8 billing/stream-fail re-verified offline as HOLD). Registry 40/219/253. See `05_Audit_Log.md` for per-wave evidence.*

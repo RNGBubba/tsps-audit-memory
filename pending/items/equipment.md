@@ -1,6 +1,6 @@
 # Pending — items/equipment
 
-> **Candidates** (28) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (30) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Gloves of silence Hunter gate (ID 10075):** Active item row omits exact DB Hunter 54 requirement; ordinary equip checks no level when requirements are absent. Its pickpocket +5% and 62-failure wear-out are implemented. Candidate-only.
 
@@ -108,9 +108,17 @@
 ---
 
 - **Iron/Steel/Black/Mithril/Adamant/Rune warhammer 1335/1339/1341/1343/1345/1347 melee_strength 9/16/19/20/31/48 vs DB/Wiki 11/18/22/27/39/62 (bronze 1337 8 clean) + Adamant 1345 crush 33 vs 35 — Equipment Rebalance 2021-04-21 family:** Active item-gameplay WARHAMMER family 1335 Iron 9 vs DB 11, 1339 Steel 16 vs DB 18, 1341 Black 19 vs DB 22, 1343 Mithril 20 vs DB 27, 1345 Adamant 31 vs DB 39 (crush 33 vs DB 35 also), 1347 Rune 48 vs DB 62; Bronze 1337 8 vs DB 8 clean control. DB items-json 1335/1339/1341/1343/1345/1347 melee_strength vs active bonuses index10 strength; Wiki Changes 2021-04-21 confirms DB (Iron warhammer 9->11, Steel 16->18 family rebalance). Loader ItemDefinitionLoader copies bonuses verbatim -> BonusManager strength index10 -> DamageFormulas. Requirements strength null/5/10/20/30/40 correct. Weight 1-2 vs 1.814-2.041 truncation informational. One root 6 IDs distinct from plate -10/-15 and helm -2/-3 families. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` and DB keys; IDs 1335, 1339, 1341, 1343, 1345, 1347, 1337, 11, 18, 22, 27, 39, 62, 9, 16, 19, 20, 31, 48).
+- **Leaf-bladed battleaxe 20727 attack_slash 50 vs DB/Wiki 72 (crush 72 clean, strength 92 clean) + omit Attack 65/Slayer 55 requirements — pre-Poll 57 stale slash + missing Slayer gate:** Active `item-gameplay.json:20727` Leaf-bladed battleaxe WEAPON/BATTLEAXE bonuses [-2,50,72,0,0,0,0,0,0,-1,92] req null vs DB `items-json/20727.json` equipment attack_slash 72/crush 72 strength 92 slot weapon requirements Attack 65 Slayer 55 weapon speed 5 axe vs active speed 6 BATTLEAXE stale; DB wiki_url https://oldschool.runescape.wiki/w/Leaf-bladed_battleaxe + data/items/items-wiki-page-text.json "Leaf-bladed battleaxe" Infobox |value 96000 |weight 2.721 |id 20727 requires Attack 65 Slayer 55 Poll 57 Nov 30 2017 slash 50→72 bonus; Loader ItemDefinitionLoader copies bonuses/requirements only when present — null req bypasses EquipPacketListener gate, BonusManager consumes 50 vs 72 slash; distinct from CAND-208 Kurask 410 leaf-bladed damage-gate candidate (that is combat gating, not item definition). 13290 Null placeholder mis-ID distinct. — triage via scout read-only audit (see 05_Audit_Log.md Wave 51 for full file:line and DB keys).
+
+---
+
+- **Brine sabre 11037 omit Attack 40 requirement — all bonuses/slot/speed/cost/alch/weight clean (DB/Wiki Attack 40 vs active null):** Active `item-gameplay.json:11037` Brine sabre WEAPON/SCIMITAR bonuses [7,47,-2,0,0,0,0,0,0,0,46] req null vs DB `items-json/11037.json` equipment attack_slash 47/crush -2 strength 46 slot weapon requirements Attack 40 weapon speed 4 slash_sword slot weapon; DB wiki_url https://oldschool.runescape.wiki/w/Brine_sabre + data/items/items-wiki-page-text.json "Brine sabre" prose requires 40 Attack Infobox |value 26000 |weight 1.814 |id 11037 slot weapon speed 4; active weight 2 vs DB 1.814 truncation informational, highAlch 15600/lowAlch 10400/dropValue 26000 clean vs DB high15600/low10400/cost26000; Loader copies only present requirements — null bypasses gate; BonusManager consumes active array clean; registry 11037 0 hits no prior CAND; distinct from CAND-216 Bronze scimitar defence_slash and CAND-217 warhammer strength families. — triage via scout read-only audit (see 05_Audit_Log.md Wave 51 for full file:line and DB keys).
+
+---
 
 ---
 
 - Continue the broad item, skill, combat, world/object, packet, dialogue, NPC option/service, shop, prayer, drop, and container audits using exact active data, runtime consumers, exact DB keys, current official mechanics where needed, and duplicate screening. See `00_INDEX.md` and `04_AuDHD_Friendly_Summary.md` for current navigation/status.
 ---
-*Last re-verified: Wave 42 — 2026-10-13 — 64 HOLD/HOLD DUP (ranged bows/crossbows/darts/knives/javelins/chinchompas + magic staves/powered staves). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-42 for per-wave evidence.*
+
+*Last re-verified: Wave 51 — 2026-10-13 — drained 64 (56 HOLD/HOLD DUP + 2 new CAND-218/219 + 6 billing/stream-fail re-verified offline as HOLD) beyond CAND-217/CHK-253 tier. Registry 40/219/253 pending new: Leaf-bladed battleaxe 20727 (50 vs 72 + req) + Brine sabre 11037 (req 40 omit). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 51 for per-wave evidence.*

@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-13T Wave51",
+  "generated": "2026-10-13T Wave51b",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 217,
+    "pending_candidates_total": 219,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -4885,6 +4885,43 @@
       "slug": "warhammer-family-1335-1347-strength-drift-rebalance",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-218",
+      "title": "Leaf-bladed battleaxe 20727 attack_slash 50 vs DB/Wiki 72 + omit Attack 65/Slayer 55 requirements",
+      "summary": "Active item-gameplay.json:20727 Leaf-bladed battleaxe WEAPON/BATTLEAXE bonuses [-2,50,72,0,0,0,0,0,0,-1,92] req null vs DB items-json 20727.json equipment attack_slash 72 crush 72 strength 92 slot weapon requirements Attack 65 Slayer 55 weapon speed 5 axe vs active BATTLEAXE speed 6 stale. DB wiki_url https://oldschool.runescape.wiki/w/Leaf-bladed_battleaxe + data/items/items-wiki-page-text.json Infobox |value 96000 |weight 2.721 |id 20727 requires Attack 65 Slayer 55 Poll 57 2017 slash 50->72. Loader copies bonuses/requirements only when present — null req bypasses equip gate, BonusManager consumes 50 vs 72. Distinct from CAND-208 Kurask 410 damage-gate. Scout W51-63 triple-verify; no 20727 prior CAND; 13290 Null placeholder distinct. Bounded candidate.",
+      "ids_mentioned": [
+        20727,
+        72,
+        50,
+        92,
+        65,
+        55
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "leaf-bladed-battleaxe-20727-slash50-vs72-req-65-55",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-219",
+      "title": "Brine sabre 11037 omit Attack 40 requirement — all bonuses/slot/speed clean",
+      "summary": "Active item-gameplay.json:11037 Brine sabre WEAPON/SCIMITAR bonuses [7,47,-2,0,0,0,0,0,0,0,46] req null vs DB items-json 11037.json equipment attack_slash 47 melee_strength 46 slot weapon requirements Attack 40 weapon speed 4 slash_sword. DB wiki_url https://oldschool.runescape.wiki/w/Brine_sabre + data/items/items-wiki-page-text.json requires 40 Attack |value 26000 |weight 1.814. Weight 2 vs 1.814 truncation informational, alch 15600/10400/drop 26000 clean vs DB. Loader only copies present req — null bypasses gate. No 11037 prior CAND/CHK; distinct from CAND-216/217. Scout W51-63 triple-verify. Bounded candidate.",
+      "ids_mentioned": [
+        11037,
+        47,
+        46,
+        40,
+        7
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "brine-sabre-11037-omit-attack-40-req",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -9387,6 +9424,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 217,
+  "pending_candidates_total": 219,
   "completed_checks_total": 253
 }
