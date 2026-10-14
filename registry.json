@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-13T Wave51b",
+  "generated": "2026-10-13T Wave52",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 219,
+    "pending_candidates_total": 223,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -4922,6 +4922,89 @@
       "slug": "brine-sabre-11037-omit-attack-40-req",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-220",
+      "title": "Leaf-bladed sword 11902 omit Attack 50 Slayer 55 - bonuses 67/62/50 clean",
+      "summary": "Active item-gameplay.json:11902 Leaf-bladed sword WEAPON/SWORD bonuses [67,62,0,0,0,0,0,0,0,0,50] req null vs DB items-json 11902.json equipment stab 67 slash 62 str 50 slot weapon requirements Attack 50 Slayer 55 weapon speed 4 stab_sword. DB wiki_url https://oldschool.runescape.wiki/w/Leaf-bladed_sword + data/items/items-wiki-page-text.json requires 50 Attack 55 Slayer |value 68000 |weight 1.814. Bonuses HOLD byte-identical, only req omitted -> null bypasses equip gate via ItemDefinitionLoader/EquipPacketListener. Distinct from CAND-218 battleaxe 20727 (slash 50 vs 72 + 65/55 + speed) and CAND-208 Kurask gate. Scout W52A-07 triple-verify; registry 11902 0 hits. Bounded candidate.",
+      "ids_mentioned": [
+        11902,
+        67,
+        62,
+        50,
+        55
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "leaf-bladed-sword-11902-omit-attack-50-slayer-55",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-221",
+      "title": "Hasta family Steel 11371 Mithril 11373 Adamant 11375 Rune 11377 omit Attack 5/20/30/40 (Bronze 11367 Iron 11369 null clean) - bonuses HOLD",
+      "summary": "Active hastas 11371 Steel [12,12,12,12] req null vs DB 11371.json stab 12 slash 12 crush 12 str 12 requirements Attack 5; 11373 Mithril [17,17,17,18] vs DB 20; 11375 Adamant [24,24,24,28] vs DB 30; 11377 Rune [36,36,36,42] vs DB 40; Bronze 11367 [5,5,5,6] null vs null HOLD and Iron 11369 [8,8,8,10] null vs null HOLD. All bonuses byte-identical steel-rune, only req omitted -> null bypasses gate. DB wiki_url per hasta + data/items/items-wiki-page-text.json each requires Attack 5/20/30/40 + data/items/items-skill-requirements.json 5/20/30/40. Scout W52A-01 triple-verify; registry 11371/11373/11375/11377 0 hits (only CAND-054 Dragon hasta special). Poisoned variants 11393/11400/11407/11414 same drift same root. One family root 4 IDs distinct from warhammer/plate families. Bounded candidate.",
+      "ids_mentioned": [
+        11371,
+        11373,
+        11375,
+        11377,
+        11367,
+        5,
+        20,
+        30,
+        40
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "hasta-family-11371-11377-omit-attack-5-20-30-40",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-222",
+      "title": "Inquisitor's mace 24417 crush 95 vs 102 + strength 89 vs 96 + req 75 vs 80 (Summer Sweep-Up 2026-07-22)",
+      "summary": "Active item-gameplay.json:24417 Inquisitor's mace WEAPON/MACE bonuses [52,-4,95,89,prayer2] req 75 vs DB items-json 24417.json equipment stab 52 slash -4 crush 102 str 96 prayer2 slot weapon requirements Attack 80 weapon speed 4 spiked. DB wiki_url https://oldschool.runescape.wiki/w/Inquisitor's_mace + data/items/items-wiki-page-text.json Infobox 52/-4/102/96/2 req 80 speed 4 Changes 2022-05-11 75->80 and 2026-07-22 armour bonus redirected to mace 95->102 89->96. Loader copies bonos/req only when present -> stale 95/89 + 75. Distinct from CHK-173 Nightmare drops 24417. Scout W52A-16 triple-verify; registry 24417 0 equipment hits. Bounded candidate.",
+      "ids_mentioned": [
+        24417,
+        95,
+        102,
+        89,
+        96,
+        75,
+        80,
+        52,
+        2
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "inquisitors-mace-24417-crush95-vs102-str89-vs96-req75-vs80",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-223",
+      "title": "Ghrazi rapier 22324 stab 94 vs 100 + strength 89 vs 93 + req 75 vs 80 (Summer Sweep-Up 2026-07-22)",
+      "summary": "Active item-gameplay.json:22324 Ghrazi rapier WEAPON/GHRAZI_RAPIER bonuses [94,55,89] req 75 vs DB items-json 22324.json equipment stab 100 slash 55 str 93 slot weapon requirements Attack 80 weapon speed 4 stab_sword. DB wiki_url https://oldschool.runescape.wiki/w/Ghrazi_rapier + data/items/items-wiki-page-text.json Changes 2022-05-11 75->80 and 2026-07-22 stab 94->100 str 89->93. Loader copies bonos/req verbatim -> stale. Scout W52A-14 + W52-25 triple-verify; registry 22324 0 hits. Bounded candidate. Holy 25734 same drift mirror.",
+      "ids_mentioned": [
+        22324,
+        25734,
+        94,
+        100,
+        89,
+        93,
+        75,
+        80
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "ghrazi-rapier-22324-stab94-vs100-str89-vs93-req75-vs80",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -9424,6 +9507,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 219,
+  "pending_candidates_total": 223,
   "completed_checks_total": 253
 }

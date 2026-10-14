@@ -1,6 +1,6 @@
 # Pending — items/equipment
 
-> **Candidates** (30) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (34) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Gloves of silence Hunter gate (ID 10075):** Active item row omits exact DB Hunter 54 requirement; ordinary equip checks no level when requirements are absent. Its pickpocket +5% and 62-failure wear-out are implemented. Candidate-only.
 
@@ -116,9 +116,23 @@
 
 ---
 
+- **Leaf-bladed sword 11902 omit Attack 50 + Slayer 55 — bonuses 67/62/50 clean vs DB items-json 11902 (Attack 50 Slayer 55 req):** Active `item-gameplay.json:11902` Leaf-bladed sword WEAPON/SWORD bonuses [67,62,0,0,0,0,0,0,0,0,50] req null vs DB `items-json/11902.json` equipment stab 67 slash 62 str 50 slot weapon requirements Attack 50 Slayer 55 weapon speed 4 stab_sword. DB wiki_url https://oldschool.runescape.wiki/w/Leaf-bladed_sword + data/items/items-wiki-page-text.json requires 50 Attack 55 Slayer |value 68000 |weight 1.814. Bonuses HOLD byte-identical, only req omitted -> null bypasses equip gate via ItemDefinitionLoader/EquipPacketListener. Distinct from CAND-218 battleaxe 20727 (slash 50 vs 72 + 65/55 + speed) and CAND-208 Kurask gate. Scout W52A-07 triple-verify; registry 11902 0 hits before filing. Bounded candidate.
+
 ---
+
+- **Hasta family Steel 11371 / Mithril 11373 / Adamant 11375 / Rune 11377 omit Attack 5/20/30/40 (Bronze 11367 + Iron 11369 null clean) — bonuses HOLD:** Active hastas 11371 Steel [12,12,12,12] req null vs DB 11371.json stab 12 slash 12 crush 12 str 12 slot weapon requirements Attack 5; 11373 Mithril [17,17,17,18] vs DB 20; 11375 Adamant [24,24,24,28] vs DB 30; 11377 Rune [36,36,36,42] vs DB 40; Bronze 11367 [5,5,5,6] null vs null HOLD and Iron 11369 [8,8,8,10] null vs null HOLD. All bonuses byte-identical steel-rune, only req omitted -> null bypasses gate. DB wiki_url per hasta + data/items/items-wiki-page-text.json each requires Attack 5/20/30/40 + data/items/items-skill-requirements.json 5/20/30/40. Scout W52A-01 triple-verify; registry 11371/11373/11375/11377 0 hits (only CAND-054 Dragon hasta special). Poisoned variants 11393/11400/11407/11414 same drift ~same root. One family root 4 IDs distinct from warhammer/plate families. — triage via scout read-only audit (see 05_Audit_Log.md Wave 52 for full file:line and DB keys).
+
+---
+
+- **Inquisitor's mace 24417 crush 95 vs DB/Wiki 102 + strength 89 vs 96 + req 75 vs 80 (Summer Sweep-Up 2026-07-22 + Poll 76):** Active `item-gameplay.json:24417` Inquisitor's mace WEAPON/MACE bonuses [52,-4,95,89,prayer2] req 75 vs DB `items-json/24417.json` equipment stab 52 slash -4 crush 102 str 96 prayer2 slot weapon requirements Attack 80 weapon speed 4 spiked. DB wiki_url https://oldschool.runescape.wiki/w/Inquisitor's_mace + data/items/items-wiki-page-text.json Infobox 52/-4/102/96/2 req 80 speed 4 Changes 2022-05-11 75->80 and 2026-07-22 armour bonus redirected to mace 95->102 89->96. Loader copies bonos/req only when present -> stale 95/89 + 75. Distinct from CHK-173 Nightmare drops 24417 weight (drops clean). Scout W52A-16 triple-verify; registry 24417 0 equipment hits before filing. Bounded candidate.
+
+---
+
+- **Ghrazi rapier 22324 stab 94 vs DB/Wiki 100 + strength 89 vs 93 + req 75 vs 80 (Summer Sweep-Up 2026-07-22 + Poll 76):** Active `item-gameplay.json:22324` Ghrazi rapier WEAPON/GHRAZI_RAPIER bonuses [94,55,89] req 75 vs DB `items-json/22324.json` equipment stab 100 slash 55 str 93 slot weapon requirements Attack 80 weapon speed 4 stab_sword. DB wiki_url https://oldschool.runescape.wiki/w/Ghrazi_rapier + data/items/items-wiki-page-text.json Changes 2022-05-11 75->80 and 2026-07-22 Summer Sweep-Up stab 94->100 str 89->93. Loader copies bonos/req verbatim -> stale. Scout W52A-14 + W52-25 triple-verify; registry 22324 0 hits. Bounded candidate. Holy 25734 same drift mirror.
 
 - Continue the broad item, skill, combat, world/object, packet, dialogue, NPC option/service, shop, prayer, drop, and container audits using exact active data, runtime consumers, exact DB keys, current official mechanics where needed, and duplicate screening. See `00_INDEX.md` and `04_AuDHD_Friendly_Summary.md` for current navigation/status.
 ---
+
+*Last re-verified: Wave 52 — 2026-10-13 — drained 128 (64 W52 HOLD + 64 W52A: hasta/leaf-sword/throwing-axe/dart/broad-bolt/chinchompa/salamander/magic-staff/powered-staff/scythe/elder-maul/dhcb/dhlance/broad-bolt/world-objects/farming-patches/world-teleport/bank-tabs/protocol/shop/npc/combat-boss/drops-seed/skills-xp/combat-formulas + 4 new CAND-220 Leaf 11902 + CAND-221 Hasta 11371-11377 + CAND-222 Inquisitor 24417 + CAND-223 Ghrazi 22324). Registry 40/223/253 (was 40/219). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 52 for per-wave evidence.*
 
 *Last re-verified: Wave 51 — 2026-10-13 — drained 64 (56 HOLD/HOLD DUP + 2 new CAND-218/219 + 6 billing/stream-fail re-verified offline as HOLD) beyond CAND-217/CHK-253 tier. Registry 40/219/253 pending new: Leaf-bladed battleaxe 20727 (50 vs 72 + req) + Brine sabre 11037 (req 40 omit). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 51 for per-wave evidence.*
