@@ -2,33 +2,34 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Progress — Wave 79 · 3262+ scouts · 2026-10-14 13:06 CDT · `registry.json` v1.2 — 40 / 270 / 253
+## Progress — Wave 79 · 3262+ scouts · 2026-10-14 13:06 CDT
 
-> **How to read:** % Done = (Findings + Verified) / Total per category · ETA auto-recalculated each wave from trailing velocity.
+> **40 Findings · 270 Pending · 253 Verified** — 563 total — **52.0% done · 270 remain**
+>
+> % Done = (Findings + Verified) / Total — auto-updated every `Sync all MD: Wave N`
 
 ```svg
 <svg viewBox="0 0 1000 28" xmlns="http://www.w3.org/2000/svg">
-  <text x="0" y="12" font-size="12" fill="currentColor">Overall 52.0% — 293 / 563 done · 270 pending</text>
+  <text x="0" y="12" font-size="12" fill="currentColor">Overall 52.0% — 293 / 563 done</text>
   <rect x="0" y="16" width="1000" height="10" rx="5" fill="var(--border)" />
   <rect x="0" y="16" width="520" height="10" rx="5" fill="var(--accent)" />
 </svg>
 ```
 
-| Category | Done | Total | % | Bar | Remain | ETA* |
-|---|---:|---:|---:|---|---|---:|---|
-| **Prayer / Slayer rituals** | 1 | 12 | 8.3% | `████░░░░░░` | 11 | ~0.2 waves |
-| **Items / Equipment** | 20 | 94 | 21.3% | `███░░░░░░░` | 74 | ~1.2 w |
-| **Skills** | 60 | 126 | 47.6% | `█████░░░░░` | 66 | ~1.0 w |
-| **Protocol / Packets** | 19 | 39 | 48.7% | `█████░░░░░` | 20 | ~0.3 w |
-| **Combat** | 33 | 57 | 57.9% | `██████░░░░` | 24 | ~0.4 w |
-| **World** | 88 | 146 | 60.3% | `██████░░░░` | 58 | ~0.9 w |
-| **Shops / NPCs** | 56 | 71 | 78.9% | `████████░░` | 15 | ~0.2 w |
-| **Bank / Inventory** | 13 | 15 | 86.7% | `█████████░` | 2 | ~0.0 w |
-| **Drops** | 3 | 3 | 100% | `██████████` | 0 | done |
-| **Overall** | **293** | **563** | **52.0%** | `█████░░░░░` | **270** | **~4.2 waves** |
+| Category | Done | Total | % Done | Pending | ETA |
+|---|---:|---:|---:|---:|---|
+| Drops | 3 | 3 | 100% | 0 | done |
+| Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0 w |
+| Shops / NPCs | 56 | 71 | 78.9% | 15 | ~0.2 w |
+| World | 88 | 146 | 60.3% | 58 | ~0.9 w |
+| Combat | 33 | 57 | 57.9% | 24 | ~0.4 w |
+| Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 w |
+| Skills | 60 | 126 | 47.6% | 66 | ~1.0 w |
+| Items / Equipment | 20 | 94 | 21.3% | 74 | ~1.2 w |
+| Prayer / Slayer | 1 | 12 | 8.3% | 11 | ~0.2 w |
+| **Overall** | **293** | **563** | **52.0%** | **270** | **~4.2 w** |
 
-*ETA per-category = Remain / 64 checks per wave · Overall = 270 / 64 = 4.2 waves. At recent pace **~5 waves/day (322 scouts/day) → ~0.9 days** to re-verify the full pending queue. At trailing **+1.4 new CAND / wave**, net pending shrinks only when triage+promotion >1.4/wave; scouting coverage to 80% (~450 done) needs ~157 net closes → **~2–3 weeks at current triage bandwidth** if no new families emerge. Updated automatically on every `Sync all MD: Wave N`.*
-
+*ETA = Pending / 64 per wave · ~5 waves/day → ~0.9 days to re-scan queue · trailing +1.4 new CAND/wave*
 
 ## Document tree — find anything without opening files
 
