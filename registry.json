@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave76",
+  "generated": "2026-10-14T Wave77",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 262,
+    "pending_candidates_total": 263,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5836,6 +5836,30 @@
       "slug": "crystal-halberd-23987-23989-omit-agility50",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-263",
+      "title": "Crystal helm 23971 + body 23975/23977 + legs 23979 family omit Agility 50 -- TSPS Defence70 only vs DB Defence70 Agility50 (bonuses/weight/alch HOLD, inactive bonuses 0 vs0 still req drift)",
+      "summary": "Active item-gameplay.json:23971 Crystal helm FULL_HELMET bonuses [0,0,0,-10,9,12,8,14,10,18,0,0,0,2] req [0,70] Defence70 only vs DB items-json 23971.json equipment attack -10/9 defence 12/8/14/10/18 prayer2 slot head requirements Defence70 Agility50 wiki_url https://oldschool.runescape.wiki/w/Crystal_helm#Active + 23975 Crystal body PLATEBODY bonuses [0,0,0,-18,31,46,38,48,44,68,0,0,0,3] req Defence70 vs DB 23975.json equipment -18/31 46/38/48/44/68 req 70/50 wiki_url https://oldschool.runescape.wiki/w/Crystal_body#Active + 23979 Crystal legs LEGS bonuses [0,0,0,-12,18,26,21,30,34,38,0,0,0,2] req Defence70 vs DB 23979.json req 70/50; inactive 23973/23977/23981 bonuses 0x14 still req Defence70 only vs DB 70/50; placeholders 23972/23976/23978/23980 HOLD clean; halberd 23987/23989 CAND-262 distinct weapon family; loader ItemDefinitionLoader.plugin.js:143-164 copies only present requirements -> EquipPacketListener Skill.AGILITY index16 bypass; Bonuses HOLD byte-identical. Registry 0 hits 23971/23975/23977/23979 crystal helm/body/legs; distinct from CAND-242 bows and CAND-262 halberd. Scouts W77Ax01/02/03 triple-verify.",
+      "ids_mentioned": [
+        23971,
+        23973,
+        23975,
+        23977,
+        23979,
+        23981,
+        70,
+        50,
+        12,
+        31,
+        46
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "crystal-armour-23971-23975-23977-23979-omit-agility50",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -10338,6 +10362,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 262,
+  "pending_candidates_total": 263,
   "completed_checks_total": 253
 }
