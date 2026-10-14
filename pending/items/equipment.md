@@ -1,6 +1,6 @@
 # Pending — items/equipment
 
-> **Candidates** (40) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (41) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Gloves of silence Hunter gate (ID 10075):** Active item row omits exact DB Hunter 54 requirement; ordinary equip checks no level when requirements are absent. Its pickpocket +5% and 62-failure wear-out are implemented. Candidate-only.
 
@@ -155,9 +155,16 @@
 
 ---
 
+
+---
+
+- **Claws family Steel 3097 Black 3098 Mithril 3099 Adamant 3100 Rune 3101 omit Attack 5/10/20/30/40 (Bronze 3095 Iron 3096 null clean) — bonuses HOLD:** Active `item-gameplay.json` claws family bonuses HOLD vs DB `items-json 3095-3101` + Wiki via DB `wiki_url`: Bronze 3095 [3,4,-4,5] req null vs DB null HOLD; Iron 3096 [4,6,-4,7] req null vs DB null HOLD; Steel 3097 [8,11,-4,12] req null vs DB `3097.json` attack5 + Wiki "level 5 Attack; Death Plateau 43 Smithing 5 bars2"; Black 3098 [10,14,-4,14] req null vs DB attack10 + Wiki "level10 Attack; Death Plateau"; Mithril 3099 [11,16,-4,17] req null vs DB attack20 + Wiki "level20 Attack Smithing63"; Adamant 3100 [18,23,-4,24] req null vs DB attack30 + Wiki "level30 Attack Smithing83"; Rune 3101 [26,38,-4,39] req null vs DB attack40 + Wiki "level40 Attack Smithing98/gryphon"; loader `ItemDefinitionLoader.plugin.js` copies requirements only when !==undefined -> null bypasses `EquipPacketListener` attack gate; Smithing levels/bars HOLD. Sc W54-02 triple-verify; registry 3097-3101 0 hits (only CAND-172 Fossil Storage 30988 distinct). 7-claw family one root. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 3095, 3096, 3097, 3098, 3099, 3100, 3101, 5, 10, 20, 30, 40).
+
+---
+
 - Continue the broad item, skill, combat, world/object, packet, dialogue, NPC option/service, shop, prayer, drop, and container audits using exact active data, runtime consumers, exact DB keys, current official mechanics where needed, and duplicate screening. See `00_INDEX.md` and `04_AuDHD_Friendly_Summary.md` for current navigation/status.
 ---
 
-*Last re-verified: Wave 53 — 2026-10-13 — drained 64 (60+ HOLD/HOLD DUP + 7 new CAND-224 dart family + CAND-225 Mithril crossbow + CAND-226 Twisted bow + CAND-227 Scythe 22325 + CAND-228 Dragon hunter crossbow + CAND-229 Steel throwing axe + drained 4 extra W53 tail HOLD) + prior 128 (64 W52 HOLD + 64 W52A: hasta/leaf-sword/throwing-axe/dart/broad-bolt/chinchompa/salamander/magic-staff/powered-staff/scythe/elder-maul/dhcb/dhlance/broad-bolt/world-objects/farming-patches/world-teleport/bank-tabs/protocol/shop/npc/combat-boss/drops-seed/skills-xp/combat-formulas + 4 new CAND-220 Leaf 11902 + CAND-221 Hasta 11371-11377 + CAND-222 Inquisitor 24417 + CAND-223 Ghrazi 22324). Registry 40/223/253 (was 40/219). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 52 for per-wave evidence.*
+*Last re-verified: Wave 54 — 2026-10-13 — drained 64 (63 HOLD/HOLD DUP + 1 new CAND-234 Claws 3097-3101) + Wave 53 — 2026-10-13 — drained 64 (60+ HOLD/HOLD DUP + 7 new CAND-224 dart family + CAND-225 Mithril crossbow + CAND-226 Twisted bow + CAND-227 Scythe 22325 + CAND-228 Dragon hunter crossbow + CAND-229 Steel throwing axe + drained 4 extra W53 tail HOLD) + prior 128 (64 W52 HOLD + 64 W52A: hasta/leaf-sword/throwing-axe/dart/broad-bolt/chinchompa/salamander/magic-staff/powered-staff/scythe/elder-maul/dhcb/dhlance/broad-bolt/world-objects/farming-patches/world-teleport/bank-tabs/protocol/shop/npc/combat-boss/drops-seed/skills-xp/combat-formulas + 4 new CAND-220 Leaf 11902 + CAND-221 Hasta 11371-11377 + CAND-222 Inquisitor 24417 + CAND-223 Ghrazi 22324). Registry 40/223/253 (was 40/219). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 52 for per-wave evidence.*
 
 *Last re-verified: Wave 51 — 2026-10-13 — drained 64 (56 HOLD/HOLD DUP + 2 new CAND-218/219 + 6 billing/stream-fail re-verified offline as HOLD) beyond CAND-217/CHK-253 tier. Registry 40/219/253 pending new: Leaf-bladed battleaxe 20727 (50 vs 72 + req) + Brine sabre 11037 (req 40 omit). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 51 for per-wave evidence.*

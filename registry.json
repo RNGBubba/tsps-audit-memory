@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-13T Wave53",
+  "generated": "2026-10-13T Wave54",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 233,
+    "pending_candidates_total": 234,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5213,6 +5213,31 @@
       "slug": "smite-drain-32-vs-40-prayer24",
       "file": "pending/prayer/prayers.md",
       "domain": "prayer/prayers"
+    },
+    {
+      "candidate_id": "CAND-234",
+      "title": "Claws family Steel 3097 Black 3098 Mithril 3099 Adamant 3100 Rune 3101 omit Attack 5/10/20/30/40 (Bronze 3095 Iron 3096 null clean) - bonuses HOLD",
+      "summary": "Active item-gameplay.json claws family bonuses HOLD vs DB items-json 3095-3101 + Wiki via DB wiki_url: Bronze 3095 [3,4,-4,5] req null vs DB null HOLD; Iron 3096 [4,6,-4,7] req null vs DB null HOLD; Steel 3097 [8,11,-4,12] req null vs DB 3097.json attack5 + Wiki 'level 5 Attack; Death Plateau 43 Smithing 5 bars2'; Black 3098 [10,14,-4,14] req null vs DB attack10 + Wiki 'level10 Attack; Death Plateau'; Mithril 3099 [11,16,-4,17] req null vs DB attack20 + Wiki 'level20 Attack Smithing63'; Adamant 3100 [18,23,-4,24] req null vs DB attack30 + Wiki 'level30 Attack Smithing83'; Rune 3101 [26,38,-4,39] req null vs DB attack40 + Wiki 'level40 Attack Smithing98/gryphon'; loader ItemDefinitionLoader.plugin.js copies requirements only when !==undefined -> null bypasses EquipPacketListener attack gate; Smithing levels/bars HOLD. Sc W54-02 triple-verify; registry 3097-3101 0 hits (only CAND-172 Fossil Storage 30988 distinct). 7-claw family one root.",
+      "ids_mentioned": [
+        3095,
+        3096,
+        3097,
+        3098,
+        3099,
+        3100,
+        3101,
+        5,
+        10,
+        20,
+        30,
+        40
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "claws-family-3097-3101-omit-attack-5-10-20-30-40",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -9715,6 +9740,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 233,
+  "pending_candidates_total": 234,
   "completed_checks_total": 253
 }
