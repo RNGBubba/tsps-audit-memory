@@ -1,6 +1,6 @@
 # Pending — items/equipment
 
-> **Candidates** (41) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (42) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Gloves of silence Hunter gate (ID 10075):** Active item row omits exact DB Hunter 54 requirement; ordinary equip checks no level when requirements are absent. Its pickpocket +5% and 62-failure wear-out are implemented. Candidate-only.
 
@@ -162,9 +162,16 @@
 
 ---
 
+
+---
+
+- **Ancient mace 11061 omit Attack 15 Prayer 25 — bonuses HOLD via MACE speed5 Spiked:** Active `item-gameplay.json:11061` Ancient mace WEAPON/MACE bonuses [10,-2,16,14,3] req null vs DB `items-json 11061.json` equipment attack 10/-2/16 str14 prayer3 slot weapon requirements Attack15 Prayer25 weapon speed5 spiked `wiki_url https://oldschool.runescape.wiki/w/Ancient_mace` + `data/items/items-wiki-page-text.json` requires 15 Attack and 25 Prayer + Infobox Bonuses HOLD + `items-skill-requirements.json` 11061: attack15 prayer25 + weapon spiked speed5. Loader `ItemDefinitionLoader.plugin.js` copies only present bonuses/requirements -> null bypasses `EquipPacketListener` Attack/Prayer gate. Controls HOLD: Steel mace 1424 [7,-2,13,11,2] req5 vs DB5, Mithril 1428 req20 etc. Sc W55-07 triple-verify; registry 11061 0 hits. Distinct from CAND-039 Dragon mace 1434 Shatter. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 11061, 10, 16, 14, 3, 15, 25).
+
+---
+
 - Continue the broad item, skill, combat, world/object, packet, dialogue, NPC option/service, shop, prayer, drop, and container audits using exact active data, runtime consumers, exact DB keys, current official mechanics where needed, and duplicate screening. See `00_INDEX.md` and `04_AuDHD_Friendly_Summary.md` for current navigation/status.
 ---
 
-*Last re-verified: Wave 54 — 2026-10-13 — drained 64 (63 HOLD/HOLD DUP + 1 new CAND-234 Claws 3097-3101) + Wave 53 — 2026-10-13 — drained 64 (60+ HOLD/HOLD DUP + 7 new CAND-224 dart family + CAND-225 Mithril crossbow + CAND-226 Twisted bow + CAND-227 Scythe 22325 + CAND-228 Dragon hunter crossbow + CAND-229 Steel throwing axe + drained 4 extra W53 tail HOLD) + prior 128 (64 W52 HOLD + 64 W52A: hasta/leaf-sword/throwing-axe/dart/broad-bolt/chinchompa/salamander/magic-staff/powered-staff/scythe/elder-maul/dhcb/dhlance/broad-bolt/world-objects/farming-patches/world-teleport/bank-tabs/protocol/shop/npc/combat-boss/drops-seed/skills-xp/combat-formulas + 4 new CAND-220 Leaf 11902 + CAND-221 Hasta 11371-11377 + CAND-222 Inquisitor 24417 + CAND-223 Ghrazi 22324). Registry 40/223/253 (was 40/219). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 52 for per-wave evidence.*
+*Last re-verified: Wave 55 — 2026-10-13 — drained 64 (63 HOLD/HOLD DUP + 1 new CAND-235 Ancient mace 11061) + Wave 54 — 2026-10-13 — drained 64 (63 HOLD/HOLD DUP + 1 new CAND-234 Claws 3097-3101) + Wave 53 — 2026-10-13 — drained 64 (60+ HOLD/HOLD DUP + 7 new CAND-224 dart family + CAND-225 Mithril crossbow + CAND-226 Twisted bow + CAND-227 Scythe 22325 + CAND-228 Dragon hunter crossbow + CAND-229 Steel throwing axe + drained 4 extra W53 tail HOLD) + prior 128 (64 W52 HOLD + 64 W52A: hasta/leaf-sword/throwing-axe/dart/broad-bolt/chinchompa/salamander/magic-staff/powered-staff/scythe/elder-maul/dhcb/dhlance/broad-bolt/world-objects/farming-patches/world-teleport/bank-tabs/protocol/shop/npc/combat-boss/drops-seed/skills-xp/combat-formulas + 4 new CAND-220 Leaf 11902 + CAND-221 Hasta 11371-11377 + CAND-222 Inquisitor 24417 + CAND-223 Ghrazi 22324). Registry 40/223/253 (was 40/219). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 52 for per-wave evidence.*
 
 *Last re-verified: Wave 51 — 2026-10-13 — drained 64 (56 HOLD/HOLD DUP + 2 new CAND-218/219 + 6 billing/stream-fail re-verified offline as HOLD) beyond CAND-217/CHK-253 tier. Registry 40/219/253 pending new: Leaf-bladed battleaxe 20727 (50 vs 72 + req) + Brine sabre 11037 (req 40 omit). Reorg v1.2 — this file's domain entries remain current; see 05_Audit_Log.md Wave 51 for per-wave evidence.*

@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-13T Wave54",
+  "generated": "2026-10-13T Wave55",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 234,
+    "pending_candidates_total": 235,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5238,6 +5238,27 @@
       "slug": "claws-family-3097-3101-omit-attack-5-10-20-30-40",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-235",
+      "title": "Ancient mace 11061 omit Attack 15 Prayer 25 — bonuses HOLD via MACE speed5 Spiked",
+      "summary": "Active item-gameplay.json:11061 Ancient mace WEAPON/MACE bonuses [10,-2,16,14,3] req null vs DB items-json 11061.json equipment attack 10/-2/16 str14 prayer3 slot weapon requirements Attack15 Prayer25 weapon speed5 spiked wiki_url https://oldschool.runescape.wiki/w/Ancient_mace + data/items/items-wiki-page-text.json requires 15 Attack and 25 Prayer + Infobox Bonuses HOLD + items-skill-requirements.json 11061: attack15 prayer25 + weapon spiked speed5. Loader ItemDefinitionLoader.plugin.js copies only present bonuses/requirements -> null bypasses EquipPacketListener Attack/Prayer gate. Controls HOLD: Steel mace 1424 [7,-2,13,11,2] req5 vs DB5, Mithril 1428 req20 etc. Sc W55-07 triple-verify; registry 11061 0 hits. Ancient mace distinct from CAND-039 Dragon mace 1434 Shatter (special stab vs crush). Weight 1 vs 1.814 truncation informational. Alch 0 vs cost1000 via loader not payout path.",
+      "ids_mentioned": [
+        11061,
+        10,
+        16,
+        14,
+        3,
+        15,
+        25,
+        11064
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "ancient-mace-11061-omit-attack15-prayer25",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -9740,6 +9761,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 234,
+  "pending_candidates_total": 235,
   "completed_checks_total": 253
 }
