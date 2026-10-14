@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-13T Wave55",
+  "generated": "2026-10-14T Wave56",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 235,
+    "pending_candidates_total": 239,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5259,6 +5259,84 @@
       "slug": "ancient-mace-11061-omit-attack15-prayer25",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-236",
+      "title": "High-ID ornamental family 20000 Dragon scimitar (or) Attack 60 + 20011/20014 3rd Age axe/pickaxe Attack 65 + Samurai set 20035/20038/20041/20044/20047 Defence 35 — requirement omission (active null vs DB)",
+      "summary": "Active item-gameplay.json:20000 Dragon scimitar (or) WEAPON bonuses [8,67,-2,66] req null vs DB items-json 20000.json equipment attack 60 slot weapon speed4 wiki_url https://oldschool.runescape.wiki/w/Dragon_scimitar_(or) + 20011 3rd Age axe [-2,38,32,42] req null vs DB 20011.json attack65 speed5 wiki_url https://oldschool.runescape.wiki/w/3rd_Age_axe + 20014 3rd Age pickaxe [38,-2,32,42] req null vs DB 20014.json attack65 + Samurai kasa 20035 HAT 16/17/15 Defence35 omit, shirt 20038 BODY 69/67/59, gloves 20041 GLOVES, greaves 20044 LEGS, boots 20047 BOOTS all req null vs DB items-json 20035/20038/20041/20044/20047.json Defence35 each + items-skill-requirements.json 20000:60 20011:65 20014:65 20035:35 20038:35 20041:35 20044:35 20047:35 + items-wiki-page-text.json each requires level via wiki_url. Loader ItemDefinitionLoader.plugin.js copies only present requirements -> null bypasses EquipPacketListener. Bonuses/slot/alch/weight HOLD byte-identical. Registry 0 hits for 20000|20011|Samurai. Sc W56-02 triple-verify; distinct from CAND-218/219/234 sub-20k families but same loader root new cohort.",
+      "ids_mentioned": [
+        "20000",
+        "20011",
+        "20014",
+        "20035",
+        "20038",
+        "20041",
+        "20044",
+        "20047",
+        "60",
+        "65",
+        "35"
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "high-id-ornamental-20000-20047-req-omission",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-237",
+      "title": "Shaman mask 21838 attack_magic -6 vs DB/Wiki +2 (Summer Sweep-Up 2026-07-22 stale)",
+      "summary": "Active item-gameplay.json:21838 Shaman mask FULL_HELMET bonuses [0,0,0,-6,-2,6,7,5,-1,6] weight2.721 FULL_HELMET vs DB docs/items-json/21838.json equipment attack_magic 2 attack_ranged -2 defence 6/7/5/-1/6 slot head requirements null cost8000 weight2.721 wiki_url https://oldschool.runescape.wiki/w/Shaman_mask + data/items/items-wiki-page-text.json Shaman mask Infobox Bonuses amagic +2 arange -2 + Changes 22 July 2026 Summer Sweep-Up magic attack -6 -> +2. Loader copies bonuses verbatim via ItemDefinitionLoader -> BonusManager index3 ATTACK_MAGIC -6 vs 2 drift (+8). 63 other IDs 21800-21930 HOLD. Registry 0 hits shaman/21838. Sc W56-54 exhaustive 64 IDs triple-verify.",
+      "ids_mentioned": [
+        "21838",
+        "-6",
+        "2",
+        "21839"
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "shaman-mask-21838-minus6-vs-plus2",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-238",
+      "title": "Ancient godsword 26233 omit Attack 75 — bonuses HOLD vs DB",
+      "summary": "Active item-gameplay.json:26233 Ancient godsword WEAPON/GODSWORD bonuses [0,132,80,132,8] weight10 tradeable true req null vs DB docs/items-json/26233.json equipment attack 0/132/80 str132 prayer8 slot 2h requirements Attack75 weapon speed6 cost1250000 weight10 wiki_url https://oldschool.runescape.wiki/w/Ancient_godsword + items-skill-requirements.json 26233:75 + items-wiki-page-text.json Ancient godsword requires 75 Attack. Loader copies only present requirements -> null bypasses EquipPacketListener Attack75 gate. Bonuses/slot/speed/cost/alch HOLD byte-identical to 11802 control. Noted 26402 placeholder 26234 HOLD. Registry 0 hits 26233. Sc W56-45 triple-verify; distinct from CAND-222/223 godsword specials.",
+      "ids_mentioned": [
+        "26233",
+        "75",
+        "11802",
+        "26402",
+        "26234"
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "ancient-godsword-26233-omit-attack75",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-239",
+      "title": "Corrupted armadyl godsword 28537 truncated stub — bonuses/requirements/weight null vs DB 106/64/106 prayer7 Attack65",
+      "summary": "Active item-gameplay.json:28537 Corrupted armadyl godsword WEAPON/GODSWORD blockAnim7056.. only equipmentType/weaponInterface, bonuses null requirements null weight null vs DB docs/items-json/28537.json equipment attack 0/106/64 str106 prayer7 slot 2h requirements Attack65 weapon speed6 cost250k weight10 wiki_url https://oldschool.runescape.wiki/w/Corrupted_armadyl_godsword + items-skill-requirements.json 28537:65 + items-wiki-page-text.json Deadman seasonal requires 65 Attack bonuses 106/64/106/7. Loader missing arrays leaves cache 0 -> BonusManager 0 vs DB 106/64/106, EquipPacketListener bypass 65. Only Corrupted godsword in DB (wiki titles 27 godsword only 1 corrupted). Registry 0 hits 28537. Sc W56-45 triple-verify; bonuses stub distinct from 26233 req-only omit.",
+      "ids_mentioned": [
+        "28537",
+        "106",
+        "64",
+        "65",
+        "7",
+        "10"
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "corrupted-armadyl-godsword-28537-stub",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -9761,6 +9839,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 235,
+  "pending_candidates_total": 239,
   "completed_checks_total": 253
 }

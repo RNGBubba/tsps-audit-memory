@@ -2,13 +2,13 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-55 1726+ scouts (62 HOLD + 2 new CAND-216/217 + 64 HOLD + 2 new CAND-218/219 + 128 HOLD + 4 new CAND-220/221/222/223 + 64 W55 63 HOLD/HOLD DUP + 1 new CAND-235 Ancient mace 11061 + 64 W54 63 HOLD/HOLD DUP + 1 new CAND-234 Claws + 64 W53 54 HOLD/HOLD DUP + 10 new CAND-224/225/226/227/228/229/230/231/232/233) re-verified offline — 40/235/253)
+## Status snapshot (auto-synced to `registry.json` v1.2 - 2026-10-14 Waves 22-56 1790+ scouts (62 HOLD + 2 new CAND-216/217 + 64 HOLD + 2 new CAND-218/219 + 128 HOLD + 4 new CAND-220/221/222/223 + 64 W55 63 HOLD/HOLD DUP + 1 new CAND-235 Ancient mace 11061 + 64 W54 63 HOLD/HOLD DUP + 1 new CAND-234 Claws + 64 W53 54 HOLD/HOLD DUP + 10 new CAND-224/225/226/227/228/229/230/231/232/233 + 64 W56 60 HOLD/HOLD DUP + 4 new CAND-236/237/238/239) re-verified offline - 40/239/253)
 
 | Bucket | Count | Where |
 |---|---|---|
-| **Accepted findings** (bugs that are verified broken) | **40** — 2 High, 34 Medium, 4 Low | [`findings/`](findings/) + `findings[]` in `registry.json` |
-| **Candidates** (need verification before promotion) | **217** | [`pending/`](pending/) + `pending_candidates[]` (`CAND-001…CAND-223`) |
-| **Verified clean** (bounded no-mismatch) | **253** | [`completed/`](completed/) + `completed_checks[]` (`CHK-001`…`CHK-253`) |
+| **Accepted findings** (bugs that are verified broken) | **40** - 2 High, 34 Medium, 4 Low | [`findings/`](findings/) + `findings[]` in `registry.json` |
+| **Candidates** (need verification before promotion) | **239** | [`pending/`](pending/) + `pending_candidates[]` (`CAND-001...CAND-239`) |
+| **Verified clean** (bounded no-mismatch) | **253** | [`completed/`](completed/) + `completed_checks[]` (`CHK-001`...`CHK-253`) |
 | **No duplicate IDs** | 0 duplicated AUD/CAND/CHK IDs | See deduplication report below |
 
 ## Document tree — find anything without opening files
@@ -30,15 +30,15 @@ Memory/
 │   ├── protocol.md           2  — PacketSender, opcode 50
 │   ├── prayer-slayer.md      1
 │   └── items-equipment.md    1
-├── pending/                 ← 223 CAND (21 files)
+├── pending/                 <- 239 CAND (21 files)
 │   ├── world/
-│   │   ├── general.md       34  — Zeah shops, diaries, teleports, misc
-│   │   ├── npcs.md          21  — Talk-to slots, NPC handlers
-│   │   └── objects.md        3  — altars, ladders, portals
+│   │   ├── general.md       34  - Zeah shops, diaries, teleports, misc
+│   │   ├── npcs.md          21  - Talk-to slots, NPC handlers
+│   │   └── objects.md        3  - altars, ladders, portals
 │   ├── items/
-│   │   └── equipment.md     26  — platebody/chain/kite/helm Defence & bonus
+│   │   └── equipment.md     46  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537
 │   ├── protocol/
-│   │   └── packets.md       20  — WIDGET_ACTION, OPNPC, Trade, run modifier
+│   │   └── packets.md       20  - WIDGET_ACTION, OPNPC, Trade, run modifier
 │   ├── shops/
 │   │   └── general-stores.md 15  — Lumbridge/Varrock/Edgeville/Falador…
 │   ├── skills/
@@ -94,12 +94,12 @@ Memory/
 | prayer-slayer | `findings/prayer-slayer.md` | AUD-021 | 1 |
 | items-equipment | `findings/items-equipment.md` | AUD-010 | 1 |
 
-## Candidates at a glance (215 CAND) — top files
+## Candidates at a glance (239 CAND) - top files
 
 | File | Candidates | Example IDs |
 |---|---|---|
 | `pending/world/general.md` | 34 | CAND-004 Dragonstone, CAND-006 Drew bucket… |
-| `pending/items/equipment.md` | 26 | CAND-117 Mithril plate 1121, CAND-199 Steel plate 1119… |
+| `pending/items/equipment.md` | 46 | CAND-216 Bronze scim 1321 / CAND-217 Warhammer 1335-1347 / CAND-218 Leaf-bladed 20727 / CAND-219 Brine 11037 / CAND-220 Leaf 11902 / CAND-221 Hasta 11371 / CAND-222 Inquisitor / CAND-223 Ghrazi / CAND-224 dart family 806-810 / CAND-225 Mithril crossbow 9181 / CAND-226 Twisted bow 20997 / CAND-227 Scythe 22325 / CAND-228 Dragon hunter 21012 / CAND-229 Throwing axe 802 / CAND-230 Amethyst 11388 / CAND-231 Zenyte / CAND-232 Rapid Heal / CAND-233 Smite / CAND-234 Claws 3097-3101 / CAND-235 Ancient mace 11061 / CAND-236 High-ID ornamental 20000-20047 / CAND-237 Shaman mask 21838 / CAND-238 Ancient godsword 26233 / CAND-239 Corrupted AGS 28537 |
 | `pending/world/npcs.md` | 21 | CAND-014 Disciple 7670, CAND-019 Hairdresser… |
 | `pending/protocol/packets.md` | 20 | CAND-051 Chat, CAND-028 OPPlayer2… |
 | `pending/shops/general-stores.md` | 15 | CAND-110 Varrock, CAND-133 Edgeville… |
@@ -107,7 +107,6 @@ Memory/
 | `pending/skills/herblore.md` | 13 | CAND-065 Prayer 139, CAND-044 Ranarr… |
 | `pending/skills/crafting.md` | 14 | CAND-057 Gold jewellery 1635… |
 | `pending/prayer/prayers.md` | 11 | CAND-109 Rigour 5451, CAND-232 Rapid Heal 10, CAND-233 Smite 24, CAND-147 Rigour 38.5… |
-
 ## Verified clean at a glance (253 CHK)
 
 | File | Checks | Example |
@@ -174,4 +173,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-55: 1726+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 64 HOLD/HOLD DUP in Wave 45; 64 HOLD/HOLD DUP in Wave 46; 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming; 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy; 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction; 64 HOLD/HOLD DUP in Wave 50 agility/farming/mining + remaining parity; 5 stream-fail re-verified offline as HOLD DUP; 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows; 8 billing/stream-fail re-verified offline as HOLD; 64 W52 64 HOLD + 64 W52A 64 HOLD/HOLD DUP + 4 new CAND-220/221/222/223 in Wave 52; 64 W55 63 HOLD/HOLD DUP + 1 new CAND-235 Ancient mace 11061 + 64 W54 63 HOLD/HOLD DUP + 1 new CAND-234 Claws + 64 W53 54 HOLD/HOLD DUP + 10 new CAND-224 dart family + CAND-225 Mithril crossbow + CAND-226 Twisted bow + CAND-227 Scythe 22325 + CAND-228 Dragon hunter 21012 + CAND-229 throwing axe 802-805 + CAND-230 Amethyst 11388 + CAND-231 Zenyte 19496 + CAND-232 Rapid Heal + CAND-233 Smite 40/235/253; 4 stream-fail + 4 not-filed as HOLD + 1 new CAND-234. Registry 40/235/253. See `05_Audit_Log.md` for per-wave evidence.*
+*Waves 22-56: 1790+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 64 HOLD/HOLD DUP in Wave 45; 64 HOLD/HOLD DUP in Wave 46; 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming; 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy; 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction; 64 HOLD/HOLD DUP in Wave 50 agility/farming/mining + remaining parity; 5 stream-fail re-verified offline as HOLD DUP; 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows; 8 billing/stream-fail re-verified offline as HOLD; 128 HOLD in Wave 52 (hastas/javelins/knives/darts/throwing axes/blowpipe/leaf/salamander/chinchompa/staves/tumeken/crossbows/broad/bank/world/combat/skills); 64 W53 54 HOLD/HOLD DUP + 10 new CAND-224/225/226/227/228/229/230/231/232/233 + 64 W54 63 HOLD/HOLD DUP + 1 new CAND-234 Claws + 64 W55 63 HOLD/HOLD DUP + 1 new CAND-235 Ancient mace 11061 + 64 W56 60 HOLD/HOLD DUP + 4 new CAND-236/237/238/239 high-ID ornamental + shaman mask + godswords) re-verified offline — 40/239/253. See `05_Audit_Log.md` for per-wave evidence.*
