@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave79",
+  "generated": "2026-10-14T Wave80",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 270,
+    "pending_candidates_total": 272,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -6024,6 +6024,47 @@
       "slug": "torva-armour-26382-26384-26386-omit-defence80",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-271",
+      "title": "Inquisitor armour 24420 hauberk crush 12 vs16 + 24421 plateskirt stab/slash -3 vs0 (helm 24419 CAND-251 distinct, Summer Sweep-Up 2026-07-22)",
+      "summary": "Active item-gameplay.json:24420 Inquisitor hauberk PLATEBODY bonuses [-3,-3,12,-11,-10,67,55,71,0,35,4] req Def30 Str70 vs DB items-json 24420.json equipment attack 0/0/16/-11/-10 defence 67/55/71/0/35 str4 slot body req Str70 Def30 wiki_url https://oldschool.runescape.wiki/w/Inquisitor's_hauberk + 24421 plateskirt LEGS bonuses [-3,-3,12,-9,-5,42,30,49,0,22,2] req Def30 Str70 vs DB 24421.json equipment attack 0/0/12/-9/-5 defence 42/30/49/0/22 str2 slot legs req Str70 Def30 wiki_url https://oldschool.runescape.wiki/w/Inquisitor's_plateskirt + data/items/items-wiki-page-text.json Changes 2026-07-22 crush8->10/12->16 etc. Loader copies bonuses verbatim -> BonusManager. Distinct from helm 24419 CAND-251 and mace 24417 CAND-222. Scout W80Ax12/13 triple-verify; registry 0 exact hits 24420/24421 before filing (CAND-251 is helm only).",
+      "ids_mentioned": [
+        24420,
+        24421,
+        24419,
+        12,
+        16,
+        -3,
+        0,
+        30,
+        70
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "inquisitor-hauberk-24420-plateskirt-24421-stale-2026-07-22",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-272",
+      "title": "Ava's accumulator 10499 CAPE omit Ranged 50 -- active requirements null vs DB Ranged50 (bonuses HOLD)",
+      "summary": "Active item-gameplay.json:10499 Ava's accumulator CAPE bonuses [0,0,0,0,4,0,1,0,4,0,0,0,0,0] weight4.5 req null vs DB items-json 10499.json equipment attack_ranged4 defence_slash1 defence_magic4 slot cape requirements Ranged50 wiki_url https://oldschool.runescape.wiki/w/Ava's_accumulator + data/items/items-skill-requirements.json 10499:50 + data/items/items-wiki-page-text.json Infobox. Loader missing requirements stays null -> EquipPacketListener Ranged50 bypass; BonusManager HOLD. Scout W80Ax45 triple-verify; registry 0 hits 10499/ava before filing.",
+      "ids_mentioned": [
+        10499,
+        50,
+        4,
+        1,
+        4,
+        0
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "avas-accumulator-10499-omit-ranged50",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -10526,6 +10567,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 270,
+  "pending_candidates_total": 272,
   "completed_checks_total": 253
 }

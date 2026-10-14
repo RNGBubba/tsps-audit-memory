@@ -2,34 +2,26 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Progress — Wave 79 · 3262+ scouts · 2026-10-14 13:06 CDT
+## Progress — Wave 80 · 3326+ scouts · 2026-10-14 13:20 CDT
 
-> **40 Findings · 270 Pending · 253 Verified** — 563 total — **52.0% done · 270 remain**
+> **40 Findings · 272 Pending · 253 Verified** — 565 total — **51.9% done · 272 remain**
 >
 > % Done = (Findings + Verified) / Total — auto-updated every `Sync all MD: Wave N`
-
-```svg
-<svg viewBox="0 0 1000 28" xmlns="http://www.w3.org/2000/svg">
-  <text x="0" y="12" font-size="12" fill="currentColor">Overall 52.0% — 293 / 563 done</text>
-  <rect x="0" y="16" width="1000" height="10" rx="5" fill="var(--border)" />
-  <rect x="0" y="16" width="520" height="10" rx="5" fill="var(--accent)" />
-</svg>
-```
 
 | Category | Done | Total | % Done | Pending | ETA |
 |---|---:|---:|---:|---:|---|
 | Drops | 3 | 3 | 100% | 0 | done |
-| Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0 w |
-| Shops / NPCs | 56 | 71 | 78.9% | 15 | ~0.2 w |
-| World | 88 | 146 | 60.3% | 58 | ~0.9 w |
-| Combat | 33 | 57 | 57.9% | 24 | ~0.4 w |
-| Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 w |
-| Skills | 60 | 126 | 47.6% | 66 | ~1.0 w |
-| Items / Equipment | 20 | 94 | 21.3% | 74 | ~1.2 w |
-| Prayer / Slayer | 1 | 12 | 8.3% | 11 | ~0.2 w |
-| **Overall** | **293** | **563** | **52.0%** | **270** | **~4.2 w** |
+| Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0 waves |
+| Shops / NPCs | 56 | 71 | 78.9% | 15 | ~0.2 waves |
+| World | 88 | 146 | 60.3% | 58 | ~0.9 waves |
+| Combat | 33 | 57 | 57.9% | 24 | ~0.4 waves |
+| Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 waves |
+| Skills | 60 | 126 | 47.6% | 66 | ~1.0 waves |
+| Items / Equipment | 20 | 96 | 17.2% | 76 | ~1.2 waves |
+| Prayer / Slayer | 1 | 12 | 8.3% | 11 | ~0.2 waves |
+| **Overall** | **293** | **565** | **51.9%** | **272** | **~4.3 waves (~0.9 days)** |
 
-*ETA = Pending / 64 per wave · ~5 waves/day → ~0.9 days to re-scan queue · trailing +1.4 new CAND/wave*
+*ETA = Pending / 64 checks per wave · ~5 waves/day · trailing +1.4 new CAND/wave · updated automatically each wave*
 
 ## Document tree — find anything without opening files
 
@@ -50,13 +42,13 @@ Memory/
 │   ├── protocol.md           2  — PacketSender, opcode 50
 │   ├── prayer-slayer.md      1
 │   └── items-equipment.md    1
-├── pending/                 <- 270 CAND (21 files)
+├── pending/                 <- 272 CAND (21 files)
 │   ├── world/
 │   │   ├── general.md       34  - Zeah shops, diaries, teleports, misc
 │   │   ├── npcs.md          21  - Talk-to slots, NPC handlers
 │   │   └── objects.md        3  - altars, ladders, portals
 │   ├── items/
-│   │   └── equipment.md     74  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537 + dragonfire 11284 + crystal 4212 + Elysian 12817 + Serpentine 12931 + defenders 8846-8849 + Hydra 23073/23075 + Twisted buckler 21000 + Dinh bulwark 21015 + Inquisitor 24419 + 3rdAge 10338-10344 + Eternal 13235 + Zenyte 19547/19553 + Skull 9013 + Toxic staff 12902 + Thammaron 22552 + Nightmare 24422-24425 + Bow Faerdhinen 25865 + Blade Saeldor 25870 + Crystal halberd 23987 + Crystal armour 23971 + Gauntlet attuned bow 23902 + kiteshield 1193 + Blue dhide 2499 + Ranger gloves 19994 + Seers 6731 + Crystal shield 23991 + Torva 26382
+│   │   └── equipment.md     76  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537 + dragonfire 11284 + crystal 4212 + Elysian 12817 + Serpentine 12931 + defenders 8846-8849 + Hydra 23073/23075 + Twisted buckler 21000 + Dinh bulwark 21015 + Inquisitor 24419 + 3rdAge 10338-10344 + Eternal 13235 + Zenyte 19547/19553 + Skull 9013 + Toxic staff 12902 + Thammaron 22552 + Nightmare 24422-24425 + Bow Faerdhinen 25865 + Blade Saeldor 25870 + Crystal halberd 23987 + Crystal armour 23971 + Gauntlet attuned bow 23902 + kiteshield 1193 + Blue dhide 2499 + Ranger gloves 19994 + Seers 6731 + Crystal shield 23991 + Torva 26382
 │   ├── protocol/
 │   │   └── packets.md       20  - WIDGET_ACTION, OPNPC, Trade, run modifier
 │   ├── shops/
@@ -119,7 +111,7 @@ Memory/
 | File | Candidates | Example IDs |
 |---|---|---|
 | `pending/world/general.md` | 34 | CAND-004 Dragonstone, CAND-006 Drew bucket… |
-| `pending/items/equipment.md` | 74 | CAND-216 Bronze scim 1321 / CAND-217 Warhammer 1335-1347 / CAND-218 Leaf-bladed 20727 / CAND-219 Brine 11037 / CAND-220 Leaf 11902 / CAND-221 Hasta 11371 / CAND-222 Inquisitor / CAND-223 Ghrazi / CAND-224 dart family 806-810 / CAND-225 Mithril crossbow 9181 / CAND-226 Twisted bow 20997 / CAND-227 Scythe 22325 / CAND-228 Dragon hunter 21012 / CAND-229 Throwing axe 802 / CAND-230 Amethyst 11388 / CAND-231 Zenyte / CAND-232 Rapid Heal / CAND-233 Smite / CAND-234 Claws 3097-3101 / CAND-235 Ancient mace 11061 / CAND-236 High-ID ornamental 20000-20047 / CAND-237 Shaman mask 21838 / CAND-238 Ancient godsword 26233 / CAND-239 Corrupted AGS 28537 / CAND-241 Dragonfire 11284 / CAND-242 Crystal 4212 / CAND-243 Elysian 12817 / CAND-244 defenders / CAND-245 Hydra 23073 / CAND-249 Twisted buckler 21000 / CAND-250 Dinh 21015 / CAND-251 Inquisitor helm 24419 / CAND-252 3rdAge 10338 / CAND-253 Eternal 13235 / CAND-254 Zenyte 19547 / CAND-255 Skull 9013 / CAND-256 Guam 91 / CAND-257 Toxic staff 12902 / CAND-258 Thammaron 22552 / CAND-259 Nightmare 24422 / CAND-260 Bow Faerdhinen 25865 / CAND-261 Saeldor 25870 / CAND-262 Crystal halberd 23987 / CAND-263 Crystal armour 23971 / CAND-264 Gauntlet attuned 23902 / CAND-265 Steel kiteshield 1193 / CAND-266 Blue dhide 2499 / CAND-267 Ranger gloves 19994 / CAND-268 Seers 6731 / CAND-269 Crystal shield 23991 / CAND-270 Torva 26382 |
+| `pending/items/equipment.md` | 76 | CAND-216 Bronze scim 1321 / CAND-217 Warhammer 1335-1347 / CAND-218 Leaf-bladed 20727 / CAND-219 Brine 11037 / CAND-220 Leaf 11902 / CAND-221 Hasta 11371 / CAND-222 Inquisitor / CAND-223 Ghrazi / CAND-224 dart family 806-810 / CAND-225 Mithril crossbow 9181 / CAND-226 Twisted bow 20997 / CAND-227 Scythe 22325 / CAND-228 Dragon hunter 21012 / CAND-229 Throwing axe 802 / CAND-230 Amethyst 11388 / CAND-231 Zenyte / CAND-232 Rapid Heal / CAND-233 Smite / CAND-234 Claws 3097-3101 / CAND-235 Ancient mace 11061 / CAND-236 High-ID ornamental 20000-20047 / CAND-237 Shaman mask 21838 / CAND-238 Ancient godsword 26233 / CAND-239 Corrupted AGS 28537 / CAND-241 Dragonfire 11284 / CAND-242 Crystal 4212 / CAND-243 Elysian 12817 / CAND-244 defenders / CAND-245 Hydra 23073 / CAND-249 Twisted buckler 21000 / CAND-250 Dinh 21015 / CAND-251 Inquisitor helm 24419 / CAND-252 3rdAge 10338 / CAND-253 Eternal 13235 / CAND-254 Zenyte 19547 / CAND-255 Skull 9013 / CAND-256 Guam 91 / CAND-257 Toxic staff 12902 / CAND-258 Thammaron 22552 / CAND-259 Nightmare 24422 / CAND-260 Bow Faerdhinen 25865 / CAND-261 Saeldor 25870 / CAND-262 Crystal halberd 23987 / CAND-263 Crystal armour 23971 / CAND-264 Gauntlet attuned 23902 / CAND-265 Steel kiteshield 1193 / CAND-266 Blue dhide 2499 / CAND-267 Ranger gloves 19994 / CAND-268 Seers 6731 / CAND-269 Crystal shield 23991 / CAND-270 Torva 26382 |
 | `pending/world/npcs.md` | 21 | CAND-014 Disciple 7670, CAND-019 Hairdresser… |
 | `pending/protocol/packets.md` | 20 | CAND-051 Chat, CAND-028 OPPlayer2… |
 | `pending/shops/general-stores.md` | 15 | CAND-110 Varrock, CAND-133 Edgeville… |
