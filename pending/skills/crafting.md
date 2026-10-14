@@ -1,6 +1,6 @@
 # Pending — skills/crafting
 
-> **Candidates** (13) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (14) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Dragonstone cutting XP (uncut 1631 → cut 1615):** Active `Typescript-RSPS/server/plugins/skills/Crafting.plugin.js:8-18,21-61` requires Crafting 55 and awards 138 XP after consuming one uncut Dragonstone and producing one Dragonstone when paired with chisel 1755. Exact authoritative `READ-ONLY-DB/docs/items-json/{1631,1615,1755}.json` confirm item identities; the DB does not define Crafting XP. Current OSRS Wiki [Uncut dragonstone](https://oldschool.runescape.wiki/w/Uncut_dragonstone) specifies level 55 and 137.5 XP, so active XP is 0.5 too high per successful cut. Crafting plugin registration and the item-on-item listener establish the static route; no live interaction was run. Duplicate searches across available Memory found no Dragonstone candidate; historical recovery remains partial.
 
@@ -53,4 +53,11 @@
 - **Green d'hide crafting via needle 1733 + thread 1734 + leather 1745 -> body 1135 L63 x62 + tanning Ellis 3231 Tanner 5809 cost vs DB hide 1753/bundle vs leather 1745/needle thread no onItemOnItem vs ticket 1069 Steel platelegs not Green d'hide body:** Active Crafting only gem-cut vs tanning 1753 Green dragonhide -> 1745 leather via Lunar 1753->1745 free + Ellis/Tanner coin interface 1-20gp but no needle 1733+thread 1734 + 3x leather 1745 -> 1135 Green d'hide body L63 x62 handler missing vs DB items-json 1069 Steel platelegs vs 1135 Green d'hide body cost7800 vs active 4396 + needle 1733 + hide vs leather vs lunar free-tan distinct. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 1069, 1135, 1733, 1734, 1745, 1753, 63, 62).
 
 ---
-*Last re-verified: Wave 42 — 2026-10-13 — 64 HOLD/HOLD DUP (ranged bows/crossbows/darts/knives/javelins/chinchompas + magic staves/powered staves). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-42 for per-wave evidence.*
+
+---
+
+- **Zenyte cutting 19496 200 vs 50 XP (Leagues V 2024-11-27 down from 200) — level 89 HOLD:** Active `Crafting.plugin.js:10-18` GEMS `UNCUT_ZENYTE 19496 -> ZENYTE 19493 level:89 xp:200 anim:7185` via `cutGem->addExperiences(CRAFTING,200)` vs DB `items-json 19496/19493.json` identities + `data/items/items-wiki-page-text.json` Uncut zenyte "chiseling an uncut zenyte rewards 50 Crafting xp, down from 200" + Changes 27 Nov 2024 Leagues V + `last_updated 2024-10-01` pre-nerf. Level 89 matches, XP +150 over per cut. Distinct from CAND-004 0.5 family and CAND-178 amethyst. Sc W53-08 triple-verify; registry zenyte 0 CAND hits. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 19496, 19493, 1755, 89, 200, 50).
+
+---
+
+*Last re-verified: Wave 53 — 2026-10-13 — 64 W53 (14 HOLD crafting + 1 new CAND-231 Zenyte + tail) + Wave 42 — 2026-10-13 — 64 HOLD/HOLD DUP (ranged bows/crossbows/darts/knives/javelins/chinchompas + magic staves/powered staves). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-42 for per-wave evidence.*

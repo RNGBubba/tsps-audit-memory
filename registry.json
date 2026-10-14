@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-13T Wave52",
+  "generated": "2026-10-13T Wave53",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 223,
+    "pending_candidates_total": 233,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5005,6 +5005,214 @@
       "slug": "ghrazi-rapier-22324-stab94-vs100-str89-vs93-req75-vs80",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-224",
+      "title": "Mithril dart family 806-810 + 812-816 pre-Phosani stale ranged 3/4/5/8/11 vs 0 + str 1/3/4/7/10 vs 1/2/3/9/17 (Rune 811 + Dragon 11230 clean controls)",
+      "summary": "Active item-gameplay.json dart family bonuses [index4 arange,index11 rstr] stale vs DB items-json 806-811+11230 + Wiki 2021-06-30 Phosani rebalance: Bronze 806 [3,1] vs DB [0,1] arange 3->0 rstr 1 clean; Iron 807 [4,3] vs DB [0,2] 4->0 rstr 3->2 (+1); Steel 808 [5,4] req5 vs DB [0,3] req5 5->0 rstr 4->3 (+1 controlled); Mithril 809 [8,7] req20 vs DB [0,9] req20 rstr 7->9 (-2); Adamant 810 [11,10] req30 vs DB [0,17] req30 rstr 10->17 (-7); Rune 811 [0,26] vs DB [0,26] req40 HOLD; Dragon 11230 [0,35] HOLD vs DB [0,35] HOLD; poisoned 812 [3,1] mirrors 806 drift (812 is Bronze (p) not a tier). Loader ItemDefinitionLoader copies bonuses verbatim -> BonusManager 4/11 -> Accuracy/Damage formulas. Rebalance documented in items-wiki-page-text.json Bronze/Iron/Steel/Mithril/Adamant/Rune Changes 30 June 2021. Sc W53-02/03 triple-verify; registry 809 0 equip hits (CAND-097 is feather recipe, CAND-061 is Rune Tourist Trap gate distinct); distinct IDs 806-810/812-816. One family root.",
+      "ids_mentioned": [
+        806,
+        807,
+        808,
+        809,
+        810,
+        811,
+        812,
+        11230,
+        3,
+        4,
+        5,
+        8,
+        11
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "mithril-bronze-dart-family-806-810-phosani-rebalance-stale",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-225",
+      "title": "Mithril crossbow 9181 ranged 66 omit Ranged 36 - neighbours 9174/9179/9183/9185 clean controls",
+      "summary": "Active item-gameplay.json:9181 Mithril crossbow WEAPON/CROSSBOW bonuses [0,0,0,0,66] weight6 req null vs DB items-json 9181.json equipment attack_ranged 66 slot weapon requirements Ranged 36 wiki_url https://oldschool.runescape.wiki/w/Mithril_crossbow + data/items/items-wiki-page-text.json requires 36 Ranged + data/items/items-skill-requirements.json 9181:36. Loader copies bonuses/requirements only when present -> null bypasses EquipPacketListener Ranged 36 gate. Controls HOLD: Bronze 9174 arange18 null clean (DB null), Steel 9179 arange54 req31, Adamant 9183 arange78 req46, Rune 9185 arange90 req61 each byte-identical. Sc W53-31 triple-verify; registry 9181 0 hits, 9174 HOLD, no crossbow omit duplicate. Weight 6 vs 5.0 informational, alch 783/43/29 identical.",
+      "ids_mentioned": [
+        9181,
+        9174,
+        9179,
+        9183,
+        9185,
+        66,
+        36
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "mithril-crossbow-9181-omit-ranged36",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-226",
+      "title": "Twisted bow 20997 prayer 4 vs DB 0 + omit Ranged 75 vs Wiki 85 (Equipment Rebalance 2021-04-21 + Poll76 2022-05-11)",
+      "summary": "Active item-gameplay.json:20997 Twisted bow WEAPON/SHORTBOW doubleHanded bonuses [0,0,0,0,70,0,0,0,0,0,0,20,0,4] prayer 4 at index13 slot 2h req null vs DB items-json 20997.json equipment attack_ranged 70 ranged_strength 20 prayer 0 slot 2h requirements Ranged 75 weapon speed6 bow wiki_url https://oldschool.runescape.wiki/w/Twisted_bow + items-skill-requirements.json 20997:75 (DB stale) + data/items/items-wiki-page-text.json Twisted bow Infobox Bonuses prayer0 + prose requires 85 Ranged + Changes 2021-04-21 prayer 4->0 and 2022-05-11 75->85. Loader ItemDefinitionLoader omits null req -> BonusManager sums prayer 4 vs 0, EquipPacketListener bypasses Ranged gate. CHK-058 is DamageFormulas void+salve integer order + ranged_strength 20 identity only (ids 20997,19481) - no prayer/requirement coverage; distinct root. Sc W53-15/W53-29 triple-verify; registry 20997 0 CAND hits.",
+      "ids_mentioned": [
+        20997,
+        70,
+        20,
+        4,
+        75,
+        85,
+        0
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "twisted-bow-20997-prayer4-vs0-req75-vs85",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-227",
+      "title": "Scythe of Vitur charged 22325 slash 110 vs 125 + req 75/75 vs DB 80/90 (unc 22486 slash HOLD, req same drift) - CHK-222 stale",
+      "summary": "Active charged 22325 SCYTHE bonuses [70,110,30,75] req Attack75 Strength75 vs DB items-json 22325.json equipment stab70 slash125 crush30 str75 slot 2h requirements Attack80 Strength90 weapon speed5 linked 22485 + items-wiki-page-text Scythe of Vitur Changes 2024-01-17 slash 110->125 charged only and 2022-05-11 75->80/90 both variants; uncharged 22486 [50,75,10,50] req75/75 vs DB 50/75/10 str50 req80/90 - bonuses HOLD but req same drift same root. CHK-222 title claims slash125 req80/90 clean for 22325 vs DB via CombatMethodResolver but active bytes are 110/75 per ScytheOfVitur.plugin.js chargedIds/chargedByUncharged + ScytheCombatMethod MAX_HITS3 halved hit - CHK stale vs active row. Sc W53-14 triple-verify; registry scythe 0 CAND hits, only CHK-222; bounded charges 25736/25739/28543 same family. Sanguine 27557 placeholder clean.",
+      "ids_mentioned": [
+        22325,
+        22486,
+        22485,
+        110,
+        125,
+        75,
+        80,
+        90
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "scythe-of-vitur-22325-slash110-vs125-req75-vs80-90",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-228",
+      "title": "Dragon hunter crossbow 21012 ranged 95 omit Ranged 70 - bonuses 95 HOLD",
+      "summary": "Active item-gameplay.json:21012 Dragon hunter crossbow WEAPON/CROSSBOW bonuses [0,0,0,0,95] weight7 doubleHanded req null vs DB items-json 21012.json equipment attack_ranged 95 slot weapon requirements Ranged70 weapon speed6 crossbow wiki_url https://oldschool.runescape.wiki/w/Dragon_hunter_crossbow + data/items/items-skill-requirements.json 21012:70 + items-wiki-page-text Infobox arange+95 speed6 requiring 70 Ranged Changes 2022-05-11 65->70. Loader omits null req -> EquipPacketListener bypass. Bonuses 95 HOLD byte-identical; weight 7 vs 7.000 clean; dragonbane passive 30% acc 25% dmg via DragonHunter.js HOLD (CHK-058 range formula). Sc W53-37 triple-verify; registry 21012 0 hits (05 log W42 HOLD DUP not registry, W52 log same).",
+      "ids_mentioned": [
+        21012,
+        95,
+        70,
+        6
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "dragon-hunter-crossbow-21012-omit-ranged70",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-229",
+      "title": "Steel throwing axe family 802-805 req index drift Attack vs Ranged (Bronze 800 Iron 801 clean controls)",
+      "summary": "Active item-gameplay.json Steel 802 bonuses [0,0,0,0,8,11] requirements [5,0,0,0,0...] puts 5 at Attack index0 vs DB items-json 802.json equipment requirements Ranged5 arange8 rstr11 slot weapon speed5 wiki_url Steel thrownaxe + items-skill-requirements.json 802:5; Mithril 803 [12,16] req [20,...] Attack20 vs DB Ranged20 (802-803 already CAND W52A-05 flag, held offline); Adamant 804 [17,23] req [30,...,30] Attack30+Ranged30 over-restrictive vs DB Ranged30 arange17 rstr23; Rune 805 [26,36] req [40,...,40] Attack40+Ranged40 vs DB Ranged40 arange26 rstr36; Bronze 800 [4,5] req null vs DB null HOLD; Iron 801 [5,7] req null vs DB null HOLD prove index mapping RANGED=4 (808 Steel dart req[4]=5 vs this req[0]=5). Bonuses all HOLD 4/5/8/12/17/26 arange +5/7/11/16/23/36 rstr. Sc W53-04 triple-verify; registry 802 0 hits (thrownaxe 802 not in registry).",
+      "ids_mentioned": [
+        800,
+        801,
+        802,
+        803,
+        804,
+        805,
+        5,
+        20,
+        30,
+        40,
+        8,
+        12,
+        17,
+        26
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "steel-throwing-axe-802-805-req-index-drift-attack-vs-ranged",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-230",
+      "title": "Amethyst mining from crystals 11388/11389 req 92 240 XP - Mining.plugin ROCKS has 0 amethyst handler (crafting side separate CAND-178)",
+      "summary": "Active Mining.plugin.js ROCKS [9711 Clay...7461 Runite] + ESSENCE_ROCKS [15410/16687/34773] only; ALL_ROCKS->ROCK_BY_NAME + api.onObjectInteraction Mine:handleMine; grep amethyst/11388/11389/21347 =0. No lvl92 240XP oreId 21347; DB objects-summary.json 11388 Amethyst crystals 11389 Amethyst crystals (adjacent 11386 Sandstone 11387 Granite anchors) + items-json 21347 Amethyst item + data/items/items-wiki-page-text.json Amethyst Infobox id 21347 + body Mining it requires level 92 and grants 240 Mining experience (Mining Guild Expansion 2017-06-22). Registry case-insensitive amethyst 0 mining CAND hits; nearest CAND-178 is crafting 21347->tips 83/85/87/89 chisel missing (different file GEMS only OPAL to ZENYTE) distinct root; pending/skills/mining.md had 1 entry (CAND-164 Rune essence) never 11388. Sc W53-12 triple-verify; legacy frozen. 11388 as item Iron hasta kp distinct namespace.",
+      "ids_mentioned": [
+        11388,
+        11389,
+        21347,
+        92,
+        240,
+        11386,
+        11387
+      ],
+      "source_file": "pending/skills/mining.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "amethyst-mining-crystals-11388-11389-req92-240xp-missing",
+      "file": "pending/skills/mining.md",
+      "domain": "skills/mining"
+    },
+    {
+      "candidate_id": "CAND-231",
+      "title": "Zenyte cutting 19496 200 vs 50 XP (Leagues V 2024-11-27 down from 200) — level 89 HOLD",
+      "summary": "Active Crafting.plugin.js GEMS UNCUT_ZENYTE 19496 -> ZENYTE 19493 level89 xp200 animation7185 via cutGem->addExperiences(CRAFTING,200) vs DB items-json 19496 Uncut zenyte wiki_url https://oldschool.runescape.wiki/w/Uncut_zenyte + 19493 Zenyte identity + data/items/items-wiki-page-text.json Uncut zenyte prose chiseling grants 50 Crafting xp, down from 200 + Changes 27 Nov 2024 Leagues V: Raging Echoes + data/items/items-wiki-page-titles mirror. DB last_updated 2024-10-01 pre-nerf no XP field. Level89 matches, XP +150 over per cut. Distinct from CAND-004 dragonstone 0.5 family and CAND-178 amethyst missing + CHK-161 zenyte shard drop separate. Sc W53-08 triple-verify; registry zenyte 0 CAND hits.",
+      "ids_mentioned": [
+        19496,
+        19493,
+        1755,
+        89,
+        200,
+        50
+      ],
+      "source_file": "pending/skills/crafting.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "zenyte-cut-xp-19496-200-vs-50-leagues-v",
+      "file": "pending/skills/crafting.md",
+      "domain": "skills/crafting"
+    },
+    {
+      "candidate_id": "CAND-232",
+      "title": "Prayer Rapid Heal 10 drain 3.0 vs DB 3.3 per min (3.333 Wiki, ~9% under-drain)",
+      "summary": "Active PrayerHandler.ts:490 RAPID_HEAL PrayerData(22,3,5616,4111) req22 drain3.0 vs DB prayers-json 10.json id10 Rapid Heal drain_per_minute 3.3 wiki_url https://oldschool.runescape.wiki/w/Rapid_Heal requirements prayer22 bonuses{} + prayers-complete.json mirror 3.3; processDrain:400 drainEffect+=pd.drainRate*0.6 per tick (server 1.8/tick vs DB 1.98/tick vs client prayers.ts:244 drainRate2 =3.333*0.6 Wiki-faithful). Effect 2x HP restore timer not filed. CHK-017 Smite/Retribution gate distinct req only. Registry case-insensitive Rapid Heal 0 hits in pending/completed (only CAND-115/130/147/163 drain family 38.5 vs40 distinct IDs 27/26/28/29). Sc W53-09 triple-verify; wiki via DB wiki_url only.",
+      "ids_mentioned": [
+        10,
+        22,
+        3,
+        3.3,
+        4111,
+        5616
+      ],
+      "source_file": "pending/prayer/prayers.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "rapid-heal-drain-3-vs-3-3-prayer10",
+      "file": "pending/prayer/prayers.md",
+      "domain": "prayer/prayers"
+    },
+    {
+      "candidate_id": "CAND-233",
+      "title": "Prayer Smite 24 drain 32.0 vs DB 40.0 per min (8.0/min under-drain, req 52 HOLD)",
+      "summary": "Active PrayerHandler.ts:484 SMITE PrayerData(52,32.0,685,4121,[6]) req52 drain32.0 vs DB prayers-json 24.json id24 Smite drain_per_minute 40.0 wiki_url https://oldschool.runescape.wiki/w/Smite requirements prayer52 bonuses{} + prayers-complete.json mirror; drainEffect 19.2/tick vs 24.0/tick vs client prayers.ts:450 drainRate18=30*0.6 (client 30 stale vs DB 40). Requirement 52 HOLD byte-identical. CHK-017 gate Retribution/Redemption/Smite members world distinct. Registry smite drain 0 hits (only CHK-017 gate, CAND-115/130/147/163 drain family ids 27/26/28/29 distinct from 24). Sc W53-10 triple-verify; one root per entry.",
+      "ids_mentioned": [
+        24,
+        52,
+        32,
+        40,
+        685,
+        4121
+      ],
+      "source_file": "pending/prayer/prayers.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "smite-drain-32-vs-40-prayer24",
+      "file": "pending/prayer/prayers.md",
+      "domain": "prayer/prayers"
     }
   ],
   "completed_checks": [
@@ -9507,6 +9715,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 223,
+  "pending_candidates_total": 233,
   "completed_checks_total": 253
 }

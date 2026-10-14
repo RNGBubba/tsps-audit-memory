@@ -1,6 +1,6 @@
 # Pending — prayer/prayers
 
-> **Candidates** (9) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (11) — need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **High-level WIDGET_ACTION drops widget submenu index (group 219):** `MenuBridge.ts:419-425` maps submenu entries to widget ops with 1-based `opSubIndex`, dispatched in the event at `:359-370`; `widgetActionPayload.ts:188-192` stores it in `subOpId`. Active group-219 handling in `WidgetActionRouter.ts:138-143` calls `sendWidgetActionMessage`; `outgoing/widgets.ts:18-45,126-132` preserves `subOpId` in the normalized payload. But `ClientBinaryEncoder.encodeWidgetAction()` writes widget/group/child, option/target, op/button, cursor/primary, slot and itemId only (`ClientBinaryEncoder.ts:389-403`). The server decoder `ClientProtocol.ts:813-826` consumes the corresponding cursor/primary fields and returns no `subOpId`, despite that optional field existing in its type. Candidate-only; exact consumer-visible behavior bounded to loss of submenu index on this path.
 
@@ -37,4 +37,15 @@
 - **KBD 239 dragonfire via legacy fireImmunityTimer + shield + prayer not DragonfireProtectionTier (tier inert), no wilderness pvp tag despite world multi zone, ladder/lever missing wilderness/lever-teleblock gate, shock stat drain ungated, ice freeze 5 vs wiki 10 ticks ungated:** Active monsters-complete 239 hp240 size5 max25 vs DB 239 clean + drops king_black_dragon 128 Always bones 536 + 23 weighted + 5 tertiary 19812/7980/12653/12113 byte-identical except noted flags on 1515/444 vs DB; but runtime KingBlackDragon.plugin 239/2642/6502 provider ladder 18987 lever 1817 via Wilderness gated Wilderness LEVELLED_AREAS spawn 2269,4697 level0 world.json multi 2249,4672 covers multi not pvp, dragonfire hits RNG 0-9 dragon/shock/poison/ice via legacy combat:dragonfireProtection tier NOT read (An antifire tier via protecti) — potion extended ignored, shock drain and ice 5 vs 10 ungated vs wiki DragonfireProtectionTier resolve path used by Dragons.plugin; lair routing lacks lever:teleport wildy leaf. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 239, 2642, 6502, 18987, 1817, 2269, 4697, 536).
 
 ---
-*Last re-verified: Wave 42 — 2026-10-13 — 64 HOLD/HOLD DUP (ranged bows/crossbows/darts/knives/javelins/chinchompas + magic staves/powered staves). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-42 for per-wave evidence.*
+
+---
+
+- **Rapid Heal 10 drain 3.0 vs DB 3.3 per min (3.333 Wiki, ~9% under-drain):** Active `PrayerHandler.ts:490` `RAPID_HEAL PrayerData(22,3,5616,4111)` req22 drain3.0 vs DB `prayers-json 10.json` id10 Rapid Heal drain_per_minute 3.3 `wiki_url https://oldschool.runescape.wiki/w/Rapid_Heal` requirements prayer22 vs `prayers-complete.json` mirror 3.3; `processDrain:400` drainEffect+=pd.drainRate*0.6 per tick (server 1.8 vs DB 1.98 vs client drainRate2=3.333*0.6 Wiki-faithful). CHK-017 gate distinct. Registry Rapid Heal 0 hits (only CAND-115/130/147/163 drain family distinct IDs). Sc W53-09 triple-verify; wiki via DB wiki_url only. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 10, 22, 3, 3.3, 4111).
+
+---
+
+- **Smite 24 drain 32.0 vs DB 40.0 per min (8.0/min under-drain, req 52 HOLD):** Active `PrayerHandler.ts:484` `SMITE PrayerData(52,32.0,685,4121,[6])` req52 drain32.0 vs DB `prayers-json 24.json` Smite drain_per_minute 40.0 `wiki_url https://oldschool.runescape.wiki/w/Smite` requirements prayer52 vs mirror + client drainRate18=30*0.6 (stale 30 vs DB 40). Requirement 52 HOLD. Registry smite drain 0 hits (only CHK-017 gate). Sc W53-10 triple-verify; one root per entry. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 24, 52, 32, 40, 685).
+
+---
+
+*Last re-verified: Wave 53 — 2026-10-13 — 64 W53 (9 HOLD prayer + 2 new CAND-232 Rapid Heal 10 + CAND-233 Smite 24 + tail) + Wave 42 — 2026-10-13 — 64 HOLD/HOLD DUP (ranged bows/crossbows/darts/knives/javelins/chinchompas + magic staves/powered staves). Registry 40/217/253. Reorg v1.2 — this file’s domain entries remain current; see 05_Audit_Log.md Waves 36-42 for per-wave evidence.*

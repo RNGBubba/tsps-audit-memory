@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-52 1534+ scouts (62 HOLD + 2 new CAND-216/217 + 64 HOLD + 2 new CAND-218/219 + 128 HOLD + 4 new CAND-220/221/222/223) re-verified offline — 40/223/253)
+## Status snapshot (auto-synced to `registry.json` v1.2 — 2026-10-13 Waves 22-53 1598+ scouts (62 HOLD + 2 new CAND-216/217 + 64 HOLD + 2 new CAND-218/219 + 128 HOLD + 4 new CAND-220/221/222/223 + 64 W53 54 HOLD/HOLD DUP + 10 new CAND-224/225/226/227/228/229/230/231/232/233) re-verified offline — 40/233/253)
 
 | Bucket | Count | Where |
 |---|---|---|
@@ -105,8 +105,8 @@ Memory/
 | `pending/shops/general-stores.md` | 15 | CAND-110 Varrock, CAND-133 Edgeville… |
 | `pending/combat/bosses.md` | 13 | CAND-001 Hydra 22973, CAND-073 KQ prayer… |
 | `pending/skills/herblore.md` | 13 | CAND-065 Prayer 139, CAND-044 Ranarr… |
-| `pending/skills/crafting.md` | 13 | CAND-057 Gold jewellery 1635… |
-| `pending/prayer/prayers.md` | 9 | CAND-109 Rigour 5451, CAND-147 Rigour 38.5… |
+| `pending/skills/crafting.md` | 14 | CAND-057 Gold jewellery 1635… |
+| `pending/prayer/prayers.md` | 11 | CAND-109 Rigour 5451, CAND-232 Rapid Heal 10, CAND-233 Smite 24, CAND-147 Rigour 38.5… |
 
 ## Verified clean at a glance (253 CHK)
 
@@ -174,4 +174,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-52: 1534+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 64 HOLD/HOLD DUP in Wave 45; 64 HOLD/HOLD DUP in Wave 46; 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming; 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy; 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction; 64 HOLD/HOLD DUP in Wave 50 agility/farming/mining + remaining parity; 5 stream-fail re-verified offline as HOLD DUP; 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows; 8 billing/stream-fail re-verified offline as HOLD). Registry 40/223/253. See `05_Audit_Log.md` for per-wave evidence.*
+*Waves 22-53: 1598+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43; 64 HOLD/HOLD DUP in Wave 44; 64 HOLD/HOLD DUP in Wave 45; 64 HOLD/HOLD DUP in Wave 46; 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming; 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy; 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction; 64 HOLD/HOLD DUP in Wave 50 agility/farming/mining + remaining parity; 5 stream-fail re-verified offline as HOLD DUP; 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows; 8 billing/stream-fail re-verified offline as HOLD; 64 W52 64 HOLD + 64 W52A 64 HOLD/HOLD DUP + 4 new CAND-220/221/222/223 in Wave 52; 64 W53 54 HOLD/HOLD DUP + 10 new CAND-224 dart family + CAND-225 Mithril crossbow + CAND-226 Twisted bow + CAND-227 Scythe 22325 + CAND-228 Dragon hunter 21012 + CAND-229 throwing axe 802-805 + CAND-230 Amethyst 11388 + CAND-231 Zenyte 19496 + CAND-232 Rapid Heal + CAND-233 Smite 40/233/253; 4 stream-fail + 4 not-filed as HOLD. Registry 40/233/253. See `05_Audit_Log.md` for per-wave evidence.*
