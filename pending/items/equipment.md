@@ -1,5 +1,5 @@
 # Pending — items/equipment
-> **Candidates** (46) - need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (47) - need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Gloves of silence Hunter gate (ID 10075):** Active item row omits exact DB Hunter 54 requirement; ordinary equip checks no level when requirements are absent. Its pickpocket +5% and 62-failure wear-out are implemented. Candidate-only.
 
@@ -158,6 +158,10 @@
 ---
 
 - **Claws family Steel 3097 Black 3098 Mithril 3099 Adamant 3100 Rune 3101 omit Attack 5/10/20/30/40 (Bronze 3095 Iron 3096 null clean) — bonuses HOLD:** Active `item-gameplay.json` claws family bonuses HOLD vs DB `items-json 3095-3101` + Wiki via DB `wiki_url`: Bronze 3095 [3,4,-4,5] req null vs DB null HOLD; Iron 3096 [4,6,-4,7] req null vs DB null HOLD; Steel 3097 [8,11,-4,12] req null vs DB `3097.json` attack5 + Wiki "level 5 Attack; Death Plateau 43 Smithing 5 bars2"; Black 3098 [10,14,-4,14] req null vs DB attack10 + Wiki "level10 Attack; Death Plateau"; Mithril 3099 [11,16,-4,17] req null vs DB attack20 + Wiki "level20 Attack Smithing63"; Adamant 3100 [18,23,-4,24] req null vs DB attack30 + Wiki "level30 Attack Smithing83"; Rune 3101 [26,38,-4,39] req null vs DB attack40 + Wiki "level40 Attack Smithing98/gryphon"; loader `ItemDefinitionLoader.plugin.js` copies requirements only when !==undefined -> null bypasses `EquipPacketListener` attack gate; Smithing levels/bars HOLD. Sc W54-02 triple-verify; registry 3097-3101 0 hits (only CAND-172 Fossil Storage 30988 distinct). 7-claw family one root. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 3095, 3096, 3097, 3098, 3099, 3100, 3101, 5, 10, 20, 30, 40).
+
+---
+
+- **Ancient mace 11061 omit Attack 15 Prayer 25 — bonuses HOLD via MACE speed5 Spiked:** Active item-gameplay.json:11061 Ancient mace WEAPON/MACE bonuses [10,-2,16,14,3] req null vs DB items-json 11061.json equipment attack 10/-2/16 str14 prayer3 slot weapon requirements Attack15 Prayer25 weapon speed5 spiked wiki_url https://oldschool.runescape.wiki/w/Ancient_mace + data/items/items-wiki-page-text.json requires 15 Attack and 25 Prayer + Infobox Bonuses HOLD + items-skill-requirements.json 11061: attack15 prayer25 + weapon spiked speed5. Loader ItemDefinitionLoader.plugin.js copies only present bonuses/requirements -> null bypasses EquipPacketListener Attack/Prayer gate. Controls HOLD: Steel mace 1424 [7,-2,13,11,2] req5 vs DB5, Mithril 1428 req20 etc. Sc W55-07 triple-verify; registry 11061 0 hits. Ancient mace distinct from CAND-039 Dragon mace 1434 Shatter (special stab vs crush). Weight 1 vs 1.814 truncation informational. Alch 0 vs cost1000 via loader not payout path. — triage via scout read-only audit (see 05_Audit_Log.md for full `file:line` evidence; IDs 11061, 11064, 15, 25).
 
 ---
 

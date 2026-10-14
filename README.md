@@ -7,7 +7,7 @@
 | Bucket | Count | Where |
 |---|---|---|
 | **Accepted findings** (bugs that are verified broken) | **40** - 2 High, 34 Medium, 4 Low | [`findings/`](findings/) + `findings[]` in `registry.json` |
-| **Candidates** (need verification before promotion) | **239** | [`pending/`](pending/) + `pending_candidates[]` (`CAND-001...CAND-239`) |
+| **Candidates** (need verification before promotion) | **240** | [`pending/`](pending/) + `pending_candidates[]` (`CAND-001...CAND-240`) |
 | **Verified clean** (bounded no-mismatch) | **253** | [`completed/`](completed/) + `completed_checks[]` (`CHK-001`...`CHK-253`) |
 | **No duplicate IDs** | 0 duplicated AUD/CAND/CHK IDs | See deduplication report below |
 
