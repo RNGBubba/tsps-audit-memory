@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave77",
+  "generated": "2026-10-14T Wave78",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 263,
+    "pending_candidates_total": 264,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5860,6 +5860,30 @@
       "slug": "crystal-armour-23971-23975-23977-23979-omit-agility50",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-264",
+      "title": "Gauntlet attuned bows 23902 Crystal bow (attuned) + 23856 Corrupted bow (attuned) prayer 1 vs DB/Wiki 2 (basic 1/perfected 3 clean)",
+      "summary": "Active item-gameplay.json:23902 Crystal bow (attuned) WEAPON/LONGBOW bonuses [0,0,0,0,118,0,0,0,0,0,0,88,0,1] weight1.814 vs DB items-json 23902.json equipment attack_ranged118 ranged_strength88 prayer2 slot2h requirements null wiki_url https://oldschool.runescape.wiki/w/Crystal_bow_(attuned) + 23856 Corrupted bow (attuned) WEAPON/LONGBOW bonuses [0,0,0,0,118,0,0,0,0,0,0,88,0,1] vs DB 23856.json equipment 118/88 prayer2 slot2h wiki_url https://oldschool.runescape.wiki/w/Corrupted_bow_(attuned) + data/items/items-wiki-page-text.json Infobox Bonuses arange118 rstr88 prayer2; controls 23901 Crystal bow (basic) [72,42,1] clean vs DB 23901 prayer1 + 23903 perfected [172,138,3] clean vs DB 3 + 23855/23857 basic/perfected corrupted 1/3 clean. Loader ItemDefinitionLoader.plugin.js:143-164 copies bonuses verbatim -> BonusManager index13 prayer 1 vs 2 drift. Scout W78Ax07 triple-verify; registry 0 hits 23902/23856/attuned.",
+      "ids_mentioned": [
+        23902,
+        23856,
+        23901,
+        23903,
+        23855,
+        23857,
+        118,
+        88,
+        1,
+        2,
+        3
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "gauntlet-attuned-bows-23902-23856-prayer1-vs2",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -10362,6 +10386,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 263,
+  "pending_candidates_total": 264,
   "completed_checks_total": 253
 }
