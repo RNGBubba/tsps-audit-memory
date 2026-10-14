@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave73",
+  "generated": "2026-10-14T Wave74",
   "purpose": "Agentic memory bank for TSPS audit \u2014 single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 248,
+    "pending_candidates_total": 256,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5530,6 +5530,183 @@
       "slug": "sanguinesti-staff-22323-22481-magic75-vs-82",
       "file": "pending/skills/herblore.md",
       "domain": "skills/herblore"
+    },
+    {
+      "candidate_id": "CAND-249",
+      "title": "Twisted buckler 21000 ranged_strength 0 vs DB/Wiki 10 + omit Defence75/Ranged75 ( Summer Sweep-Up 2021-06-30 + 2026-07-22 )",
+      "summary": "Active item-gameplay.json:21000 Twisted buckler SHIELD bonuses [ -7/-8/-7/-10/18 defence 22/24/22/26/58 rstr0 ] weight4.5 requirements null vs DB items-json 21000.json equipment attack -7/-8/-7/-10/18 defence 22/24/22/26/58 rstr10 slot shield requirements Defence75 Ranged75 wiki_url https://oldschool.runescape.wiki/w/Twisted_buckler + data/items/items-wiki-page-text.json Infobox Bonuses rstr+10 Changes 2021-06-30 rstr0->10; loader ItemDefinitionLoader.plugin.js:143-164 copies bonuses/requirements verbatim -> BonusManager index11 rstr10 drift + EquipPacketListener bypasses 75 gates. Scout W74Ax08 triple-verify; registry 0 hits 21000/buckler.",
+      "ids_mentioned": [
+        21000,
+        21001,
+        21002,
+        10,
+        58,
+        75
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "twisted-buckler-21000-rstr0-vs10-req75-omitted",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-250",
+      "title": "Dinh's bulwark 21015 bonuses stale pre-2021-09-22 + omit Attack75/Defence75 \u2014 crush 110 vs124 + def 141/145/145/18 vs106/109/109/-10 speed7->5",
+      "summary": "Active item-gameplay.json:21015 Dinh's bulwark WEAPON/BULWARK doubleHanded weight30 bonuses [0,0,110,0,0,141,145,145,18,148,38] no requirements vs DB items-json 21015.json equipment attack 0/0/124/0/0 defence 106/109/109/-10/148 melee38 slot2h requirements Attack75 Defence75 weapon speed5 wiki_url https://oldschool.runescape.wiki/w/Dinh%27s_bulwark + data/items/items-wiki-page-text.json Changes 2021-09-22 crush110->124 stab141->106 slash145->109 crush145->109 magic18->-10 speed7->5; loader copies bonuses/requirements verbatim -> BonusManager index2 acrush -14 + index5-9 def drifts. Scout W74Ax09 triple-verify; registry 0 hits 21015/bulwark.",
+      "ids_mentioned": [
+        21015,
+        21016,
+        21017,
+        124,
+        110,
+        106,
+        109,
+        75
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "dinhs-bulwark-21015-stale-bonuses-and-req75-omitted",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-251",
+      "title": "Inquisitor's great helm 24419 stale pre-Summer Sweep-Up 2026-07-22 \u2014 crush 8 vs10 + str4 vs6 + stab/slash -2 vs0 (mace 24417 distinct CAND-222)",
+      "summary": "Active item-gameplay.json:24419 Inquisitor's great helm FULL_HELMET bonuses [ -2/-2/8/-5/-5,19/10/21/0/12,4] req Defence30 Strength70 vs DB items-json 24419.json equipment attack 0/0/10/-5/-5 defence 19/10/21/0/12 melee6 slot head requirements Strength70 Defence30 wiki_url https://oldschool.runescape.wiki/w/Inquisitor%27s_great_helm + data/items/items-wiki-page-text.json Changes 2026-07-22 crush8->10 str4->6 stab-2->0 slash-2->0; loader copies bonuses verbatim via ItemDefinitionLoader.plugin.js -> BonusManager index2/10 etc. Distinct from CAND-222 mace 24417. Scout W74Ax11 triple-verify; registry 0 hits 24419/great helm.",
+      "ids_mentioned": [
+        24419,
+        24420,
+        24457,
+        10,
+        8,
+        6,
+        4,
+        70,
+        30
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "inquisitors-great-helm-24419-stale-2026-07-22",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-252",
+      "title": "3rd Age mage family 10338 robe top /10340 robe /10342 mage hat /10344 amulet stale \u2014 Defence 65 vs DB30 + magic damage 0 vs1.0 + examine ancient vs fabulously ancient",
+      "summary": "Active item-gameplay.json:10342 COIF 8/0 defence8 mdmg0 req Defence65 Magic65 vs DB 10342.json head attack8 defence8 mdmg1.0 req Magic65 Defence30 wiki_url https://oldschool.runescape.wiki/w/3rd_Age_mage_hat + 10338 PLATEBODY 24/24 mdmg0 req 65/65 vs DB body 24/24 mdmg1.0 req30/65 + 10340 LEGS 19/19 mdmg0 vs DB 19/19 mdmg1.0 + 10344 AMULET 15/10 mdmg0 vs DB 15/10 mdmg0 but req same; all weight not copied but examine Ancient vs Fabulously ancient; loader ItemDefinitionLoader.plugin.js hydrate + Bonuses index12 mdmg 0 vs1 drift. Scout W74Ax21 triple-verify; registry 0 hits 10342/10338 mage family.",
+      "ids_mentioned": [
+        10342,
+        10338,
+        10340,
+        10344,
+        65,
+        30,
+        1,
+        24,
+        19,
+        15
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "3rd-age-mage-family-10338-10344-def65-vs30-mdmg0-vs1",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-253",
+      "title": "Eternal boots 13235 magic_damage 0 vs1.0 + omit Magic75/Defence75 (Pegasian 13237 rstr +1 sweep distinct but grouped family HOLD DUP as control)",
+      "summary": "Active item-gameplay.json:13235 BOOTS bonuses [0,0,0,8,0,5/5/5/8/5,0,0,0] no requirements vs DB items-json 13235.json equipment attack8 defence5/5/5/8/5 magic_damage1.0 slot feet requirements Magic75 Defence75 wiki_url https://oldschool.runescape.wiki/w/Eternal_boots + data/items/items-wiki-page-text.json Changes 2024-05-29 mdmg0->1.0; loader ItemDefinitionLoader.plugin.js has no ETERNAL_BOOTS hardcoded (only PEGASIAN/AVERNIC/ANCESTRAL) -> requirements null bypasses EquipPacketListener Magic75/Def75; BonusManager index12 mdmg 0 vs1 drift. Scout W74Ax16 triple-verify; registry 0 hits 13235/eternal boots.",
+      "ids_mentioned": [
+        13235,
+        13236,
+        13237,
+        8,
+        1,
+        75,
+        5
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "eternal-boots-13235-mdmg0-vs1-req75-omitted",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-254",
+      "title": "Zenyte necklaces Necklace of anguish 19547 + Amulet of torture 19553 omit Hitpoints 75 \u2014 active AMULET/RING requirements null vs DB Hitpoints75 (ornamental 22249 control)",
+      "summary": "Active item-gameplay.json:19547 AMULET bonuses [0,0,0,0,15,0,0,0,0,0,0,5,0,2] no requirements vs DB 19547.json equipment arange15 rstr5 prayer2 slot neck requirements Hitpoints75 wiki_url https://oldschool.runescape.wiki/w/Necklace_of_anguish + 19553 AMULET bonuses [15,15,15,0,0,0,0,0,0,0,10,0,0,2] vs DB 19553.json equipment 15/15/15 str10 prayer2 requirements Hitpoints75 wiki_url https://oldschool.runescape.wiki/w/Amulet_of_torture; controls 19550 Ring of suffering HOLD, ornamental 22249 has req Hitpoints75 correctly. Loader copies only present requirements -> bypass Hitpoints gate. Scout W74Ax05/06 triple-verify; registry 0 hits 19547/19553 zenyte HP75.",
+      "ids_mentioned": [
+        19547,
+        19553,
+        19550,
+        22249,
+        75,
+        15,
+        10,
+        5,
+        2
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "zenyte-necklaces-19547-19553-omit-hitpoints75",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-255",
+      "title": "Skull sceptre family 9013 (+ imbuded 21276) combat drift \u2014 attack_magic 4 vs10 + examine An imbued vs A fragile + weight 1.8 vs1.814 (9007 Right half weight 1 vs0.08 grouped)",
+      "summary": "Active item-gameplay.json:9013 WEAPON/STAFF bonuses [0,-1,7,4,0,2,3,1,4,0,3] examine An imbued magical Sceptre weight1.8 vs DB 9013.json equipment attack -1/7 magic10 def2/3/1/4 melee3 slot weapon requirements null weight1.814 wiki_url https://oldschool.runescape.wiki/w/Skull_sceptre + 21276 Skull sceptre (i) same bonuses vs DB 21276.json same; 9007 Right skull half weight1 vs DB 0.08 grouped same family per one-root rule. Loader copies bonuses verbatim -> BonusManager index3 acrush drift -6. Scout W74Ax29 triple-verify; registry 0 hits 9013/21276 skull sceptre bonuses.",
+      "ids_mentioned": [
+        9013,
+        21276,
+        9007,
+        9008,
+        9009,
+        9010,
+        9011,
+        9012,
+        4,
+        10,
+        1
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "skull-sceptre-9013-21276-attack4-vs10-examine-swapped",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-256",
+      "title": "Herblore Guam potion (unf) 91 permits creation at Herblore 1 vs Wiki 3 (Marrentill 93 - Torstol 111 clean controls)",
+      "summary": "Active Herblore.plugin.js UNFINISHED_POTIONS Map Guam potion (unf) 91 level1 vs Wiki via DB wiki_url https://oldschool.runescape.wiki/w/Guam_potion_(unf) + data/items/items-wiki-page-text.json Guam potion (unf) Recipe skill1lvl3 requiring 3 Herblore + Creation ticks1; controls Marrentill 93 lvl5 vs5 HOLD, Tarromin 95 12 vs12, Harralander 97 22, Ranarr 99 30, Irit 101 45, Avantoe 103 50, Kwuarm 105 55, Cadantine 107 66, Dwarf weed 109 72, Torstol 111 78 all HOLD byte-identical + alchemy 1/1 HOLD via ItemDefinitionLoader. Registry 0 hits Guam unf level 91; distinct from AUD-063 cleaning. Scout W74Ax35 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        91,
+        93,
+        95,
+        97,
+        99,
+        101,
+        103,
+        105,
+        107,
+        109,
+        111,
+        1,
+        3
+      ],
+      "source_file": "pending/skills/herblore.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "guam-potion-unf-91-level1-vs-wiki3",
+      "file": "pending/skills/herblore.md",
+      "domain": "skills/herblore"
     }
   ],
   "completed_checks": [
@@ -10032,6 +10209,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 248,
+  "pending_candidates_total": 256,
   "completed_checks_total": 253
 }
