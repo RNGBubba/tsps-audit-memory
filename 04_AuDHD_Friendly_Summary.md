@@ -1,6 +1,6 @@
 # Daily Audit Summary
 
-> **Agentic entry point is [00_INDEX.md](00_INDEX.md) + [registry.json](registry.json).** This file is the human working view - current priorities, quick wins, and what's next. Detail lives in `findings/`+`pending/`+`completed/` + `registry.json`. Tree lives in `00_INDEX.md`. Reorg v1.2 2026-10-14 (updated through Wave 62): 40/240/253.
+> **Agentic entry point is [00_INDEX.md](00_INDEX.md) + [registry.json](registry.json).** This file is the human working view - current priorities, quick wins, and what's next. Detail lives in `findings/`+`pending/`+`completed/` + `registry.json`. Tree lives in `00_INDEX.md`. Reorg v1.2 2026-10-14 (updated through Wave 63): 40/240/253.
 
 ## Quick Wins — Top 10 to fix first
 
@@ -21,7 +21,7 @@
 
 | Family | File | Count | Sample |
 |---|---|---|---|
-| Equipment bonus/requirement | pending/items/equipment.md | 46 | CAND-216 Bronze scim 1321 / CAND-217 Warhammer 1335-1347 / CAND-218 Leaf-bladed 20727 / CAND-219 Brine 11037 / CAND-220 Leaf 11902 / CAND-221 Hasta 11371 / CAND-222 Inquisitor 24417 / CAND-223 Ghrazi 22324 / CAND-224 dart family 806-810 / CAND-225 Mithril crossbow 9181 / CAND-226 Twisted bow 20997 / CAND-227 Scythe 22325 / CAND-228 Dragon hunter 21012 / CAND-229 throwing axe 802 / CAND-230 Amethyst 11388 / CAND-231 Zenyte / CAND-232 Rapid Heal / CAND-233 Smite / CAND-234 Claws 3097-3101 / CAND-235 Ancient mace 11061 / CAND-236 High-ID ornamental 20000-20047 / CAND-237 Shaman mask 21838 / CAND-238 Ancient godsword 26233 / CAND-239 Corrupted AGS 28537 |
+| Equipment bonus/requirement | pending/items/equipment.md | 47 | CAND-216 Bronze scim 1321 / CAND-217 Warhammer 1335-1347 / CAND-218 Leaf-bladed 20727 / CAND-219 Brine 11037 / CAND-220 Leaf 11902 / CAND-221 Hasta 11371 / CAND-222 Inquisitor 24417 / CAND-223 Ghrazi 22324 / CAND-224 dart family 806-810 / CAND-225 Mithril crossbow 9181 / CAND-226 Twisted bow 20997 / CAND-227 Scythe 22325 / CAND-228 Dragon hunter 21012 / CAND-229 throwing axe 802 / CAND-230 Amethyst 11388 / CAND-231 Zenyte / CAND-232 Rapid Heal / CAND-233 Smite / CAND-234 Claws 3097-3101 / CAND-235 Ancient mace 11061 / CAND-236 High-ID ornamental 20000-20047 / CAND-237 Shaman mask 21838 / CAND-238 Ancient godsword 26233 / CAND-239 Corrupted AGS 28537 |
 | NPCs/Options | pending/world/npcs.md | 21 | Disciple 7670 slot-5 Check |
 | Packets/Protocol | pending/protocol/packets.md | 20 | WIDGET_ACTION 219, OPNPC 50 |
 | Shops | pending/shops/general-stores.md | 15 | Lumbridge/Varrock 1102/1362 |
@@ -38,6 +38,7 @@
 - **Need shop?** → `pending/shops/general-stores.md` + `completed/shops.md`.
 - Tree + counts: 00_INDEX.md → document tree section.
 
-## Latest — Waves 22-62 (2174+ scouts, through Wave 62 exhaustive 64 HOLD/HOLD DUP re-verification (Wave 62: 63 HOLD/HOLD DUP + 1 new CAND-240 Halberd 3196-3204 Strength 5/10/15/20/30 omit + 1 stream-fail re-verified offline as CAND-240)
+## Latest — Waves 22-63 (2238+ scouts, through Wave 63 exhaustive 64 HOLD/HOLD DUP re-verification)
+2238+ scouts drained offline since Wave 22 (62 HOLD/HOLD DUP + 2 new CAND-216/217 + 2 new CAND-218/219 + 128 HOLD + 4 new CAND-220/221/222/223 in Wave 41; 64 HOLD/HOLD DUP in Wave 42; 64 HOLD/HOLD DUP in Wave 43 — arrows/bolts/ammo + jewellery + capes/gloves/boots; 64 HOLD/HOLD DUP in Wave 44 — shields/kites + helms + legs/body; 64 HOLD/HOLD DUP in Wave 45 — dhides/mystic/infinity/barrows; 64 HOLD/HOLD DUP in Wave 46 — void/fighter/obsidian/dragon special weapons + ornament kits + jewellery; 64 HOLD/HOLD DUP in Wave 47 — herblore potions + smithing bars + fletching bows + cooking/fishing + farming seeds; 64 HOLD/HOLD DUP in Wave 48 — construction planks + mining ores + woodcutting logs + fishing/cooking + herblore secondaries/unf/grimy; 64 HOLD/HOLD DUP in Wave 49 — hunter/runecraft/thieving/slayer/construction; 64 HOLD/HOLD DUP in Wave 50 — agility/farming/mining + remaining parity; 5 stream-fail re-verified offline as HOLD DUP; 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows; 8 billing/stream-fail re-verified offline as HOLD; 64 HOLD/HOLD DUP in Wave 52 exhaustive + 4 new CAND-220/221/222/223; 64 HOLD/HOLD DUP in Wave 53 54 HOLD/HOLD DUP + 10 new CAND-224/225/226/227/228/229/230/231/232/233; 64 HOLD/HOLD DUP in Wave 54 63 HOLD/HOLD DUP + 1 new CAND-234 Claws; 64 HOLD/HOLD DUP in Wave 55 63 HOLD/HOLD DUP + 1 new CAND-235 Ancient mace; 60 HOLD/HOLD DUP in Wave 56 60 HOLD/HOLD DUP + 4 new CAND-236/237/238/239; 64 HOLD/HOLD DUP in Wave 57; 64 HOLD/HOLD DUP in Wave 58; 64 HOLD/HOLD DUP in Wave 59; 64 HOLD/HOLD DUP in Wave 60; 64 HOLD/HOLD DUP in Wave 61; 64 HOLD/HOLD DUP in Wave 62 axes/pickaxes/maces/longswords/battleaxes/daggers/halberds/spears/bolts + 1 new CAND-240 Halberd 3196-3204 Strength omit; 64 HOLD/HOLD DUP in Wave 63 axes/pickaxes/maces/longswords/battleaxes/daggers/halberds/spears/crossbows/bolts + 0 new CAND/CHK. Registry 40/240/253.)
 ---
 *Teams: fix from `findings/<domain>.md` + registry Open+High/Med first; investigate via `pending/<domain>/<sub>.md`. Full tables in `00_INDEX.md`.
