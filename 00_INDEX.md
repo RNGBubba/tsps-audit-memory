@@ -30,19 +30,19 @@ Memory/
 │   ├── protocol.md           2  — PacketSender, opcode 50
 │   ├── prayer-slayer.md      1
 │   └── items-equipment.md    1
-├── pending/                 <- 239 CAND (21 files)
+├── pending/                 <- 248 CAND (21 files)
 │   ├── world/
 │   │   ├── general.md       34  - Zeah shops, diaries, teleports, misc
 │   │   ├── npcs.md          21  - Talk-to slots, NPC handlers
 │   │   └── objects.md        3  - altars, ladders, portals
 │   ├── items/
-│   │   └── equipment.md     46  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537
+│   │   └── equipment.md     53  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537 + dragonfire 11284 + crystal 4212 + Elysian 12817 + Serpentine 12931 + defenders 8846-8849 + Hydra 23073/23075
 │   ├── protocol/
 │   │   └── packets.md       20  - WIDGET_ACTION, OPNPC, Trade, run modifier
 │   ├── shops/
 │   │   └── general-stores.md 15  — Lumbridge/Varrock/Edgeville/Falador…
 │   ├── skills/
-│   │   ├── herblore.md      13  — super atk/str/def, potion XP
+│   │   ├── herblore.md      15  — super atk/str/def, potion XP + Bastion/Battlemage + Sanguinesti
 │   │   ├── crafting.md      13  — dragonstone, leather, jewellery
 │   │   ├── smithing.md       8  — mithril bar, cannonball, coal bag
 │   │   ├── cooking.md        8  — shark/manta/karambwan, cake
