@@ -2,14 +2,22 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 - 2026-10-14 Waves 22-79 3262+ scouts (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41 + 64 HOLD/HOLD DUP in Wave 42 + 64 HOLD/HOLD DUP in Wave 43 + 64 HOLD/HOLD DUP in Wave 44 + 64 HOLD/HOLD DUP in Wave 45 + 64 HOLD/HOLD DUP in Wave 46 + 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming + 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy + 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction + 64 HOLD/HOLD DUP in Wave 50 agility/farming/mining + remaining parity + 5 stream-fail re-verified offline as HOLD DUP + 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows + 8 billing/stream-fail re-verified offline HOLD DUP + 64 HOLD/HOLD DUP in Wave52 axes/scim/warhammer/leaf/sabre/hasta/inquisitor/ghrazi/dart/crossbow/bow/scythe/dhcb/thrownaxe/amethyst/zenyte/prayers/shops/bank/world + 64 HOLD/HOLD DUP in Wave53 darts/crossbows/twisted/scythe/dhcb/thrownaxe/amethyst/zenyte/prayers/world + 64 HOLD/HOLD DUP in Wave54 claws/spears/axes/maces/longswords/battleaxes/daggers/whip/godswords/blowpipe/inquisitor/ghrazi + 64 HOLD/HOLD DUP in Wave55 high-ID ornamental/shaman/godswords + 64 HOLD/HOLD DUP in Wave56 exhaustive 1300-1350/mystic/Graceful/starters + 64 HOLD/HOLD DUP in Waves57-73 exhaustive beyond CAND-248 2h/scim/dagger/battleaxe/claws/elder/bludgeon/defender/shield/spirit/bow/ballista/knife/javelin/trident/kodai/capecape/serp/bandos/armadyl/potion/slayer/agility/farming/shop/npc/KQ/protocol + 64 scouts in Wave74 exhaustive ancestral/torva/anguish/buckler/bulwark/justiciar/inquisitor/ghrazi/ballista/boots/3rdAge/graceful/void/cape/salve/occult/fury/lance/sceptre/tentacle/chinchompa/bow/crossbow/cannonball/herblore unf/cooking/slayer/prayer/farming/agility/world/shop/bank/protocol/boss/drops/woodcutting/mining/fletching/crafting/smithing 56 HOLD/HOLD DUP + 8 new CAND-249 Twisted buckler 21000 + CAND-250 Dinh bulwark 21015 + CAND-251 Inquisitor helm 24419 + CAND-252 3rdAge mage 10338-10344 + CAND-253 Eternal boots 13235 + CAND-254 Zenyte necklaces 19547/19553 + CAND-255 Skull sceptre 9013 + CAND-256 Guam unf 91))
+## Progress by category — Wave 79 (auto-synced to `registry.json` v1.2 · 3262+ scouts · 40 / 270 / 253)
 
-| Bucket | Count | Where |
-|---|---|---|
-| **Accepted findings** (bugs that are verified broken) | **40** - 2 High, 34 Medium, 4 Low | [`findings/`](findings/) + `findings[]` in `registry.json` |
-| **Candidates** (need verification before promotion) | **270** | [`pending/`](pending/))) + `pending_candidates[]` (`CAND-001...CAND-270`) |
-| **Verified clean** (bounded no-mismatch) | **253** | [`completed/`](completed/) + `completed_checks[]` (`CHK-001`...`CHK-253`) |
-| **No duplicate IDs** | 0 duplicated AUD/CAND/CHK IDs | See deduplication report below |
+*% Done = (Findings + Verified clean) / Total · Total = Findings + Pending + Verified per category.*
+
+| Category | Findings | Pending | Verified | Total | % Done |
+|---|---|---:|---:|---:|---:|
+| **Items / Equipment** | 1 | 74 | 19 | 94 | 21.3% |
+| **World** (general / npcs / objects) | 0 | 58 | 88 | 146 | 60.3% |
+| **Shops / NPCs** | 8 | 15 | 48 | 71 | 78.9% |
+| **Skills** (herblore/crafting/smithing/cooking/fletching/farming/agility/fishing/woodcutting/mining) | 12 | 66 | 48 | 126 | 47.6% |
+| **Combat** (bosses / slayer / monsters) | 7 | 24 | 26 | 57 | 57.9% |
+| **Protocol / Packets** | 2 | 20 | 17 | 39 | 48.7% |
+| **Bank / Inventory** | 6 | 2 | 7 | 15 | 86.7% |
+| **Prayer / Slayer** | 1 | 11 | 0 | 12 | 8.3% |
+| **Drops** | 3 | 0 | 0 | 3 | 100% |
+| **Overall** | **40** | **270** | **253** | **563** | **52.0%** |
 
 ## Document tree — find anything without opening files
 
