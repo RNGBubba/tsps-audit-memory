@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave72",
+  "generated": "2026-10-14T Wave73",
   "purpose": "Agentic memory bank for TSPS audit \u2014 single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 240,
+    "pending_candidates_total": 248,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5360,6 +5360,176 @@
       "slug": "halberd-family-3196-3204-omit-strength-5-30",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-241",
+      "title": "Dragonfire shield 11284 inflated to charged bonuses 70/75/72/72 vs DB uncharged 20/25/22/22",
+      "summary": "Active item-gameplay.json:11284 Dragonfire shield SHIELD bonuses [0,0,0,-10,-5,70,75,72,10,72,7] weight9 no requirements vs DB items-json 11284.json equipment defence 20/25/22/10/22 wiki_url https://oldschool.runescape.wiki/w/Dragonfire_shield#Uncharged + 11283 charged HOLD control. Scout W73Ax41 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        11284,
+        11283,
+        20,
+        25,
+        22,
+        72,
+        75,
+        70
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "dragonfire-shield-11284-inflated-vs-uncharged",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-242",
+      "title": "Historical crystal bows 4212 New + 4214 Full (and 4215-4223 degrade) omit Agility 50",
+      "summary": "Active 4212 New crystal bow Ranged70 only vs DB items-json 4212.json Agility50 Ranged70 wiki_url https://oldschool.runescape.wiki/w/Crystal_bow_(historical)#New + 4214 Full same. Scout W73Ax43 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        4212,
+        4214,
+        4215,
+        4216,
+        4217,
+        4218,
+        4219,
+        4220,
+        4221,
+        4222,
+        4223,
+        50,
+        70
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "historical-crystal-bows-4212-4223-omit-agility50",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-243",
+      "title": "Elysian spirit shield 12817 requirements Pray70+Magic65 vs DB/Wiki Pray75 (no Magic)",
+      "summary": "Active 12817 req Defence75 Prayer70 Magic65 vs DB 12817 Defence75 Prayer75 wiki_url https://oldschool.runescape.wiki/w/Elysian_spirit_shield + Arcane 12825 correct control. Scout W73Ax42 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        12817,
+        12825,
+        12831,
+        12829,
+        12821,
+        75,
+        70,
+        65
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "elysian-spirit-shield-12817-pray70-magic65-vs-75",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-244",
+      "title": "Serpentine helm 12931 charged defence 52/55/58/50 str5 omitted \u2014 active FULL_HELMET bonuses zero vs DB head 52/55/58/50",
+      "summary": "Active 12931 FULL_HELMET 0 vs DB 12931 head 52/55/58/50 str5 wiki_url https://oldschool.runescape.wiki/w/Serpentine_helm#Charged distinct from CAND-031 venom. Scout W73Ax53 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        12931,
+        12929,
+        52,
+        55,
+        58,
+        50,
+        75
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "serpentine-helm-12931-charged-defence-omitted",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-245",
+      "title": "Steel-Adamant defenders 8846-8849 omit Attack 5/10/20/30 \u2014 only Defence gate present",
+      "summary": "Active 8846 Steel Defence5 only vs DB Attack5 Defence5 + 8847 Black Defence10 vs DB Attack10 Defence10 + 8848 Mithril Defence20 vs DB Attack20 Defence20 + 8849 Adamant Defence30 vs DB Attack30 Defence30; controls Bronze Iron null clean + Rune 8850 HOLD + Dragon 12954 Def60 clean. Scout W73Ax39 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        8846,
+        8847,
+        8848,
+        8849,
+        8844,
+        8845,
+        8850,
+        12954,
+        5,
+        10,
+        20,
+        30
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "steel-adamant-defenders-8846-8849-omit-attack",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-246",
+      "title": "Hydra slayer helmet 23073 / 23075 (i) omit Slayer 60 \u2014 active Defence10 only vs DB Defence10+Slayer60",
+      "summary": "Active 23073 Defence10 only vs DB Defence10 Slayer60 wiki_url https://oldschool.runescape.wiki/w/Hydra_slayer_helmet + 23075 same. Scout W73Ax58 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        23073,
+        23075,
+        21888,
+        21890,
+        10,
+        60
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "hydra-slayer-helmet-23073-23075-omit-slayer60",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-247",
+      "title": "Bastion potion 22461 + Battlemage potion 22449 have no Herblore creation route \u2014 cadantine blood potion (unf) 22443 + wine of zamorak 245 cascade absent (Herblore 80/155 ticks2)",
+      "summary": "Active Herblore.plugin FINISHED_POTIONS only 9 herbs Guam->Dwarf weed; no 22443 cadantine blood potion (unf) + wine 245 -> bastion/battlemage mapping Herblore 80/155 ticks2. Scout W73Ax57 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        22461,
+        22449,
+        22443,
+        22446,
+        245,
+        80,
+        155
+      ],
+      "source_file": "pending/skills/herblore.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "bastion-battlemage-potion-no-herblore-creation-route",
+      "file": "pending/skills/herblore.md",
+      "domain": "skills/herblore"
+    },
+    {
+      "candidate_id": "CAND-248",
+      "title": "Sanguinesti staff 22323 + 22481 omit Magic 82 \u2014 active requirements Magic75 vs DB/Wiki Magic82",
+      "summary": "Active 22323/22481 Magic75 vs DB 22323/22481 Magic82 wiki_url https://oldschool.runescape.wiki/w/Sanguinesti_staff#Charged + Trident swamp 12899 Magic78 control HOLD. Scout W73Ax49 triple-verify; registry 0 hits.",
+      "ids_mentioned": [
+        22323,
+        22481,
+        12899,
+        75,
+        82
+      ],
+      "source_file": "pending/skills/herblore.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "sanguinesti-staff-22323-22481-magic75-vs-82",
+      "file": "pending/skills/herblore.md",
+      "domain": "skills/herblore"
     }
   ],
   "completed_checks": [
@@ -9862,6 +10032,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 240,
+  "pending_candidates_total": 248,
   "completed_checks_total": 253
 }
