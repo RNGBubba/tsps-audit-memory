@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave78",
+  "generated": "2026-10-14T Wave79",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 264,
+    "pending_candidates_total": 270,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -5884,6 +5884,146 @@
       "slug": "gauntlet-attuned-bows-23902-23856-prayer1-vs2",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-265",
+      "title": "Steel kiteshield 1193 SHIELD -2 vs DB -3 attack_ranged drift (WA21-04-21 rebalance, Bronze 1189/Iron 1191 distinct controls)",
+      "summary": "Active item-gameplay.json:1193 Steel kiteshield SHIELD bonuses [0,0,0,-8,-2,13,15,14,-1,14] weight5 requirements Defence5 vs DB items-json 1193.json equipment attack_ranged -3 attack_magic -8 defence 13/15/14/-1/14 slot shield requirements Defence5 wiki_url https://oldschool.runescape.wiki/w/Steel_kiteshield + data/items/items-skill-requirements.json:1193 Def5 + data/items/items-wiki-page-text.json Changes 2021-04-21 Equipment Rebalance ranged -2->-3. Loader ItemDefinitionLoader.plugin.js:143-164 copies bonuses verbatim -> BonusManager index4 -2 vs -3 drift. Scout W79Ax41 triple-verify; registry 0 exact hits 1193/steel kiteshield before filing; Bronze 1189 CAND-214 + Iron 1191 CAND-215 distinct.",
+      "ids_mentioned": [
+        1193,
+        1189,
+        1191,
+        -2,
+        -3,
+        -8,
+        13,
+        15,
+        14,
+        5
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "steel-kiteshield-1193-minus2-vs-minus3",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-266",
+      "title": "Blue d'hide body 2499 BODY defence inflated 45/37/50/30/45 vs DB 23/30/30/28/40 (requirements Ranged50/Defence40 HOLD, Black 2503 distinct control)",
+      "summary": "Active item-gameplay.json:2499 Blue d'hide body BODY bonuses [0,0,0,-15,20,45,37,50,30,45] weight7 requirements Ranged50 Defence40 vs DB items-json 2499.json equipment attack -15/20 defence 23/30/30/28/40 slot body requirements Ranged50 Defence40 wiki_url https://oldschool.runescape.wiki/w/Blue_d'hide_body + data/items/items-skill-requirements.json 2499:50/40 + Black 2503 control defence 30/38/45/45/50 vs active 55/47/60/50/55 distinct. Loader copies bonuses verbatim -> BonusManager defence inflated +22/+7/+20/+2/+5. Scout W79Ax47 triple-verify; registry 0 hits 2499/blue dhide before filing.",
+      "ids_mentioned": [
+        2499,
+        2503,
+        45,
+        37,
+        50,
+        30,
+        45,
+        23,
+        30,
+        28,
+        40
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "blue-dhide-body-2499-defence-inflated",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-267",
+      "title": "Ranger gloves 19994 GLOVES omit Ranged 40 -- active requirements null vs DB Ranged40 (weight 0 vs 0.226, Infinity boots 6920 clean control distinct)",
+      "summary": "Active item-gameplay.json:19994 Ranger gloves GLOVES bonuses [0,0,0,-10,11,1,2,1,2,0,0,0,0,0] weight0 requirements missing (null) vs DB items-json 19994.json equipment attack -10/11 defence 1/2/1/2 slot hands requirements Ranged40 wiki_url https://oldschool.runescape.wiki/w/Ranger_gloves + data/items/items-skill-requirements.json 19994:40 + Infinity boots 6920 control bonuses [0,0,0,5,0,0,0,0,5] req Magic50 Defence25 HOLD. Loader missing requirements stays null -> EquipPacketListener Ranged40 bypass. Scout W79Ax19 triple-verify; registry 0 hits 19994/ranger gloves before filing.",
+      "ids_mentioned": [
+        19994,
+        6920,
+        40,
+        0,
+        11,
+        1,
+        2,
+        1,
+        2,
+        50,
+        25
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "ranger-gloves-19994-omit-ranged40",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-268",
+      "title": "Seers ring 6731 RING magic_damage 0 vs DB 0.2 (attack_magic 6 defence_magic 6 HOLD, slot ring HOLD)",
+      "summary": "Active item-gameplay.json:6731 Seers ring RING bonuses [0,0,0,6,0,0,0,0,6,0,0,0,0,0] weight0 vs DB items-json 6731.json equipment attack_magic 6 defence_magic 6 magic_damage 0.2 slot ring requirements null wiki_url https://oldschool.runescape.wiki/w/Seers_ring + items-skill-requirements.json 6731 null. Loader copies bonuses verbatim -> BonusManager index12 0 vs 0.2 magic_damage drift. Scout W79Ax25 triple-verify; registry 0 hits 6731/seers ring before filing.",
+      "ids_mentioned": [
+        6731,
+        0,
+        0.2,
+        6,
+        6,
+        0,
+        0
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "seers-ring-6731-mdmg0-vs0-2",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-269",
+      "title": "Crystal shield 23991 Active omit Agility 50 + 23993 Inactive bonus inflation 51/54/53/80 vs DB 0/0/0/0/0 (slot shield HOLD)",
+      "summary": "Active item-gameplay.json:23991 Crystal shield SHIELD bonuses [0,0,0,-10,-10,51,54,53,0,80] req Defence70 only vs DB items-json 23991.json equipment defence 51/54/53/0/80 attack -10/-10 slot shield requirements Defence70 Agility50 wiki_url https://oldschool.runescape.wiki/w/Crystal_shield#Active + 23993 Inactive bonuses [0,0,0,-10,-10,51,54,53,0,80] same vs DB 23993.json equipment defence 0/0/0/0/0 attack 0/0 requirements null wiki_url #Inactive. Loader copies only present requirements -> Agility50 bypass for active; BonusManager inflated 51/54/53/80 for inactive. Scout W79Ax04 triple-verify; registry 0 hits 23991/23993/crystal shield before filing.",
+      "ids_mentioned": [
+        23991,
+        23993,
+        23992,
+        70,
+        50,
+        51,
+        54,
+        53,
+        80
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "crystal-shield-23991-23993-agility50-bonus-inflation",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-270",
+      "title": "Torva armour 26382 helm + 26384 platebody + 26386 platelegs omit Defence 80 -- active requirements null vs DB Defence80 (bonuses HOLD)",
+      "summary": "Active item-gameplay.json:26382 Torva full helm FULL_HELMET bonuses [0,0,0,-5,-5,59,60,62,-2,57,8] req null + 26384 Torva platebody PLATEBODY bonuses [0,0,0,-18,-14,117,111,117,-11,142,6] req null + 26386 Torva platelegs LEGS bonuses [0,0,0,-24,-11,87,78,79,-9,102,4] req null vs DB items-json 26382.json equipment defence 59/60/62/-2/57 str8 slot head requirements Defence80 wiki_url https://oldschool.runescape.wiki/w/Torva_full_helm#Restored + 26384.json 117/111/117/-11/142 str6 + 26386.json 87/78/79/-9/102 str4 all req Defence80 via items-skill-requirements.json 26382/26384/26386:80. Loader missing requirements stays null -> EquipPacketListener Defence80 bypass. Bonuses/weight/alch HOLD. Scout W79Ax14/15/16 triple-verify; registry 0 hits torva/26382 before filing.",
+      "ids_mentioned": [
+        26382,
+        26384,
+        26386,
+        80,
+        59,
+        60,
+        62,
+        117,
+        111,
+        142,
+        87,
+        78,
+        79,
+        102
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "torva-armour-26382-26384-26386-omit-defence80",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -10386,6 +10526,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 264,
+  "pending_candidates_total": 270,
   "completed_checks_total": 253
 }
