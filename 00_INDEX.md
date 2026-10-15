@@ -7,7 +7,7 @@
 | Bucket | Count | Where |
 |---|---|---|
 | **Accepted findings** (bugs that are verified broken) | **40** - 2 High, 34 Medium, 4 Low | [`findings/`](findings/) + `findings[]` in `registry.json` |
-| **Candidates** (need verification before promotion) | **272** | [`pending/`](pending/))) + `pending_candidates[]` (`CAND-001...CAND-272`)`) |
+| **Candidates** (need verification before promotion) | **275** | [`pending/`](pending/) + `pending_candidates[]` (`CAND-001...CAND-275`) |
 | **Verified clean** (bounded no-mismatch) | **253** | [`completed/`](completed/) + `completed_checks[]` (`CHK-001`...`CHK-253`) |
 | **No duplicate IDs** | 0 duplicated AUD/CAND/CHK IDs | See deduplication report below |
 
@@ -30,13 +30,13 @@ Memory/
 │   ├── protocol.md           2  — PacketSender, opcode 50
 │   ├── prayer-slayer.md      1
 │   └── items-equipment.md    1
-├── pending/                 <- 272 CAND (21 files)
+├── pending/                 <- 275 CAND (21 files)
 │   ├── world/
 │   │   ├── general.md       34  - Zeah shops, diaries, teleports, misc
 │   │   ├── npcs.md          21  - Talk-to slots, NPC handlers
 │   │   └── objects.md        3  - altars, ladders, portals
 │   ├── items/
-│   │   └── equipment.md     76  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537 + dragonfire 11284 + crystal 4212 + Elysian 12817 + Serpentine 12931 + defenders 8846-8849 + Hydra 23073/23075 + Twisted buckler 21000 + Dinh bulwark 21015 + Inquisitor 24419 + 3rdAge 10338-10344 + Eternal 13235 + Zenyte 19547/19553 + Skull 9013 + Toxic staff 12902 + Thammaron 22552 + Nightmare 24422-24425 + Bow Faerdhinen 25865 + Blade Saeldor 25870 + Crystal halberd 23987 + Crystal armour 23971 + Gauntlet attuned bow 23902 + kiteshield 1193 + Blue dhide 2499 + Ranger gloves 19994 + Seers 6731 + Crystal shield 23991 + Torva 26382 + Inquisitor armour 24420 + Ava accumulator 10499
+│   │   └── equipment.md     79  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537 + dragonfire 11284 + crystal 4212 + Elysian 12817 + Serpentine 12931 + defenders 8846-8849 + Hydra 23073/23075 + Twisted buckler 21000 + Dinh bulwark 21015 + Inquisitor 24419 + 3rdAge 10338-10344 + Eternal 13235 + Zenyte 19547/19553 + Skull 9013 + Toxic staff 12902 + Thammaron 22552 + Nightmare 24422-24425 + Bow Faerdhinen 25865 + Blade Saeldor 25870 + Crystal halberd 23987 + Crystal armour 23971 + Gauntlet attuned bow 23902 + kiteshield 1193 + Blue dhide 2499 + Ranger gloves 19994 + Seers 6731 + Crystal shield 23991 + Torva 26382 + Inquisitor armour 24420/24421 + Ava accumulator 10499 + gilded 3481/3483/3485 + Fremennik shirts 3767-3775 + decorative 4068-4072
 │   ├── protocol/
 │   │   └── packets.md       20  - WIDGET_ACTION, OPNPC, Trade, run modifier
 │   ├── shops/
@@ -94,12 +94,12 @@ Memory/
 | prayer-slayer | `findings/prayer-slayer.md` | AUD-021 | 1 |
 | items-equipment | `findings/items-equipment.md` | AUD-010 | 1 |
 
-## Candidates at a glance (272 CAND) - top files
+## Candidates at a glance (275 CAND) - top files
 
 | File | Candidates | Example IDs |
 |---|---|---|
 | `pending/world/general.md` | 34 | CAND-004 Dragonstone, CAND-006 Drew bucket… |
-| `pending/items/equipment.md` | 76 | CAND-216 Bronze scim 1321 / CAND-217 Warhammer 1335-1347 / CAND-218 Leaf-bladed 20727 + … + CAND-239 Corrupted AGS 28537 / CAND-241 Dragonfire 11284 / CAND-242 Crystal 4212 / CAND-243 Elysian 12817 / CAND-244 defenders / CAND-245 Hydra 23073 / CAND-249 Twisted buckler 21000 / CAND-250 Dinh 21015 / CAND-251 Inquisitor helm 24419 / CAND-252 3rdAge 10338 / CAND-253 Eternal 13235 / CAND-254 Zenyte 19547 / CAND-255 Skull 9013 / CAND-256 Guam 91 / CAND-257 Toxic staff 12902 / CAND-258 Thammaron 22552 / CAND-259 Nightmare 24422 / CAND-260 Bow Faerdhinen 25865 / CAND-261 Saeldor 25870 / CAND-262 Crystal halberd 23987 / CAND-263 Crystal armour 23971 / CAND-264 Gauntlet attuned 23902 / CAND-265 Steel kiteshield 1193 / CAND-266 Blue dhide 2499 / CAND-267 Ranger gloves 19994 / CAND-268 Seers 6731 / CAND-269 Crystal shield 23991 / CAND-270 Torva 26382 / CAND-271 Inquisitor 24420 / CAND-272 Ava accumulator 10499 |
+| `pending/items/equipment.md` | 79 | CAND-216 Bronze scim 1321 / CAND-217 Warhammer 1335-1347 / CAND-218 Leaf-bladed 20727 + … + CAND-239 Corrupted AGS 28537 / CAND-241 Dragonfire 11284 / CAND-242 Crystal 4212 / CAND-243 Elysian 12817 / CAND-244 defenders / CAND-245 Hydra 23073 / CAND-249 Twisted buckler 21000 / CAND-250 Dinh 21015 / CAND-251 Inquisitor helm 24419 / CAND-252 3rdAge 10338 / CAND-253 Eternal 13235 / CAND-254 Zenyte 19547 / CAND-255 Skull 9013 / CAND-256 Guam 91 / CAND-257 Toxic staff 12902 / CAND-258 Thammaron 22552 / CAND-259 Nightmare 24422 / CAND-260 Bow Faerdhinen 25865 / CAND-261 Saeldor 25870 / CAND-262 Crystal halberd 23987 / CAND-263 Crystal armour 23971 / CAND-264 Gauntlet attuned 23902 / CAND-265 Steel kiteshield 1193 / CAND-266 Blue dhide 2499 / CAND-267 Ranger gloves 19994 / CAND-268 Seers 6731 / CAND-269 Crystal shield 23991 / CAND-270 Torva 26382 / CAND-271 Inquisitor 24420 / CAND-272 Ava accumulator 10499 |
 | `pending/world/npcs.md` | 21 | CAND-014 Disciple 7670, CAND-019 Hairdresser… |
 | `pending/protocol/packets.md` | 20 | CAND-051 Chat, CAND-028 OPPlayer2… |
 | `pending/shops/general-stores.md` | 15 | CAND-110 Varrock, CAND-133 Edgeville… |
