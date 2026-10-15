@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave85",
+  "generated": "2026-10-15T Wave86",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 275,
+    "pending_candidates_total": 279,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -6134,6 +6134,89 @@
       "status": "candidate",
       "needs_verification": true,
       "slug": "decorative-castle-wars-4068-4072-bonuses-req5-omitted",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-276",
+      "title": "Leaf-bladed spear duplicate 4159 duplicate:true equipable false (DB) vs active WEAPON/SPEAR bonuses null vs [47,42,36,50] slot null vs 2h (authoritative 4158 Attack50 Slayer55 HOLD)",
+      "summary": "Active item-gameplay.json:4161 Leaf-bladed spear 4159 WEAPON/SPEAR doubleHanded weight2 bonuses [47,42,36,50] no requirements vs DB items-json 4159.json Leaf-bladed spear duplicate:true equipable:false equipable_by_player:false equipment:null cost1 low0 high0 weight2.267 duplicate:true wiki_url https://oldschool.runescape.wiki/w/Leaf-bladed_spear duplicate via substitution table — DB marks player-non-equipable duplicate with no equipment object; control authoritative 4158.json Leaf-bladed spear equipable:true slot 2h requirements Slayer55 Attack50 bonuses 47/42/36/1/1/50 weapon speed5 spear wiki_url https://oldschool.runescape.wiki/w/Leaf-bladed_spear#Unpoisoned + items-skill-requirements 4158:50/55. Loader ItemDefinitionLoader.plugin.js:111-164 would copy bonuses but cache duplicate is null equipment — runtime allows equip with 50 bonuses vs DB null. Scout Wave86-262 triple-verify; registry 0 hits 4159/leaf-bladed spear duplicate. -- triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 4159, 4158, duplicate:true, 47/42/36/50).",
+      "ids_mentioned": [
+        4159,
+        4158,
+        47,
+        42,
+        36,
+        50
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "leaf-bladed-spear-duplicate-4159-vs-4158",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-277",
+      "title": "Rune brutal 4803 ammo slot Ranged 40 omitted — active ARROWS requires null vs DB Ranged40 (stacked 4804-4807 noted HOLD)",
+      "summary": "Active item-gameplay.json:4805 Rune brutal 4803 ARROWS stackable true tradeable true cost450 low180 high270 weight0.0 bonuses [0,0,0,0,0,0,0,0,0,0,0,60] requirements missing (null) vs DB items-json 4803.json Rune brutal cost450 low180 high270 weight0.0 slot ammo requirements Ranged40 equipment melee0 ranged60 slot ammo wiki_url https://oldschool.runescape.wiki/w/Rune_brutal + data/items/items-skill-requirements 4803:40 + items-wiki-page-text via DB wiki_url; fallback items-complete present; stacked variants 4804 id4803 count2 etc hold noted not CAND. Loader ItemDefinitionLoader.plugin.js:111-164 not copying missing requirements allows Ranged<40 to wield via EquipPacketListener 119-133 gate bypass. Scout Wave86-306 triple-verify; registry 0 hits 4803/rune brutal before filing.",
+      "ids_mentioned": [
+        4803,
+        40,
+        60,
+        4804,
+        4805,
+        4806,
+        4807
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "rune-brutal-4803-omit-ranged40",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-278",
+      "title": "Karil's leathertop degraded family 4940 100 / 4942 50 / 4944 25 / 4950 25 etc omit Ranged70 + Defence70 vs DB Ranged70+Defence70 (base 4736 CHK-131 HOLD, variant Barrows degrade still omits Ranged)",
+      "summary": "Active item-gameplay.json:4942 Karil's leathertop 100 4940 PLATEBODY bonuses [0,0,0,-15,30,47,42,50,65,57] requirements [0,70,0,0,0,0,0...] Defence70 only vs DB items-json 4940.json Karil's leathertop 100 slot body requirements Ranged70 Defence70 bonuses -15/30 47/42/50/65/57 cost50000 low20000 high30000 weight6.803 wiki_url https://oldschool.runescape.wiki/w/Karil's_leathertop#100 + 4942 Karil's leathertop 50 slot body req70/70 vs active [0,70] only + 4944/4950 etc degraded via BARROWS_BASE_ITEMS 4716 index loop 4856+index*6+stage bonuses zero vs base retained — degraded zero file still misses Ranged70. Base repaired CHK-131 Ahrim/Karil set 4732/4734/4736/4738 verified clean for undamaged but degraded variants 4940-4952 not in registry. Loader copies only present requirements -> bypass Ranged70. Scout Wave86-317 triple-verify; registry 0 hits 4940/4942/karil leathertop degraded.",
+      "ids_mentioned": [
+        4940,
+        4942,
+        4944,
+        4950,
+        70,
+        30,
+        47,
+        42,
+        50,
+        65,
+        57
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "karil-leathertop-degraded-4940-omit-ranged70",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-279",
+      "title": "Torag's hammers degraded 4959 75 + 4960 50 equipment slot FULL_HELMET vs DB WEAPON/2h — Barrows staged 75/50 incorrectly helm slot (Torag helm 4953-4956 HOLD, hammers base 4747 WEAPON HOLD)",
+      "summary": "Active item-gameplay.json:4959 Torag's hammers 75 4959 FULL_HELMET bonuses [75,75,75,0,0,7,7,7,0,0,75] req Attack70 vs DB items-json 4959.json Torag's hammers 75 slot 2h weapon WEAPON doubleHanded true requirements Attack70 Strength70 bonuses 75/75/75/7/7/7/75 weapon speed5 hammers wiki_url https://oldschool.runescape.wiki/w/Torag's_hammers#75 + 4960 Torag's hammers 50 same slot 2h vs active FULL_HELMET head slot — active incorrectly maps Barrows staged 75/50 hammers to helm slot via item-gameplay equipmentType FULL_HELMET vs DB WEAPON; loader hydrateEquipmentType FULL_HELMET -> HEAD_SLOT 0 vs DB 2h WEAPON_SLOT 3, BonusManager still sums but equip slot wrong per EquipPacketListener 135-141. Controls Torag's helm 4953/4954/4955 FULL_HELMET correct vs DB head + hammers base 4747 WEAPON correct distinct. Scout Wave86-318 triple-verify; registry 0 hits 4959/4960/torag hammers degraded.",
+      "ids_mentioned": [
+        4959,
+        4960,
+        4747,
+        75,
+        7,
+        7,
+        7
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "torag-hammers-4959-4960-full-helmet-vs-weapon",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
     }
