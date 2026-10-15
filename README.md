@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Progress — Wave 80 · 3326+ scouts · 2026-10-14 13:20 CDT
+## Progress — Wave 81 · 3390+ scouts · 2026-10-15 
 
 > **40 Findings · 272 Pending · 253 Verified** — 565 total — **51.9% done · 272 remain**
 >
@@ -13,14 +13,14 @@
 | Category | Done | Total | % Done | Pending | ETA |
 |---|---:|---:|---:|---:|---|
 | Prayer / Slayer | 1 | 12 | 8.3% | 11 | ~0.2 waves |
-| Items / Equipment | 20 | 96 | 17.2% | 76 | ~1.2 waves |
+| Items / Equipment | 20 | 96 | 20.8% | 76 | ~1.2 waves |
 | Skills | 60 | 126 | 47.6% | 66 | ~1.0 waves |
 | Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 waves |
 | Combat | 33 | 57 | 57.9% | 24 | ~0.4 waves |
-| World | 88 | 146 | 60.3% | 58 | ~0.9 waves |
-| Shops / NPCs | 56 | 71 | 78.9% | 15 | ~0.2 waves |
-| Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0 waves |
-| Drops | 3 | 3 | 100% | 0 | done |
+| Shops / NPCs | 56 | 92 | 60.9% | 36 | ~0.6 waves |
+| World | 88 | 125 | 70.4% | 37 | ~0.6 waves |
+| Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0.0 waves |
+| Drops | 3 | 3 | 100.0% | 0 | done |
 | **Overall** | **293** | **565** | **51.9%** | **272** | **~4.3 waves (~0.9 days)** |
 
 > **ETA** — Pending / 64 per wave · ~5 waves/day → ~0.9 days to re-scan the full pending queue · trailing **+1.4 new CAND / wave** · coverage to 80% needs ~157 net closes → ~2–3 weeks at current triage bandwidth.
