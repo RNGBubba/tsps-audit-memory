@@ -19,3 +19,6 @@ HANDOFF.md
 03_Found_Bugs_and_Issues.md
 
 !.git/hooks/post-commit
+
+# B+ infra generated — local only (coverage bitmap)
+coverage.json
