@@ -2,18 +2,18 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Progress — Wave 87 · 3774+ scouts · 2026-10-15 
+## Progress — Wave 88 · 3838+ scouts · 2026-10-15 
 
-> **40 Findings · 285 Pending · 253 Verified** — 578 total — **50.7% done · 285 remain**
+> **40 Findings · 365 Pending · 253 Verified** — 658 total — **44.5% done · 365 remain**
 >
 > % Done = (Findings + Verified) / Total — auto-updated every `Sync all MD: Wave N`
 
-**Overall — 293 / 578 done — 50.7%**
+**Overall — 293 / 658 done — 44.5%**
 
 | Category | Done | Total | % Done | Pending | ETA |
 |---|---:|---:|---:|---:|---|
 | Prayer / Slayer | 1 | 12 | 8.3% | 11 | ~0.2 waves |
-| Items / Equipment | 20 | 109 | 18.3% | 89 | ~1.4 waves |
+| Items / Equipment | 20 | 189 | 10.6% | 169 | ~2.6 waves |
 | Skills | 60 | 126 | 47.6% | 66 | ~1.0 waves |
 | Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 waves |
 | Combat | 33 | 57 | 57.9% | 24 | ~0.4 waves |

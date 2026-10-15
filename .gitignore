@@ -28,3 +28,7 @@ coverage-wave84.json
 coverage-wave85.json
 coverage-wave86.json
 coverage-wave87.json
+coverage-wave88.json
+coverage-bulk-diff*.json
+coverage-wave88-*.json
+coverage-wave88-groups.json
