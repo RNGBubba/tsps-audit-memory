@@ -1,5 +1,5 @@
 # Pending — items/equipment
-> **Candidates** (83) - need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (89) - need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Gloves of silence Hunter gate (ID 10075):** Active item row omits exact DB Hunter 54 requirement; ordinary equip checks no level when requirements are absent. Its pickpocket +5% and 62-failure wear-out are implemented. Candidate-only.
 
@@ -239,3 +239,29 @@
 
 - **Torag's hammers degraded 4959 75 + 4960 50 equipment slot FULL_HELMET vs DB WEAPON/2h — Barrows staged 75/50 incorrectly helm slot (Torag helm 4953-4956 HOLD, hammers base 4747 WEAPON HOLD):** Active item-gameplay.json:4959 Torag's hammers 75 4959 FULL_HELMET bonuses [75,75,75,0,0,7,7,7,0,0,75] req Attack70 vs DB items-json 4959.json Torag's hammers 75 slot 2h weapon WEAPON doubleHanded true requirements Attack70 Strength70 bonuses 75/75/75/7/7/7/75 weapon speed5 hammers wiki_url https://oldschool.runescape.wiki/w/Torag's_hammers#75 + 4960 Torag's hammers 50 same slot 2h vs active FULL_HELMET head slot — active incorrectly maps Barrows staged 75/50 hammers to helm slot via item-gameplay equipmentType FULL_HELMET vs DB WEAPON; loader hydrateEquipmentType FULL_HELMET -> HEAD_SLOT 0 vs DB 2h WEAPON_SLOT 3, BonusManager still sums but equip slot wrong per EquipPacketListener 135-141. Controls Torag's helm 4953/4954/4955 FULL_HELMET correct vs DB head + hammers base 4747 WEAPON correct distinct. Scout Wave86-318 triple-verify; registry 0 hits 4959/4960/torag hammers degraded.
 
+
+---
+
+- **Steel brutal 4783 ammo Ranged 5 omitted — active ARROWS requirements null vs DB Ranged5 (bonuses HOLD: ranged_str 19 clean):** Active item-gameplay.json:4783 Steel brutal ARROWS stackable true tradeable true bonuses [0,0,0,0,0,0,0,0,0,0,0,19] requirements null vs DB items-json 4783.json Steel brutal cost135 low8 high12 weight0.0 slot ammo requirements Ranged5 equipment ranged_str19 slot ammo wiki_url https://oldschool.runescape.wiki/w/Steel_brutal + data/items/items-skill-requirements.json 4783:5. Loader ItemDefinitionLoader.plugin.js:111-164 not copying missing requirements allows Ranged<5 to wield via EquipPacketListener 119-133 gate bypass. Bonuses/slot exact, trade/weight/value HOLD per integrity hold. Scout Wave87-323 HOLD logic flagged HOLD but req mismatch qualifies CAND per bonus/requirements/slot/speed rule. Dup-screen 0 hits 4783/brutal before filing. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 4783, 5, 19).
+
+---
+
+- **Adamant brutal 4798 ammo Ranged 30 omitted — active ARROWS requirements null vs DB Ranged30 (ranged_str 45 clean):** Active item-gameplay.json:4798 Adamant brutal ARROWS stackable true bonuses [0,0,0,0,0,0,0,0,0,0,0,45] requirements null vs DB items-json 4798.json Adamant brutal cost326 low38 high57 weight0.0 slot ammo requirements Ranged30 equipment ranged_str45 wiki_url https://oldschool.runescape.wiki/w/Adamant_brutal + data/items/items-skill-requirements 4798:30. Loader missing requirements bypasses EquipPacketListener Ranged30 gate. Bonuses/slot HOLD. Scout Wave87-324 flagged HOLD but req omission is CAND per contract. Dup-screen 0 hits 4798/brutal. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4798, 30, 45).
+
+---
+
+- **Dharok's platelegs degraded 4900 50 attack_ranged -7 vs DB -11 (staged degrade variant of base 4722 CAND-149, BARROWS 4722->4900 stage2):** Active item-gameplay.json:4900 Dharok's platelegs 50 LEGS bonuses [0,0,0,-21,-7,85,82,83,-4,92] req Defence70 vs DB staged variant -11 defence 85/82/83/-4/92 slot legs requirements Defence70 wiki_url https://oldschool.runescape.wiki/w/Dharok's_platelegs#50 backed by base 4722.json -11 via BARROWS_BASE_ITEMS 4722->4900 stage2; loader copies base bonuses [-7] verbatim. BonusManager index4 -7 vs -11 Delta4 understates ranged penalty. Slot/req/alch exact, weight/trade HOLD. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4900, 4722, -7, -11, 70).
+
+---
+
+- **Guthan's chainskirt degraded 4922 100 + 4923 75 attack_ranged -7 vs DB -11 (base 4730 CAND-160, BARROWS 4730->4922/4923 stages 0/1):** Active item-gameplay.json:4922 Guthan's chainskirt 100 LEGS bonuses [0,0,0,-14,-7,75,72,73,-4,82] req Defence70 + 4923 Guthan's chainskirt 75 same -14/-7 vs DB 4922.json/4923.json -11 defence 75/72/73/-4/82 slot legs requirements Defence70 wiki_url https://oldschool.runescape.wiki/w/Guthan's_chainskirt#100/#75 + base 4730.json -11. Loader BARROWS_BASE_ITEMS copies base -7 to variants. BonusManager index4 delta4. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4922, 4923, 4730, -7, -11, 70).
+
+---
+
+- **Torag's platelegs degraded 4972 50 attack_ranged -7 vs DB -11 (base 4751 staged 50, BARROWS 4751->4972 stage2):** Active item-gameplay.json:4972 Torag's platelegs 50 LEGS bonuses [0,0,0,-21,-7,85,82,83,-4,92] req Defence70 vs DB staged variant -11 defence 85/82/83/-4/92 slot legs requirements Defence70 wiki_url https://oldschool.runescape.wiki/w/Torag's_platelegs#50 via base 4751.json -11 BARROWS_BASE_ITEMS 4751->4972 stage2 copies base -7. BonusManager index4 delta4. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4972, 4751, -7, -11, 70).
+
+---
+
+- **Verac's plateskirt degraded 4994 100 + 4995 75 + 4996 50 + 4997 25 attack_ranged -7 vs DB -11 family (base 4759 CAND-162, BARROWS 4759->4994-4997 stages 0-3):** Active item-gameplay.json:4994 Verac's plateskirt 100 LEGS bonuses [0,0,0,-21,-7,85,82,83,0,84,0,0,0,4] + 4995 75 + 4996 50 + 4997 25 identical -21/-7 vs DB 4994.json #100 /4995 #75/4996 #50/4997 #25 each -11 defence 85/82/83/0/84 prayer4 slot legs requirements Defence70 wiki_url https://oldschool.runescape.wiki/w/Verac's_plateskirt#100-#25 + base 4759.json -11 via BARROWS. BonusManager index4 -7 vs -11 delta4 systemically understates ranged penalty for all 4 degraded stages. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4994, 4995, 4996, 4997, 4759, -7, -11, 70).
+
+---

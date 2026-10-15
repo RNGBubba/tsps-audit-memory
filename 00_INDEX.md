@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 - 2026-10-15 Waves 22-86 3710+ scouts
+## Status snapshot (auto-synced to `registry.json` v1.2 - 2026-10-15 Waves 22-87 3774+ scouts
 
 | Bucket | Count | Where |
 |---|---|---|
@@ -174,4 +174,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-86: 3710+ scouts drained offline — Wave86 4 new CAND-276 leaf spear duplicate 4159 / CAND-277 rune brutal 4803 / CAND-278 karil degraded 4940 / CAND-279 torag hammers 4959
+*Waves 22-87: 3774+ scouts drained offline — Wave87 CAND-280 steel brutal 4783 Ranged5 / CAND-281 adamant brutal 4798 Ranged30 / CAND-282 Dharok platelegs 4900 / CAND-283 Guthan chainskirt 4922-4923 / CAND-284 Torag platelegs 4972 / CAND-285 Verac plateskirt 4994-4997 family

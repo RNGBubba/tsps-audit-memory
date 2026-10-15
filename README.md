@@ -2,18 +2,18 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Progress — Wave 86 · 3710+ scouts · 2026-10-15 
+## Progress — Wave 87 · 3774+ scouts · 2026-10-15 
 
-> **40 Findings · 279 Pending · 253 Verified** — 572 total — **51.2% done · 279 remain**
+> **40 Findings · 285 Pending · 253 Verified** — 578 total — **50.7% done · 285 remain**
 >
 > % Done = (Findings + Verified) / Total — auto-updated every `Sync all MD: Wave N`
 
-**Overall — 293 / 572 done — 51.2%**
+**Overall — 293 / 578 done — 50.7%**
 
 | Category | Done | Total | % Done | Pending | ETA |
 |---|---:|---:|---:|---:|---|
 | Prayer / Slayer | 1 | 12 | 8.3% | 11 | ~0.2 waves |
-| Items / Equipment | 20 | 103 | 19.4% | 83 | ~1.3 waves |
+| Items / Equipment | 20 | 109 | 18.3% | 89 | ~1.4 waves |
 | Skills | 60 | 126 | 47.6% | 66 | ~1.0 waves |
 | Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 waves |
 | Combat | 33 | 57 | 57.9% | 24 | ~0.4 waves |
@@ -21,7 +21,6 @@
 | World | 88 | 125 | 70.4% | 37 | ~0.6 waves |
 | Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0.0 waves |
 | Drops | 3 | 3 | 100.0% | 0 | done |
-| **Overall** | **293** | **572** | **51.2%** | **279** | **~4.3 waves (~0.9 days)** |
 
 > **ETA** — Pending / 64 per wave · ~5 waves/day → ~0.9 days to re-scan the full pending queue · trailing **+1.4 new CAND / wave** · coverage to 80% needs ~157 net closes → ~2–3 weeks at current triage bandwidth.
 >
@@ -46,13 +45,13 @@ Memory/
 │   ├── protocol.md           2  — PacketSender, opcode 50
 │   ├── prayer-slayer.md      1
 │   └── items-equipment.md    1
-├── pending/                 <- 272 CAND (21 files)
+├── pending/                 <- 285 CAND (21 files)
 │   ├── world/
 │   │   ├── general.md       34  - Zeah shops, diaries, teleports, misc
 │   │   ├── npcs.md          21  - Talk-to slots, NPC handlers
 │   │   └── objects.md        3  - altars, ladders, portals
 │   ├── items/
-│   │   └── equipment.md     76  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537 + dragonfire 11284 + crystal 4212 + Elysian 12817 + Serpentine 12931 + defenders 8846-8849 + Hydra 23073/23075 + Twisted buckler 21000 + Dinh bulwark 21015 + Inquisitor 24419 + 3rdAge 10338-10344 + Eternal 13235 + Zenyte 19547/19553 + Skull 9013 + Toxic staff 12902 + Thammaron 22552 + Nightmare 24422-24425 + Bow Faerdhinen 25865 + Blade Saeldor 25870 + Crystal halberd 23987 + Crystal armour 23971 + Gauntlet attuned bow 23902 + kiteshield 1193 + Blue dhide 2499 + Ranger gloves 19994 + Seers 6731 + Crystal shield 23991 + Torva 26382
+│   │   └── equipment.md     89  - platebody/chain/kite/helm/scimitar/warhammer/bonus + high-ID ornamental 20000-20047 + shaman mask 21838 + godswords 26233/28537 + dragonfire 11284 + crystal 4212 + Elysian 12817 + Serpentine 12931 + defenders 8846-8849 + Hydra 23073/23075 + Twisted buckler 21000 + Dinh bulwark 21015 + Inquisitor 24419 + 3rdAge 10338-10344 + Eternal 13235 + Zenyte 19547/19553 + Skull 9013 + Toxic staff 12902 + Thammaron 22552 + Nightmare 24422-24425 + Bow Faerdhinen 25865 + Blade Saeldor 25870 + Crystal halberd 23987 + Crystal armour 23971 + Gauntlet attuned bow 23902 + kiteshield 1193 + Blue dhide 2499 + Ranger gloves 19994 + Seers 6731 + Crystal shield 23991 + Torva 26382
 │   ├── protocol/
 │   │   └── packets.md       20  - WIDGET_ACTION, OPNPC, Trade, run modifier
 │   ├── shops/

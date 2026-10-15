@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-15T Wave86",
+  "generated": "2026-10-15T Wave87",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 279,
+    "pending_candidates_total": 285,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -6219,6 +6219,131 @@
       "slug": "torag-hammers-4959-4960-full-helmet-vs-weapon",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-280",
+      "title": "Steel brutal 4783 ammo Ranged 5 omitted — active ARROWS requirements null vs DB Ranged5 (bonuses HOLD: ranged_str 19 clean)",
+      "summary": "Active item-gameplay.json:4783 Steel brutal ARROWS stackable true tradeable true bonuses [0,0,0,0,0,0,0,0,0,0,0,19] requirements null vs DB items-json 4783.json Steel brutal cost135 low8 high12 weight0.0 slot ammo requirements Ranged5 equipment ranged_str19 slot ammo wiki_url https://oldschool.runescape.wiki/w/Steel_brutal + data/items/items-skill-requirements.json 4783:5. Loader ItemDefinitionLoader.plugin.js:111-164 not copying missing requirements allows Ranged<5 to wield via EquipPacketListener 119-133 gate bypass. Bonuses/slot exact, trade/weight/value HOLD per integrity hold. Scout Wave87-323 HOLD logic flagged HOLD but req mismatch qualifies CAND per bonus/requirements/slot/speed rule. Dup-screen 0 hits 4783/brutal before filing. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 4783, 5, 19).",
+      "ids_mentioned": [
+        4783,
+        5,
+        19,
+        4784,
+        4781,
+        4778
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "steel-brutal-4783-omit-ranged5",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-281",
+      "title": "Adamant brutal 4798 ammo Ranged 30 omitted — active ARROWS requirements null vs DB Ranged30 (ranged_str 45 clean)",
+      "summary": "Active item-gameplay.json:4798 Adamant brutal ARROWS stackable true bonuses [0,0,0,0,0,0,0,0,0,0,0,45] requirements null vs DB items-json 4798.json Adamant brutal cost326 low38 high57 weight0.0 slot ammo requirements Ranged30 equipment ranged_str45 wiki_url https://oldschool.runescape.wiki/w/Adamant_brutal + data/items/items-skill-requirements 4798:30. Loader missing requirements bypasses EquipPacketListener Ranged30 gate. Bonuses/slot HOLD. Scout Wave87-324 flagged HOLD but req omission is CAND per contract. Dup-screen 0 hits 4798/brutal. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4798, 30, 45).",
+      "ids_mentioned": [
+        4798,
+        30,
+        45,
+        4793,
+        4803,
+        4788
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "adamant-brutal-4798-omit-ranged30",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-282",
+      "title": "Dharok's platelegs degraded 4900 50 attack_ranged -7 vs DB -11 (staged degrade variant of base 4722 CAND-149, BARROWS 4722→4900 stage2)",
+      "summary": "Active item-gameplay.json:4900 Dharok's platelegs 50 LEGS bonuses [0,0,0,-21,-7,85,82,83,-4,92] req Defence70 vs DB items-json 4900.json (via items-complete fallback) staged variant equipment attack_ranged -11 defence 85/82/83/-4/92 slot legs requirements Defence70 wiki_url https://oldschool.runescape.wiki/w/Dharok's_platelegs#50 backed by base 4722.json -11 via BARROWS_BASE_ITEMS 4722→4900 stage2; loader BARROWS_BASE_ITEMS copies base bonuses [-7] verbatim to variant 4900, preserving drift. BonusManager index4 attack_ranged -7 vs -11 Delta4 understates ranged penalty. Slot LEGS 7 exact, req Def70 exact, alch 110k/165k exact, weight/trade/value HOLD. Scout Wave87-328/330 flagged HOLD for equipable variant but bonus mismatch qualifies CAND. Dup-screen 0 hits 4900 before filing (CAND-149 covers base 4722 only). — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4900, 4722, -7, -11, 70).",
+      "ids_mentioned": [
+        4900,
+        4722,
+        4751,
+        4759,
+        4730,
+        7,
+        11,
+        70
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "dharok-platelegs-4900-50-minus7-vs-minus11",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-283",
+      "title": "Guthan's chainskirt degraded 4922 100 + 4923 75 attack_ranged -7 vs DB -11 (base 4730 CAND-160, BARROWS 4730→4922/4923 stages 0/1)",
+      "summary": "Active item-gameplay.json:4922 Guthan's chainskirt 100 LEGS bonuses [0,0,0,-14,-7,75,72,73,-4,82] req Defence70 + 4923 Guthan's chainskirt 75 same -14/-7 vs DB items-json 4922.json / 4923.json equipment attack_ranged -11 defence 75/72/73/-4/82 slot legs requirements Defence70 wiki_url https://oldschool.runescape.wiki/w/Guthan's_chainskirt#100/#75 + base 4730.json -11. Loader BARROWS_BASE_ITEMS 4730→4922 stage0/4923 stage1 copies base -7 to variants. BonusManager index4 -7 vs -11 delta4. Slot/req/alch exact, weight/trade HOLD. Dup-screen 0 hits 4922/4923 (CAND-160 covers base 4730 only). — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4922, 4923, 4730, -7, -11, 70).",
+      "ids_mentioned": [
+        4922,
+        4923,
+        4730,
+        4722,
+        4751,
+        7,
+        11,
+        70
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "guthan-chainskirt-4922-4923-minus7-vs-minus11",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-284",
+      "title": "Torag's platelegs degraded 4972 50 attack_ranged -7 vs DB -11 (base 4751 staged 50, BARROWS 4751→4972 stage2; contrasts Torva 26386 et al)",
+      "summary": "Active item-gameplay.json:4972 Torag's platelegs 50 LEGS bonuses [0,0,0,-21,-7,85,82,83,-4,92] req Defence70 vs DB items-json 4972.json staged variant -11 defence 85/82/83/-4/92 slot legs requirements Defence70 wiki_url https://oldschool.runescape.wiki/w/Torag's_platelegs#50 via base 4751.json -11 BARROWS_BASE_ITEMS 4751→4972 stage2 copies base -7. BonusManager index4 delta4. Slot/req/alch exact. Scout Wave87-328 flagged CAND bonus drift (509 HOLD DUP). Dup-screen 0 hits 4972 before filing (TORAG platelegs base 4751 HOLD DUP vs CAND-149/160/162 legs pattern but distinct ID family). — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4972, 4751, -7, -11, 70, 92).",
+      "ids_mentioned": [
+        4972,
+        4751,
+        4722,
+        4730,
+        4759,
+        7,
+        11,
+        70
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "torag-platelegs-4972-50-minus7-vs-minus11",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-285",
+      "title": "Verac's plateskirt degraded 4994 100 + 4995 75 + 4996 50 + 4997 25 attack_ranged -7 vs DB -11 family (base 4759 CAND-162, BARROWS 4759→4994-4997 stages 0-3)",
+      "summary": "Active item-gameplay.json:4994 Verac's plateskirt 100 LEGS bonuses [0,0,0,-21,-7,85,82,83,0,84,0,0,0,4] + 4995 75 + 4996 50 + 4997 25 identical -21/-7 vs DB items-json 4994.json #100 / 4995.json #75 / 4996.json #50 / 4997.json #25 each equipment attack_ranged -11 defence 85/82/83/0/84 prayer4 slot legs requirements Defence70 wiki_url https://oldschool.runescape.wiki/w/Verac's_plateskirt#100-#25 + base 4759.json -11 via BARROWS_BASE_ITEMS 4759→4994 stage0 etc copies base -7. BonusManager index4 -7 vs -11 delta4 systemically understates ranged penalty for all 4 degraded stages. Slot LEGS 7/req Def70/alch exact, weight/trade HOLD. Dup-screen 0 hits 4994-4997 (CAND-162 covers base 4759 only). — triage via scout read-only audit (see 05_Audit_Log.md; IDs 4994, 4995, 4996, 4997, 4759, -7, -11, 70).",
+      "ids_mentioned": [
+        4994,
+        4995,
+        4996,
+        4997,
+        4759,
+        4730,
+        4722,
+        4751,
+        -7,
+        -11,
+        70
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "verac-plateskirt-4994-4997-minus7-vs-minus11",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
     }
   ],
   "completed_checks": [
@@ -10721,6 +10846,6 @@
       "domain": "items"
     }
   ],
-  "pending_candidates_total": 272,
+  "pending_candidates_total": 285,
   "completed_checks_total": 253
 }
