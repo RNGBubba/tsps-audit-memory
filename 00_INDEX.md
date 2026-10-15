@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 - 2026-10-15 Waves 22-84 3582+ scouts
+## Status snapshot (auto-synced to `registry.json` v1.2 - 2026-10-15 Waves 22-85 3646+ scouts
 
 | Bucket | Count | Where |
 |---|---|---|
@@ -174,4 +174,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-84: 3582+ scouts drained offline
+*Waves 22-85: 3646+ scouts drained offline — Wave85 3 new CAND-273 gilded 3481/3483/3485 / CAND-274 Fremennik shirts 3767-3775 / CAND-275 decorative 4068-4072

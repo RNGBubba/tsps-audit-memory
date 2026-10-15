@@ -2,18 +2,18 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Progress — Wave 84 · 3582+ scouts · 2026-10-15 
+## Progress — Wave 85 · 3646+ scouts · 2026-10-15 
 
-> **40 Findings · 272 Pending · 253 Verified** — 565 total — **51.9% done · 272 remain**
+> **40 Findings · 275 Pending · 253 Verified** — 568 total — **51.6% done · 275 remain**
 >
 > % Done = (Findings + Verified) / Total — auto-updated every `Sync all MD: Wave N`
 
-**Overall — 293 / 565 done — 51.9%**
+**Overall — 293 / 568 done — 51.6%**
 
 | Category | Done | Total | % Done | Pending | ETA |
 |---|---:|---:|---:|---:|---|
 | Prayer / Slayer | 1 | 12 | 8.3% | 11 | ~0.2 waves |
-| Items / Equipment | 20 | 96 | 20.8% | 76 | ~1.2 waves |
+| Items / Equipment | 20 | 99 | 20.2% | 79 | ~1.2 waves |
 | Skills | 60 | 126 | 47.6% | 66 | ~1.0 waves |
 | Protocol / Packets | 19 | 39 | 48.7% | 20 | ~0.3 waves |
 | Combat | 33 | 57 | 57.9% | 24 | ~0.4 waves |
@@ -21,7 +21,7 @@
 | World | 88 | 125 | 70.4% | 37 | ~0.6 waves |
 | Bank / Inventory | 13 | 15 | 86.7% | 2 | ~0.0 waves |
 | Drops | 3 | 3 | 100.0% | 0 | done |
-| **Overall** | **293** | **565** | **51.9%** | **272** | **~4.3 waves (~0.9 days)** |
+| **Overall** | **293** | **568** | **51.6%** | **275** | **~4.3 waves (~0.9 days)** |
 
 > **ETA** — Pending / 64 per wave · ~5 waves/day → ~0.9 days to re-scan the full pending queue · trailing **+1.4 new CAND / wave** · coverage to 80% needs ~157 net closes → ~2–3 weeks at current triage bandwidth.
 >

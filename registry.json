@@ -1,6 +1,6 @@
 {
   "version": "1.2",
-  "generated": "2026-10-14T Wave84",
+  "generated": "2026-10-14T Wave85",
   "purpose": "Agentic memory bank for TSPS audit — single source of truth for what is broken, what needs investigation, and what is verified clean.",
   "source_of_truth": {
     "findings_register": "findings/",
@@ -89,7 +89,7 @@
       "Low": 4,
       "High": 2
     },
-    "pending_candidates_total": 272,
+    "pending_candidates_total": 275,
     "completed_checks_total": 253,
     "legacy_finding_blocks_frozen": 40
   },
@@ -6063,6 +6063,77 @@
       "status": "candidate",
       "needs_verification": true,
       "slug": "avas-accumulator-10499-omit-ranged50",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-273",
+      "title": "Gilded armour family 3481 platebody -10 vs -15 + 3483 platelegs / 3485 plateskirt -7 vs -11 + Defence 50 vs DB 40 over-gate (Rune 3477/3479 -7 vs -11 HOLD same family, noted 3487/3489 HOLD placeholder)",
+      "summary": "Active item-gameplay.json:3483 Gilded platebody PLATEBODY 3481 bonuses [0,0,0,-30,-10,82,80,72,-6,80] req Defence50 vs DB items-json 3481.json Gilded platebody cost65000 low26000 high39000 weight9.979 slot body attack -15 defence 82/80/72/-6/80 req Defence40 wiki_url https://oldschool.runescape.wiki/w/Gilded_platebody + 3483 Gilded platelegs LEGS bonuses [0,0,0,-21,-7,51,49,47,-4,49] req50 vs DB 3483.json Gilded platelegs slot legs req40 weight9.071 high38400 low26000 64k + 3485 Gilded plateskirt same legs -7 vs -11 req50 vs DB 3485.json req40 weight9.071 64k; controls Rune plateskirt (t) 3477 LEGS -7 vs -11 req40 HOLD byte-identical via loader + Saradomin plateskirt 3479 same -7 vs -11 + noted Gilded full helm 3487 / kiteshield 3489 are Null placeholders (DB key missing, noted true NONE slot-1) HOLD not CAND per Wave85-211 triple-verify. Loader ItemDefinitionLoader.plugin.js:111-164 copies bonuses/requirements verbatim -> BonusManager index4 -10/-7 vs -15/-11 + EquipPacketListener 50 vs 40 over-gate. Registry 0 hits 3481/3483/3485. -- triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 3481/3483/3485, -10/-15 -7/-11, 50 vs 40).",
+      "ids_mentioned": [
+        3481,
+        3483,
+        3485,
+        3477,
+        3479,
+        50,
+        40,
+        -10,
+        -15,
+        -7,
+        -11
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "gilded-armour-3481-3483-3485-bonus-req-drift",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-274",
+      "title": "Fremennik shirts 3767 brown / 3769 grey / 3771 beige / 3773 red / 3775 blue defence_slash/crush 0/0 vs DB 2/2 (cloak 3765/3777/3779 HOLD, helm 3749-3755 CHK-223 HOLD control)",
+      "summary": "Active item-gameplay.json:3767 Fremennik brown shirt PLATEBODY 3767 bonuses [0,0,0,0,0,0,0,0,0,0] weight0 vs DB items-json 3767.json Fremennik brown shirt cost250 low100 high150 weight0.907 slot body defence 0/2/2/0/0 slot cape? actually body req null wiki_url https://oldschool.runescape.wiki/w/Fremennik_brown_shirt + 3769 grey shirt same 2/2 vs 0/0 wiki Green? 3769 grey + 3771 beige + 3773 red + 3775 blue each DB defence 0/2/2/0/0 vs active 0/0/0/0/0 - BonusManager index6/7 2->0 drift; controls Fremennik green cloak 3765 CAPE 0/1/1/0/2 byte-identical HOLD vs DB 3765 + red cloak 3777 + cape controls HOLD + Archer 3749/Berserker 3751/Warrior 3753/Farseer 3755 COIF/MED_HELMET CHK-223 HOLD dup. Loader copies bonuses verbatim via ItemDefinitionLoader.plugin.js:111-164 -> BonusManager; ItemDefinitionLoader missing bonuses array leaves cache 0 vs DB 2/2. Registry 0 hits 3767/3769/3771/3773/3775. -- triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 3767/3769/3771/3773/3775, 2/2 vs 0/0).",
+      "ids_mentioned": [
+        3767,
+        3769,
+        3771,
+        3773,
+        3775,
+        2,
+        2,
+        0,
+        0
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "fremennik-shirts-3767-3775-defence2-2-vs0-0",
+      "file": "pending/items/equipment.md",
+      "domain": "items/equipment"
+    },
+    {
+      "candidate_id": "CAND-275",
+      "title": "Decorative Castle Wars armour set 4068 sword / 4069 platebody / 4070 platelegs / 4071 helm / 4072 shield bonuses null + Defence5/Attack5 omitted via loader (4067 ticket HOLD, 4073 damp HOLD)",
+      "summary": "Active item-gameplay.json:4070 Decorative sword WEAPON/SCIMITAR 4068 no bonuses req null value5 high0 low0 weight0 vs DB items-json 4068.json Decorative sword (red) cost500 low200 high300 weight1.587 slot weapon requirements Attack5 equipment attack 13/18/-2 def 0/3/2 melee16 weapon speed5 wiki_url https://oldschool.runescape.wiki/w/Decorative_sword_(red) + 4069 Decorative armour PLATEBODY 4069 slot body req Defence5 attack -30/-15 def32/31/24/-6/31 cost2000 high1200 low800 weight8.618 vs null + 4070 LEGS 4070 slot legs req Defence5 attack -21/-11 def17/16/15/-4/16 cost1000 high600 low400 + 4071 MED_HELMET head req Defence5 attack -3/0 def7/8/6/-1/7 cost300 + 4072 SHIELD shield req Defence5 attack -8/-3 def13/15/14/-1/14 cost850 weight4.535; controls Castle wars ticket 4067 NONE HOLD clean async damp tinderbox 4073 NONE HOLD + noted 4074 Null placeholder HOLD. Loader ItemDefinitionLoader.plugin.js:111-164 copies only present bonuses/requirements -> null bypasses BonusManager 39-50 + EquipPacketListener 119-133. Registry 0 hits 4068/4069/4070/4071/4072/decorative. -- triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 4068/4069/4070/4071/4072, Attack5 Defence5, bonuses null vs DB).",
+      "ids_mentioned": [
+        4068,
+        4069,
+        4070,
+        4071,
+        4072,
+        5,
+        13,
+        18,
+        32,
+        31,
+        17,
+        16
+      ],
+      "source_file": "pending/items/equipment.md",
+      "status": "candidate",
+      "needs_verification": true,
+      "slug": "decorative-castle-wars-4068-4072-bonuses-req5-omitted",
       "file": "pending/items/equipment.md",
       "domain": "items/equipment"
     }
