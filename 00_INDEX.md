@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Status snapshot (auto-synced to `registry.json` v1.2 - 2026-10-15 Waves 22-83 3518+ scouts
+## Status snapshot (auto-synced to `registry.json` v1.2 - 2026-10-15 Waves 22-84 3582+ scouts
 
 | Bucket | Count | Where |
 |---|---|---|
@@ -174,4 +174,4 @@ Memory/
 - Do not modify files under `Typescript-RSPS/` or `READ-ONLY-DB/` during this audit; `GOAL_RESUME.md`/`HANDOFF.md` are local-only (gitignored).
 
 ---
-*Waves 22-83: 3326+ scouts drained offline (62 HOLD/HOLD DUP + 2 new CAND-216/217 in Wave 41 + 64 HOLD/HOLD DUP in Wave 42 + 64 HOLD/HOLD DUP in Wave 43 + 64 HOLD/HOLD DUP in Wave 44 + 64 HOLD/HOLD DUP in Wave 45 + 64 HOLD/HOLD DUP in Wave 46 + 64 HOLD/HOLD DUP in Wave 47 herblore/smithing/fletching/cooking/farming + 64 HOLD/HOLD DUP in Wave 48 construction/planks + mining/woodcutting/fishing/cooking + herblore unf/grimy + 64 HOLD/HOLD DUP in Wave 49 hunter/runecraft/thieving/slayer/construction + 64 HOLD/HOLD DUP in Wave 50 agility/farming/mining + remaining parity + 5 stream-fail re-verified offline as HOLD DUP + 64 HOLD/HOLD DUP in Wave 51 2h/claws/halberds/spears/pickaxes/axes/maces/longswords/battleaxes/daggers/whip/godswords/barrows + 8 billing/stream-fail re-verified + 64 HOLD/HOLD DUP in Wave52 + 64 HOLD/HOLD DUP in Wave53 10 new CAND-224-233 + 64 (63 HOLD + CAND-234) in Wave54 + 64 (63 HOLD + CAND-235) in Wave55 + 64 (60 HOLD + 4 CAND-236-239) in Wave56 + 64 HOLD/HOLD DUP in Waves57-69 + 64 (59 HOLD +5 CAND-257-261) in Wave75 + 64 (63 HOLD + CAND-262) in Wave76 + 64 (63 HOLD + CAND-263) in Wave77 + 64 (63 HOLD/HOLD DUP + CAND-264 Gauntlet attuned bow 23902) in Wave78; registry 40/264/253) + 64 (58 HOLD/HOLD DUP + 6 new CAND-265 Steel kiteshield 1193 / CAND-266 Blue dhide 2499 / CAND-267 Ranger gloves 19994 / CAND-268 Seers 6731 / CAND-269 Crystal shield 23991 / CAND-270 Torva 26382) in Wave79; registry 40/270/253) + 64 (62 HOLD/HOLD DUP + 2 new CAND-271 Inquisitor armour 24420 + CAND-272 Ava accumulator 10499) in Wave80; registry 40/272/253) + 64 (64 HOLD/HOLD DUP + 0 new CAND/CHK) in Wave81; registry 40/272/253) + 64×8=512 HOLD/HOLD DUP + 0 new CAND/CHK in Wave82; registry 40/272/253) + 64×8=512 HOLD/HOLD DUP + 0 new CAND/CHK in Wave83; registry 40/272/253)
+*Waves 22-84: 3582+ scouts drained offline

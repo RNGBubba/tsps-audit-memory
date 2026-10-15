@@ -2,7 +2,7 @@
 
 > **Machine-readable source of truth:** [`registry.json`](registry.json) — one JSON object with every finding, candidate, and completed check. Agents: read this first.
 
-## Progress — Wave 83 · 3518+ scouts · 2026-10-15 
+## Progress — Wave 84 · 3582+ scouts · 2026-10-15 
 
 > **40 Findings · 272 Pending · 253 Verified** — 565 total — **51.9% done · 272 remain**
 >
