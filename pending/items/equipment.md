@@ -1,5 +1,5 @@
 # Pending — items/equipment
-> **Candidates** (169) - need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
+> **Candidates** (301) - need verification before promotion. Each is a **CAND**; triple-verify active + exact DB key + Wiki before filing. One root per entry.
 
 - **Gloves of silence Hunter gate (ID 10075):** Active item row omits exact DB Hunter 54 requirement; ordinary equip checks no level when requirements are absent. Its pickpocket +5% and 62-failure wear-out are implemented. Candidate-only.
 
@@ -585,3 +585,533 @@
 ---
 
 - **Wave88 req 7917 Ram skull helm Defence30->0 (1 ids):** Active item-gameplay 7917 Ram skull helm requirements null vs DB items-json 7917.json equipment requirements Defence30->0 wiki https://oldschool.runescape.wiki/w/Ram_skull_helm + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 5438-8606 req Defence30->0 1 ids 7917. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 7917). — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 7917, 30, 0).
+
+---
+
+- **Wave89 bonus 8714 Rune kiteshield attack_ranged -3->-2 idx4 (55 ids):** Active item-gameplay 8714 Rune kiteshield bonuses attack_ranged -3->-2 idx4 vs DB items-json 8714.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 55 ids 8714,8716,8718,8720,8724,8726... wiki https://oldschool.runescape.wiki/w/Rune_kiteshield_(Arrav), https://oldschool.runescape.wiki/w/Rune_kiteshield_(Asgarnia). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 8714,8716,8718,8720,8724,8726...).
+
+---
+
+- **Wave89 bonus 9676 Proselyte cuisse attack_ranged -11->-7 idx4 (19 ids):** Active item-gameplay 9676 Proselyte cuisse bonuses attack_ranged -11->-7 idx4 vs DB items-json 9676.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 19 ids 9676,9678,12207,12209,12217,12219... wiki https://oldschool.runescape.wiki/w/Proselyte_cuisse, https://oldschool.runescape.wiki/w/Proselyte_tasset. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 9676,9678,12207,12209,12217,12219...).
+
+---
+
+- **Wave89 bonus 8682 Steel heraldic helm act null vs db [0, 0, 0, -6, -3, 9, 10, 7, -1, 9, 0, 0, 0, 0] (16 ids):** Active item-gameplay 8682 Steel heraldic helm bonuses act null vs db [0, 0, 0, -6, -3, 9, 10, 7, -1, 9, 0, 0, 0, 0] vs DB items-json 8682.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 16 ids 8682,8684,8686,8688,8690,8692... wiki https://oldschool.runescape.wiki/w/Steel_heraldic_helm_(Arrav), https://oldschool.runescape.wiki/w/Steel_heraldic_helm_(Asgarnia). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 8682,8684,8686,8688,8690,8692...).
+
+---
+
+- **Wave89 bonus 9674 Proselyte hauberk attack_ranged -15->-10 idx4 (10 ids):** Active item-gameplay 9674 Proselyte hauberk bonuses attack_ranged -15->-10 idx4 vs DB items-json 9674.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 10 ids 9674,12205,12215,12225,12235,12277... wiki https://oldschool.runescape.wiki/w/Proselyte_hauberk, https://oldschool.runescape.wiki/w/Bronze_platebody_(g). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 9674,12205,12215,12225,12235,12277...).
+
+---
+
+- **Wave89 bonus 12420 Light infinity top magic_damage 1->0 idx12 (4 ids):** Active item-gameplay 12420 Light infinity top bonuses magic_damage 1->0 idx12 vs DB items-json 12420.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 4 ids 12420,12421,12458,12459 wiki https://oldschool.runescape.wiki/w/Light_infinity_top, https://oldschool.runescape.wiki/w/Light_infinity_bottoms. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12420,12421,12458,12459).
+
+---
+
+- **Wave89 bonus 9044 Pharaoh's sceptre db null vs act [7, -1, 25, 10, 0, 2, 3, 1, 10, 0, 32, 0, 0, 0] (3 ids):** Active item-gameplay 9044 Pharaoh's sceptre bonuses db null vs act [7, -1, 25, 10, 0, 2, 3, 1, 10, 0, 32, 0, 0, 0] vs DB items-json 9044.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 3 ids 9044,9046,9048 wiki https://oldschool.runescape.wiki/w/Pharaoh's_sceptre_(discontinued)#(3), https://oldschool.runescape.wiki/w/Pharaoh's_sceptre_(discontinued)#(2). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 9044,9046,9048).
+
+---
+
+- **Wave89 bonus 10582 Keris(p) act null vs db [40, 20, -10, 2, 0, 0, 0, 0, 2, 0, 30, 0, 0, 2] (3 ids):** Active item-gameplay 10582 Keris(p) bonuses act null vs db [40, 20, -10, 2, 0, 0, 0, 0, 2, 0, 30, 0, 0, 2] vs DB items-json 10582.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 3 ids 10582,10583,10584 wiki https://oldschool.runescape.wiki/w/Keris#Poison, https://oldschool.runescape.wiki/w/Keris#Poison+. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10582,10583,10584).
+
+---
+
+- **Wave89 bonus 12464 Ancient plateskirt attack_ranged -11->-7 idx4, prayer 1->0 idx13 (3 ids):** Active item-gameplay 12464 Ancient plateskirt bonuses attack_ranged -11->-7 idx4, prayer 1->0 idx13 vs DB items-json 12464.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 3 ids 12464,12474,12484 wiki https://oldschool.runescape.wiki/w/Ancient_plateskirt, https://oldschool.runescape.wiki/w/Armadyl_plateskirt. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12464,12474,12484).
+
+---
+
+- **Wave89 bonus 8936 Blue flowers db null vs act [-100, -100, -50, 0, 0, 0, 0, 0, 0, 0, -10, 0, 0, 0] (2 ids):** Active item-gameplay 8936 Blue flowers bonuses db null vs act [-100, -100, -50, 0, 0, 0, 0, 0, 0, 0, -10, 0, 0, 0] vs DB items-json 8936.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 8936,8938 wiki https://oldschool.runescape.wiki/w/Blue_flowers_(Trouble_Brewing), https://oldschool.runescape.wiki/w/Red_flowers_(Trouble_Brewing). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 8936,8938).
+
+---
+
+- **Wave89 bonus 9286 Blurite bolts (p) act null vs db [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0] (2 ids):** Active item-gameplay 9286 Blurite bolts (p) bonuses act null vs db [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 28, 0, 0] vs DB items-json 9286.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 9286,9300 wiki https://oldschool.runescape.wiki/w/Blurite_bolts#Poison, https://oldschool.runescape.wiki/w/Blurite_bolts#Poison++. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 9286,9300).
+
+---
+
+- **Wave89 bonus 11165 Phoenix crossbow db null vs act [0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0] (2 ids):** Active item-gameplay 11165 Phoenix crossbow bonuses db null vs act [0, 0, 0, 0, 6, 0, 0, 0, 0, 0, 0, 0, 0, 0] vs DB items-json 11165.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 11165,11167 wiki https://oldschool.runescape.wiki/w/Phoenix_crossbow_(unobtainable_item)#1, https://oldschool.runescape.wiki/w/Phoenix_crossbow_(unobtainable_item)#2. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11165,11167).
+
+---
+
+- **Wave89 bonus 11896 Decorative armour act null vs db [0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0] (2 ids):** Active item-gameplay 11896 Decorative armour bonuses act null vs db [0, 0, 0, 0, 0, 20, 20, 20, 20, 20, 0, 0, 0, 0] vs DB items-json 11896.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 11896,11899 wiki https://oldschool.runescape.wiki/w/Decorative_armour_(magic_top)#Normal, https://oldschool.runescape.wiki/w/Decorative_armour_(ranged_top)#Normal. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11896,11899).
+
+---
+
+- **Wave89 bonus 11897 Decorative armour act null vs db [0, 0, 0, 0, 0, 15, 15, 15, 15, 15, 0, 0, 0, 0] (2 ids):** Active item-gameplay 11897 Decorative armour bonuses act null vs db [0, 0, 0, 0, 0, 15, 15, 15, 15, 15, 0, 0, 0, 0] vs DB items-json 11897.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 11897,11900 wiki https://oldschool.runescape.wiki/w/Decorative_armour_(magic_legs)#Normal, https://oldschool.runescape.wiki/w/Decorative_armour_(ranged_legs)#Normal. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11897,11900).
+
+---
+
+- **Wave89 bonus 11898 Decorative armour act null vs db [0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 0, 0, 0, 0] (2 ids):** Active item-gameplay 11898 Decorative armour bonuses act null vs db [0, 0, 0, 0, 0, 4, 4, 4, 4, 4, 0, 0, 0, 0] vs DB items-json 11898.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 11898,11901 wiki https://oldschool.runescape.wiki/w/Decorative_armour_(magic_hat)#Normal, https://oldschool.runescape.wiki/w/Decorative_armour_(quiver)#Normal. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11898,11901).
+
+---
+
+- **Wave89 bonus 12327 Red d'hide body (g) defence_stab 26->50 idx5, defence_slash 34->42 idx6, defence_crush 36->55 idx7, defence_magic 36->40 :** Active item-gameplay 12327 Red d'hide body (g) bonuses defence_stab 26->50 idx5, defence_slash 34->42 idx6, defence_crush 36->55 idx7, defence_magic 36->40 idx8, defence_ranged 45->50 idx9 vs DB items-json 12327.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 12327,12331 wiki https://oldschool.runescape.wiki/w/Red_d'hide_body_(g), https://oldschool.runescape.wiki/w/Red_d'hide_body_(t). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12327,12331).
+
+---
+
+- **Wave89 bonus 12329 Red d'hide chaps (g) defence_stab 15->28 idx5, defence_slash 18->22 idx6, defence_crush 22->30 idx7, defence_magic 18->20:** Active item-gameplay 12329 Red d'hide chaps (g) bonuses defence_stab 15->28 idx5, defence_slash 18->22 idx6, defence_crush 22->30 idx7, defence_magic 18->20 idx8, defence_ranged 20->28 idx9 vs DB items-json 12329.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 12329,12333 wiki https://oldschool.runescape.wiki/w/Red_d'hide_chaps_(g), https://oldschool.runescape.wiki/w/Red_d'hide_chaps_(t). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12329,12333).
+
+---
+
+- **Wave89 bonus 12381 Black d'hide body (g) defence_stab 30->55 idx5, defence_slash 38->47 idx6, defence_crush 45->60 idx7, defence_magic 45->5:** Active item-gameplay 12381 Black d'hide body (g) bonuses defence_stab 30->55 idx5, defence_slash 38->47 idx6, defence_crush 45->60 idx7, defence_magic 45->50 idx8, defence_ranged 50->55 idx9 vs DB items-json 12381.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 12381,12385 wiki https://oldschool.runescape.wiki/w/Black_d'hide_body_(g), https://oldschool.runescape.wiki/w/Black_d'hide_body_(t). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12381,12385).
+
+---
+
+- **Wave89 bonus 12383 Black d'hide chaps (g) defence_stab 18->31 idx5, defence_slash 20->25 idx6, defence_crush 26->33 idx7, defence_magic 23->:** Active item-gameplay 12383 Black d'hide chaps (g) bonuses defence_stab 18->31 idx5, defence_slash 20->25 idx6, defence_crush 26->33 idx7, defence_magic 23->28 idx8, defence_ranged 26->31 idx9 vs DB items-json 12383.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 12383,12387 wiki https://oldschool.runescape.wiki/w/Black_d'hide_chaps_(g), https://oldschool.runescape.wiki/w/Black_d'hide_chaps_(t). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12383,12387).
+
+---
+
+- **Wave89 bonus 12449 Black wizard robe (g) attack_magic 3->2 idx3, defence_magic 3->2 idx8 (2 ids):** Active item-gameplay 12449 Black wizard robe (g) bonuses attack_magic 3->2 idx3, defence_magic 3->2 idx8 vs DB items-json 12449.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 2 ids 12449,12451 wiki https://oldschool.runescape.wiki/w/Black_wizard_robe_(g), https://oldschool.runescape.wiki/w/Black_wizard_robe_(t). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12449,12451).
+
+---
+
+- **Wave89 bonus 9976 Chinchompa db null vs act [0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0] (1 ids):** Active item-gameplay 9976 Chinchompa bonuses db null vs act [0, 0, 0, 0, 45, 0, 0, 0, 0, 0, 0, 0, 0, 0] vs DB items-json 9976.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 9976 wiki https://oldschool.runescape.wiki/w/Chinchompa. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 9976).
+
+---
+
+- **Wave89 bonus 9977 Red chinchompa db null vs act [0, 0, 0, 0, 70, 0, 0, 0, 0, 0, 0, 15, 0, 0] (1 ids):** Active item-gameplay 9977 Red chinchompa bonuses db null vs act [0, 0, 0, 0, 70, 0, 0, 0, 0, 0, 0, 15, 0, 0] vs DB items-json 9977.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 9977 wiki https://oldschool.runescape.wiki/w/Red_chinchompa. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 9977).
+
+---
+
+- **Wave89 bonus 10045 Larupia hat defence_ranged 4->1 idx9 (1 ids):** Active item-gameplay 10045 Larupia hat bonuses defence_ranged 4->1 idx9 vs DB items-json 10045.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 10045 wiki https://oldschool.runescape.wiki/w/Larupia_hat. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10045).
+
+---
+
+- **Wave89 bonus 10143 Marrentill tar act null vs db [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0] (1 ids):** Active item-gameplay 10143 Marrentill tar bonuses act null vs db [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 22, 0, 0] vs DB items-json 10143.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 10143 wiki https://oldschool.runescape.wiki/w/Marrentill_tar. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10143).
+
+---
+
+- **Wave89 bonus 10487 Undead chicken act null vs db [-100, -100, -50, 0, 0, 0, 0, 0, 0, 0, -10, 0, 0, 0] (1 ids):** Active item-gameplay 10487 Undead chicken bonuses act null vs db [-100, -100, -50, 0, 0, 0, 0, 0, 0, 0, -10, 0, 0, 0] vs DB items-json 10487.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 10487 wiki https://oldschool.runescape.wiki/w/Undead_chicken_(item). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10487).
+
+---
+
+- **Wave89 bonus 10566 Fire cape db null vs act [1, 1, 1, 1, 1, 11, 11, 11, 11, 11, 4, 0, 0, 2] (1 ids):** Active item-gameplay 10566 Fire cape bonuses db null vs act [1, 1, 1, 1, 1, 11, 11, 11, 11, 11, 4, 0, 0, 2] vs DB items-json 10566.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 10566 wiki https://oldschool.runescape.wiki/w/Fire_cape_(animation_item). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10566).
+
+---
+
+- **Wave89 bonus 10822 Yak-hide armour act null vs db [0, 0, 0, -5, 0, 25, 20, 15, -2, 25, 0, 0, 0, 0] (1 ids):** Active item-gameplay 10822 Yak-hide armour bonuses act null vs db [0, 0, 0, -5, 0, 25, 20, 15, -2, 25, 0, 0, 0, 0] vs DB items-json 10822.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 10822 wiki https://oldschool.runescape.wiki/w/Yak-hide_armour_(top). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10822).
+
+---
+
+- **Wave89 bonus 10824 Yak-hide armour act null vs db [0, 0, 0, -5, 10, 25, 20, 15, -2, 10, 0, 0, 0, 0] (1 ids):** Active item-gameplay 10824 Yak-hide armour bonuses act null vs db [0, 0, 0, -5, 10, 25, 20, 15, -2, 10, 0, 0, 0, 0] vs DB items-json 10824.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 10824 wiki https://oldschool.runescape.wiki/w/Yak-hide_armour_(legs). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10824).
+
+---
+
+- **Wave89 bonus 10826 Neitiznot shield attack_magic -10->-8 idx3, attack_ranged -10->-2 idx4, defence_stab 17->27 idx5, defence_slash 17->31 id:** Active item-gameplay 10826 Neitiznot shield bonuses attack_magic -10->-8 idx3, attack_ranged -10->-2 idx4, defence_stab 17->27 idx5, defence_slash 17->31 idx6, defence_crush 31->29 idx7, defence_magic -4->-1 idx8, defence_ranged 33->29 idx9 vs DB items-json 10826.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 10826 wiki https://oldschool.runescape.wiki/w/Neitiznot_shield. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10826).
+
+---
+
+- **Wave89 bonus 10888 Barrelchest anchor db null vs act [-2, 10, 92, 0, 0, 0, 0, 0, 0, 0, 100, 0, 0, 0] (1 ids):** Active item-gameplay 10888 Barrelchest anchor bonuses db null vs act [-2, 10, 92, 0, 0, 0, 0, 0, 0, 0, 100, 0, 0, 0] vs DB items-json 10888.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 10888 wiki https://oldschool.runescape.wiki/w/Barrelchest_anchor#Broken. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10888).
+
+---
+
+- **Wave89 bonus 11199 Rupert's helmet db null vs act [0, 0, 6, -2, -2, 27, 28, 31, 5, 24, 0, 0, 0, 0] (1 ids):** Active item-gameplay 11199 Rupert's helmet bonuses db null vs act [0, 0, 6, -2, -2, 27, 28, 31, 5, 24, 0, 0, 0, 0] vs DB items-json 11199.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11199 wiki https://oldschool.runescape.wiki/w/Rupert's_helmet. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11199).
+
+---
+
+- **Wave89 bonus 11701 Iron arrow db null vs act [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0] (1 ids):** Active item-gameplay 11701 Iron arrow bonuses db null vs act [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 10, 0, 0] vs DB items-json 11701.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11701 wiki https://oldschool.runescape.wiki/w/Iron_arrow_(Barbarian_Assault). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11701).
+
+---
+
+- **Wave89 bonus 11702 Steel arrow db null vs act [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0] (1 ids):** Active item-gameplay 11702 Steel arrow bonuses db null vs act [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 16, 0, 0] vs DB items-json 11702.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11702 wiki https://oldschool.runescape.wiki/w/Steel_arrow_(Barbarian_Assault). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11702).
+
+---
+
+- **Wave89 bonus 11707 Cursed goblin hammer attack_stab -100->0 idx0, attack_slash -100->0 idx1, attack_crush -100->0 idx2, melee_strength -100-:** Active item-gameplay 11707 Cursed goblin hammer bonuses attack_stab -100->0 idx0, attack_slash -100->0 idx1, attack_crush -100->0 idx2, melee_strength -100->0 idx10 vs DB items-json 11707.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11707 wiki https://oldschool.runescape.wiki/w/Cursed_goblin_hammer. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11707).
+
+---
+
+- **Wave89 bonus 11770 Seers ring (i) magic_damage 0.5->0 idx12 (1 ids):** Active item-gameplay 11770 Seers ring (i) bonuses magic_damage 0.5->0 idx12 vs DB items-json 11770.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11770 wiki https://oldschool.runescape.wiki/w/Seers_ring_(i)#Nightmare_Zone. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11770).
+
+---
+
+- **Wave89 bonus 11787 Steam battlestaff attack_magic 12->10 idx3, defence_magic 12->10 idx8 (1 ids):** Active item-gameplay 11787 Steam battlestaff bonuses attack_magic 12->10 idx3, defence_magic 12->10 idx8 vs DB items-json 11787.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11787 wiki https://oldschool.runescape.wiki/w/Steam_battlestaff. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11787).
+
+---
+
+- **Wave89 bonus 11789 Mystic steam staff attack_stab 10->7 idx0, attack_magic 14->10 idx3, defence_magic 14->10 idx8 (1 ids):** Active item-gameplay 11789 Mystic steam staff bonuses attack_stab 10->7 idx0, attack_magic 14->10 idx3, defence_magic 14->10 idx8 vs DB items-json 11789.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11789 wiki https://oldschool.runescape.wiki/w/Mystic_steam_staff. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11789).
+
+---
+
+- **Wave89 bonus 11826 Armadyl helmet defence_slash 8->6 idx6 (1 ids):** Active item-gameplay 11826 Armadyl helmet bonuses defence_slash 8->6 idx6 vs DB items-json 11826.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11826 wiki https://oldschool.runescape.wiki/w/Armadyl_helmet. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11826).
+
+---
+
+- **Wave89 bonus 11893 Decorative armour act null vs db [0, 0, 0, -21, -11, 17, 16, 15, -4, 16, 0, 0, 0, 0] (1 ids):** Active item-gameplay 11893 Decorative armour bonuses act null vs db [0, 0, 0, -21, -11, 17, 16, 15, -4, 16, 0, 0, 0, 0] vs DB items-json 11893.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11893 wiki https://oldschool.runescape.wiki/w/Decorative_armour_(red_plateskirt). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11893).
+
+---
+
+- **Wave89 bonus 11894 Decorative armour act null vs db [0, 0, 0, -21, -11, 24, 22, 20, -4, 22, 0, 0, 0, 0] (1 ids):** Active item-gameplay 11894 Decorative armour bonuses act null vs db [0, 0, 0, -21, -11, 24, 22, 20, -4, 22, 0, 0, 0, 0] vs DB items-json 11894.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11894 wiki https://oldschool.runescape.wiki/w/Decorative_armour_(white_plateskirt). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11894).
+
+---
+
+- **Wave89 bonus 11895 Decorative armour act null vs db [0, 0, 0, -21, -11, 33, 31, 29, -4, 31, 0, 0, 0, 0] (1 ids):** Active item-gameplay 11895 Decorative armour bonuses act null vs db [0, 0, 0, -21, -11, 33, 31, 29, -4, 31, 0, 0, 0, 0] vs DB items-json 11895.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11895 wiki https://oldschool.runescape.wiki/w/Decorative_armour_(gold_plateskirt)#Normal. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11895).
+
+---
+
+- **Wave89 bonus 11924 Malediction ward magic_damage 2->0 idx12 (1 ids):** Active item-gameplay 11924 Malediction ward bonuses magic_damage 2->0 idx12 vs DB items-json 11924.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11924 wiki https://oldschool.runescape.wiki/w/Malediction_ward. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11924).
+
+---
+
+- **Wave89 bonus 11926 Odium ward ranged_strength 4->0 idx11 (1 ids):** Active item-gameplay 11926 Odium ward bonuses ranged_strength 4->0 idx11 vs DB items-json 11926.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 11926 wiki https://oldschool.runescape.wiki/w/Odium_ward. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11926).
+
+---
+
+- **Wave89 bonus 12000 Mystic smoke staff attack_magic 14->10 idx3, defence_magic 14->10 idx8 (1 ids):** Active item-gameplay 12000 Mystic smoke staff bonuses attack_magic 14->10 idx3, defence_magic 14->10 idx8 vs DB items-json 12000.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 12000 wiki https://oldschool.runescape.wiki/w/Mystic_smoke_staff. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12000).
+
+---
+
+- **Wave89 bonus 12373 Dragon cane attack_stab 40->42 idx0 (1 ids):** Active item-gameplay 12373 Dragon cane bonuses attack_stab 40->42 idx0 vs DB items-json 12373.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 12373 wiki https://oldschool.runescape.wiki/w/Dragon_cane. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12373).
+
+---
+
+- **Wave89 bonus 12418 Dragon sq shield (g) attack_ranged 0->-2 idx4 (1 ids):** Active item-gameplay 12418 Dragon sq shield (g) bonuses attack_ranged 0->-2 idx4 vs DB items-json 12418.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 12418 wiki https://oldschool.runescape.wiki/w/Dragon_sq_shield_(g). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12418).
+
+---
+
+- **Wave89 bonus 12426 3rd Age longsword attack_stab 0->60 idx0, attack_crush 60->-2 idx2 (1 ids):** Active item-gameplay 12426 3rd Age longsword bonuses attack_stab 0->60 idx0, attack_crush 60->-2 idx2 vs DB items-json 12426.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies bonuses verbatim -> BonusManager idx. Bulk hybrid chunk 8608-12504 1 ids 12426 wiki https://oldschool.runescape.wiki/w/3rd_Age_longsword. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12426).
+
+---
+
+- **Wave89 slot 10971 Eel sushi DB slot NONE (-1) vs active HEAD (0) (463 ids):** Active item-gameplay 10971 Eel sushi DB slot NONE (-1) vs active HEAD (0) vs DB items-json 10971.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 463 ids 10971,10972,10973,10975,10976,10977... wiki https://oldschool.runescape.wiki/w/Eel_sushi, https://oldschool.runescape.wiki/w/Dorgesh-kaan_sphere. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10971,10972,10973,10975,10976,10977...).
+
+---
+
+- **Wave89 slot 11759 New crystal shield (i) DB slot SHIELD (5) vs active HEAD (0) (11 ids):** Active item-gameplay 11759 New crystal shield (i) DB slot SHIELD (5) vs active HEAD (0) vs DB items-json 11759.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 11 ids 11759,11760,11761,11762,11763,11764... wiki https://oldschool.runescape.wiki/w/Crystal_shield_(i)#New, https://oldschool.runescape.wiki/w/Crystal_shield_(i)#Full. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11759,11760,11761,11762,11763,11764...).
+
+---
+
+- **Wave89 slot 8871 Crate with zanik DB slot NONE (-1) vs active WEAPON (3) (10 ids):** Active item-gameplay 8871 Crate with zanik DB slot NONE (-1) vs active WEAPON (3) vs DB items-json 8871.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 10 ids 8871,9665,9702,9906,9907,9908... wiki https://oldschool.runescape.wiki/w/Crate_with_zanik, https://oldschool.runescape.wiki/w/Torch_(animation_item,_Sea_Slug). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 8871,9665,9702,9906,9907,9908...).
+
+---
+
+- **Wave89 slot 11749 Crystal bow full (i) DB slot WEAPON (3) vs active HEAD (0) (10 ids):** Active item-gameplay 11749 Crystal bow full (i) DB slot WEAPON (3) vs active HEAD (0) vs DB items-json 11749.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 10 ids 11749,11750,11751,11752,11753,11754... wiki https://oldschool.runescape.wiki/w/Crystal_bow_(i)#Full, https://oldschool.runescape.wiki/w/Crystal_bow_(i)#9/10. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11749,11750,11751,11752,11753,11754...).
+
+---
+
+- **Wave89 slot 11065 Bracelet mould DB slot NONE (-1) vs active GLOVES (9) (8 ids):** Active item-gameplay 11065 Bracelet mould DB slot NONE (-1) vs active GLOVES (9) vs DB items-json 11065.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 8 ids 11065,11068,11071,11078,11087,11094... wiki https://oldschool.runescape.wiki/w/Bracelet_mould, https://oldschool.runescape.wiki/w/Gold_bracelet. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11065,11068,11071,11078,11087,11094...).
+
+---
+
+- **Wave89 slot 12317 Pink elegant legs DB slot LEGS (7) vs active BODY (4) (4 ids):** Active item-gameplay 12317 Pink elegant legs DB slot LEGS (7) vs active BODY (4) vs DB items-json 12317.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 4 ids 12317,12341,12345,12349 wiki https://oldschool.runescape.wiki/w/Pink_elegant_legs, https://oldschool.runescape.wiki/w/Pink_elegant_skirt. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12317,12341,12345,12349).
+
+---
+
+- **Wave89 slot 10024 Falconer's glove DB slot WEAPON (3) vs active GLOVES (9) (3 ids):** Active item-gameplay 10024 Falconer's glove DB slot WEAPON (3) vs active GLOVES (9) vs DB items-json 10024.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 3 ids 10024,11705,11706 wiki https://oldschool.runescape.wiki/w/Falconer's_glove#With_Falcon, https://oldschool.runescape.wiki/w/Beach_boxing_gloves#Yellow. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 10024,11705,11706).
+
+---
+
+- **Wave89 slot 11885 Broad arrowhead pack DB slot NONE (-1) vs active ARROWS (13) (2 ids):** Active item-gameplay 11885 Broad arrowhead pack DB slot NONE (-1) vs active ARROWS (13) vs DB items-json 11885.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 2 ids 11885,11887 wiki https://oldschool.runescape.wiki/w/Broad_arrowhead_pack, https://oldschool.runescape.wiki/w/Unfinished_broad_bolt_pack. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 11885,11887).
+
+---
+
+- **Wave89 slot 8856 Defensive shield DB slot NONE (-1) vs active SHIELD (5) (1 ids):** Active item-gameplay 8856 Defensive shield DB slot NONE (-1) vs active SHIELD (5) vs DB items-json 8856.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 1 ids 8856 wiki https://oldschool.runescape.wiki/w/Defensive_shield. Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 8856).
+
+---
+
+- **Wave89 slot 12447 Black skirt (t) DB slot LEGS (7) vs active HEAD (0) (1 ids):** Active item-gameplay 12447 Black skirt (t) DB slot LEGS (7) vs active HEAD (0) vs DB items-json 12447.json equipment via ItemDefinitionLoader.plugin.js:111-164 copies equipmentType via hydrateEquipmentType -> BonusManager/EquipPacketListener slot. Bulk hybrid chunk 8608-12504 1 ids 12447 wiki https://oldschool.runescape.wiki/w/Black_skirt_(t). Scout Wave89 64x32 triple-verify 0 hits registry. — triage via scout read-only audit (see 05_Audit_Log.md for full file:line evidence; IDs 12447).
+
+---
+
+- **Wave89 req 8901 Black mask (10) Defence10->0,Strength20->0 (22 ids):** Active item-gameplay 8901 Black mask (10) requirements Defence10->0,Strength20->0 vs DB items-json 8901.json equipment requirements Defence10->0,Strength20->0 wiki https://oldschool.runescape.wiki/w/Black_mask#(10) + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence10->0,Strength20->0 22 ids 8901,8903,8905,8907,8909,8911.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 8901,8903,8905,8907,8909,8911...).
+
+---
+
+- **Wave89 req 10440 Saradomin crozier Prayer60->0 (12 ids):** Active item-gameplay 10440 Saradomin crozier requirements Prayer60->0 vs DB items-json 10440.json equipment requirements Prayer60->0 wiki https://oldschool.runescape.wiki/w/Saradomin_crozier + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Prayer60->0 12 ids 10440,10442,10444,10470,10472,10474.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10440,10442,10444,10470,10472,10474...).
+
+---
+
+- **Wave89 req 10458 Saradomin robe top Prayer20->0 (11 ids):** Active item-gameplay 10458 Saradomin robe top requirements Prayer20->0 vs DB items-json 10458.json equipment requirements Prayer20->0 wiki https://oldschool.runescape.wiki/w/Saradomin_robe_top + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Prayer20->0 11 ids 10458,10460,10462,10464,10466,10468.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10458,10460,10462,10464,10466,10468...).
+
+---
+
+- **Wave89 req 9084 Lunar staff Defence40->0 (10 ids):** Active item-gameplay 9084 Lunar staff requirements Defence40->0 vs DB items-json 9084.json equipment requirements Defence40->0 wiki https://oldschool.runescape.wiki/w/Lunar_staff + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence40->0 10 ids 9084,10549,10552,10553,10554,12391.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9084,10549,10552,10553,10554,12391...).
+
+---
+
+- **Wave89 req 8841 Void knight mace Attack42->0,Defence42->0,Strength42->0,Hitpoints42->0,Ranged42->0,Prayer22->0,Magic42->0 (9 ids):** Active item-gameplay 8841 Void knight mace requirements Attack42->0,Defence42->0,Strength42->0,Hitpoints42->0,Ranged42->0,Prayer22->0,Magic42->0 vs DB items-json 8841.json equipment requirements Attack42->0,Defence42->0,Strength42->0,Hitpoints42->0,Ranged42->0,Prayer22->0,Magic42->0 wiki https://oldschool.runescape.wiki/w/Void_knight_mace#Normal + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack42->0,Defence42->0,Strength42->0,Hitpoints42->0,Ranged42->0,Prayer22->0,Magic42->0 9 ids 8841,11666,11667,11668,11669,11670.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 8841,11666,11667,11668,11669,11670...).
+
+---
+
+- **Wave89 req 10083 Red spiky vambraces Ranged60->0 (9 ids):** Active item-gameplay 10083 Red spiky vambraces requirements Ranged60->0 vs DB items-json 10083.json equipment requirements Ranged60->0 wiki https://oldschool.runescape.wiki/w/Red_spiky_vambraces + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged60->0 9 ids 10083,11217,11222,11227,11228,11229.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10083,11217,11222,11227,11228,11229...).
+
+---
+
+- **Wave89 req 9140 Iron bolts Ranged26->0 (8 ids):** Active item-gameplay 9140 Iron bolts requirements Ranged26->0 vs DB items-json 9140.json equipment requirements Ranged26->0 wiki https://oldschool.runescape.wiki/w/Iron_bolts#Unpoisoned + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged26->0 8 ids 9140,9145,9287,9292,9294,9299.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9140,9145,9287,9292,9294,9299...).
+
+---
+
+- **Wave89 req 9144 Runite bolts Ranged61->0 (8 ids):** Active item-gameplay 9144 Runite bolts requirements Ranged61->0 vs DB items-json 9144.json equipment requirements Ranged61->0 wiki https://oldschool.runescape.wiki/w/Runite_bolts#Unpoisoned + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged61->0 8 ids 9144,9243,9245,9291,9305,9340.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9144,9243,9245,9291,9305,9340...).
+
+---
+
+- **Wave89 req 11414 Rune hasta(p) Attack40->0 (8 ids):** Active item-gameplay 11414 Rune hasta(p) requirements Attack40->0 vs DB items-json 11414.json equipment requirements Attack40->0 wiki https://oldschool.runescape.wiki/w/Rune_hasta#Poison + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack40->0 8 ids 11414,11416,11417,11419,11719,12357.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11414,11416,11417,11419,11719,12357...).
+
+---
+
+- **Wave89 req 9142 Mithril bolts Ranged36->0 (7 ids):** Active item-gameplay 9142 Mithril bolts requirements Ranged36->0 vs DB items-json 9142.json equipment requirements Ranged36->0 wiki https://oldschool.runescape.wiki/w/Mithril_bolts#Unpoisoned + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged36->0 7 ids 9142,9240,9241,9289,9296,9303.... — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9142,9240,9241,9289,9296,9303...).
+
+---
+
+- **Wave89 req 9141 Steel bolts Ranged31->0 (6 ids):** Active item-gameplay 9141 Steel bolts requirements Ranged31->0 vs DB items-json 9141.json equipment requirements Ranged31->0 wiki https://oldschool.runescape.wiki/w/Steel_bolts#Unpoisoned + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged31->0 6 ids 9141,9239,9288,9295,9302,9336. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9141,9239,9288,9295,9302,9336).
+
+---
+
+- **Wave89 req 9143 Adamant bolts Ranged46->0 (6 ids):** Active item-gameplay 9143 Adamant bolts requirements Ranged46->0 vs DB items-json 9143.json equipment requirements Ranged46->0 wiki https://oldschool.runescape.wiki/w/Adamant_bolts#Unpoisoned + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged46->0 6 ids 9143,9290,9297,9304,9338,9339. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9143,9290,9297,9304,9338,9339).
+
+---
+
+- **Wave89 req 10446 Saradomin cloak Prayer40->0 (6 ids):** Active item-gameplay 10446 Saradomin cloak requirements Prayer40->0 vs DB items-json 10446.json equipment requirements Prayer40->0 wiki https://oldschool.runescape.wiki/w/Saradomin_cloak + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Prayer40->0 6 ids 10446,10448,10450,12197,12261,12273. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10446,10448,10450,12197,12261,12273).
+
+---
+
+- **Wave89 req 10452 Saradomin mitre Prayer40->0,Magic40->0 (6 ids):** Active item-gameplay 10452 Saradomin mitre requirements Prayer40->0,Magic40->0 vs DB items-json 10452.json equipment requirements Prayer40->0,Magic40->0 wiki https://oldschool.runescape.wiki/w/Saradomin_mitre + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Prayer40->0,Magic40->0 6 ids 10452,10454,10456,12203,12259,12271. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10452,10454,10456,12203,12259,12271).
+
+---
+
+- **Wave89 req 10491 Blessed axe Attack20->0 (6 ids):** Active item-gameplay 10491 Blessed axe requirements Attack20->0 vs DB items-json 10491.json equipment requirements Attack20->0 wiki https://oldschool.runescape.wiki/w/Blessed_axe + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack20->0 6 ids 10491,11400,11402,11403,11405,11720. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10491,11400,11402,11403,11405,11720).
+
+---
+
+- **Wave89 req 9139 Blurite bolts Ranged16->0 (4 ids):** Active item-gameplay 9139 Blurite bolts requirements Ranged16->0 vs DB items-json 9139.json equipment requirements Ranged16->0 wiki https://oldschool.runescape.wiki/w/Blurite_bolts#Unpoisoned + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged16->0 4 ids 9139,9176,9237,9335. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9139,9176,9237,9335).
+
+---
+
+- **Wave89 req 10081 Blue spiky vambraces Ranged50->0 (4 ids):** Active item-gameplay 10081 Blue spiky vambraces requirements Ranged50->0 vs DB items-json 10081.json equipment requirements Ranged50->0 wiki https://oldschool.runescape.wiki/w/Blue_spiky_vambraces + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged50->0 4 ids 10081,10156,10158,10159. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10081,10156,10158,10159).
+
+---
+
+- **Wave89 req 11393 Steel hasta(p) Attack5->0 (4 ids):** Active item-gameplay 11393 Steel hasta(p) requirements Attack5->0 vs DB items-json 11393.json equipment requirements Attack5->0 wiki https://oldschool.runescape.wiki/w/Steel_hasta#Poison + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack5->0 4 ids 11393,11395,11396,11398. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11393,11395,11396,11398).
+
+---
+
+- **Wave89 req 11407 Adamant hasta(p) Attack30->0 (4 ids):** Active item-gameplay 11407 Adamant hasta(p) requirements Attack30->0 vs DB items-json 11407.json equipment requirements Attack30->0 wiki https://oldschool.runescape.wiki/w/Adamant_hasta#Poison + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack30->0 4 ids 11407,11409,11410,11412. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11407,11409,11410,11412).
+
+---
+
+- **Wave89 req 9091 Lunar staff - pt1 Magic0->65 (3 ids):** Active item-gameplay 9091 Lunar staff - pt1 requirements Magic0->65 vs DB items-json 9091.json equipment requirements Magic0->65 wiki https://oldschool.runescape.wiki/w/Lunar_staff_-_pt1 + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Magic0->65 3 ids 9091,9092,9093. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9091,9092,9093).
+
+---
+
+- **Wave89 req 9753 Defence cape Defence99->0 (3 ids):** Active item-gameplay 9753 Defence cape requirements Defence99->0 vs DB items-json 9753.json equipment requirements Defence99->0 wiki https://oldschool.runescape.wiki/w/Defence_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence99->0 3 ids 9753,9754,9755. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9753,9754,9755).
+
+---
+
+- **Wave89 req 9765 Runecraft cape Runecraft99->0 (3 ids):** Active item-gameplay 9765 Runecraft cape requirements Runecraft99->0 vs DB items-json 9765.json equipment requirements Runecraft99->0 wiki https://oldschool.runescape.wiki/w/Runecraft_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Runecraft99->0 3 ids 9765,9766,9767. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9765,9766,9767).
+
+---
+
+- **Wave89 req 9771 Agility cape Agility99->0 (3 ids):** Active item-gameplay 9771 Agility cape requirements Agility99->0 vs DB items-json 9771.json equipment requirements Agility99->0 wiki https://oldschool.runescape.wiki/w/Agility_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Agility99->0 3 ids 9771,9772,9773. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9771,9772,9773).
+
+---
+
+- **Wave89 req 9774 Herblore cape Herblore99->0 (3 ids):** Active item-gameplay 9774 Herblore cape requirements Herblore99->0 vs DB items-json 9774.json equipment requirements Herblore99->0 wiki https://oldschool.runescape.wiki/w/Herblore_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Herblore99->0 3 ids 9774,9775,9776. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9774,9775,9776).
+
+---
+
+- **Wave89 req 9777 Thieving cape Thieving99->0 (3 ids):** Active item-gameplay 9777 Thieving cape requirements Thieving99->0 vs DB items-json 9777.json equipment requirements Thieving99->0 wiki https://oldschool.runescape.wiki/w/Thieving_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Thieving99->0 3 ids 9777,9778,9779. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9777,9778,9779).
+
+---
+
+- **Wave89 req 9780 Crafting cape Crafting99->0 (3 ids):** Active item-gameplay 9780 Crafting cape requirements Crafting99->0 vs DB items-json 9780.json equipment requirements Crafting99->0 wiki https://oldschool.runescape.wiki/w/Crafting_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Crafting99->0 3 ids 9780,9781,9782. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9780,9781,9782).
+
+---
+
+- **Wave89 req 9783 Fletching cape Fletching99->0 (3 ids):** Active item-gameplay 9783 Fletching cape requirements Fletching99->0 vs DB items-json 9783.json equipment requirements Fletching99->0 wiki https://oldschool.runescape.wiki/w/Fletching_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Fletching99->0 3 ids 9783,9784,9785. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9783,9784,9785).
+
+---
+
+- **Wave89 req 9786 Slayer cape Slayer99->0 (3 ids):** Active item-gameplay 9786 Slayer cape requirements Slayer99->0 vs DB items-json 9786.json equipment requirements Slayer99->0 wiki https://oldschool.runescape.wiki/w/Slayer_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Slayer99->0 3 ids 9786,9787,9788. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9786,9787,9788).
+
+---
+
+- **Wave89 req 9789 Construct. cape Hunter99->0 (3 ids):** Active item-gameplay 9789 Construct. cape requirements Hunter99->0 vs DB items-json 9789.json equipment requirements Hunter99->0 wiki https://oldschool.runescape.wiki/w/Construct._cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Hunter99->0 3 ids 9789,9790,9791. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9789,9790,9791).
+
+---
+
+- **Wave89 req 9792 Mining cape Mining99->0 (3 ids):** Active item-gameplay 9792 Mining cape requirements Mining99->0 vs DB items-json 9792.json equipment requirements Mining99->0 wiki https://oldschool.runescape.wiki/w/Mining_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Mining99->0 3 ids 9792,9793,9794. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9792,9793,9794).
+
+---
+
+- **Wave89 req 9795 Smithing cape Smithing99->0 (3 ids):** Active item-gameplay 9795 Smithing cape requirements Smithing99->0 vs DB items-json 9795.json equipment requirements Smithing99->0 wiki https://oldschool.runescape.wiki/w/Smithing_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Smithing99->0 3 ids 9795,9796,9797. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9795,9796,9797).
+
+---
+
+- **Wave89 req 9798 Fishing cape Fishing99->0 (3 ids):** Active item-gameplay 9798 Fishing cape requirements Fishing99->0 vs DB items-json 9798.json equipment requirements Fishing99->0 wiki https://oldschool.runescape.wiki/w/Fishing_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Fishing99->0 3 ids 9798,9799,9800. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9798,9799,9800).
+
+---
+
+- **Wave89 req 9801 Cooking cape Cooking99->0 (3 ids):** Active item-gameplay 9801 Cooking cape requirements Cooking99->0 vs DB items-json 9801.json equipment requirements Cooking99->0 wiki https://oldschool.runescape.wiki/w/Cooking_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Cooking99->0 3 ids 9801,9802,9803. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9801,9802,9803).
+
+---
+
+- **Wave89 req 9804 Firemaking cape Firemaking99->0 (3 ids):** Active item-gameplay 9804 Firemaking cape requirements Firemaking99->0 vs DB items-json 9804.json equipment requirements Firemaking99->0 wiki https://oldschool.runescape.wiki/w/Firemaking_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Firemaking99->0 3 ids 9804,9805,9806. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9804,9805,9806).
+
+---
+
+- **Wave89 req 9807 Woodcutting cape Woodcutting99->0 (3 ids):** Active item-gameplay 9807 Woodcutting cape requirements Woodcutting99->0 vs DB items-json 9807.json equipment requirements Woodcutting99->0 wiki https://oldschool.runescape.wiki/w/Woodcutting_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Woodcutting99->0 3 ids 9807,9808,9809. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9807,9808,9809).
+
+---
+
+- **Wave89 req 9810 Farming cape Farming99->0 (3 ids):** Active item-gameplay 9810 Farming cape requirements Farming99->0 vs DB items-json 9810.json equipment requirements Farming99->0 wiki https://oldschool.runescape.wiki/w/Farming_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Farming99->0 3 ids 9810,9811,9812. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9810,9811,9812).
+
+---
+
+- **Wave89 req 9948 Hunter cape Construction99->0 (3 ids):** Active item-gameplay 9948 Hunter cape requirements Construction99->0 vs DB items-json 9948.json equipment requirements Construction99->0 wiki https://oldschool.runescape.wiki/w/Hunter_cape#Untrimmed + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Construction99->0 3 ids 9948,9949,9950. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9948,9949,9950).
+
+---
+
+- **Wave89 req 10035 Kyatt legs Construction52->0 (3 ids):** Active item-gameplay 10035 Kyatt legs requirements Construction52->0 vs DB items-json 10035.json equipment requirements Construction52->0 wiki https://oldschool.runescape.wiki/w/Kyatt_legs + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Construction52->0 3 ids 10035,10037,10039. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10035,10037,10039).
+
+---
+
+- **Wave89 req 10047 Graahk legs Construction38->0 (3 ids):** Active item-gameplay 10047 Graahk legs requirements Construction38->0 vs DB items-json 10047.json equipment requirements Construction38->0 wiki https://oldschool.runescape.wiki/w/Graahk_legs + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Construction38->0 3 ids 10047,10049,10051. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10047,10049,10051).
+
+---
+
+- **Wave89 req 10954 Frog-leather body Defence25->0,Ranged25->0 (3 ids):** Active item-gameplay 10954 Frog-leather body requirements Defence25->0,Ranged25->0 vs DB items-json 10954.json equipment requirements Defence25->0,Ranged25->0 wiki https://oldschool.runescape.wiki/w/Frog-leather_body + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence25->0,Ranged25->0 3 ids 10954,10956,10958. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10954,10956,10958).
+
+---
+
+- **Wave89 req 9102 Lunar amulet Defence0->40,Magic0->65 (2 ids):** Active item-gameplay 9102 Lunar amulet requirements Defence0->40,Magic0->65 vs DB items-json 9102.json equipment requirements Defence0->40,Magic0->65 wiki https://oldschool.runescape.wiki/w/Lunar_amulet + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence0->40,Magic0->65 2 ids 9102,9104. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9102,9104).
+
+---
+
+- **Wave89 req 10041 Larupia legs Construction28->0 (2 ids):** Active item-gameplay 10041 Larupia legs requirements Construction28->0 vs DB items-json 10041.json equipment requirements Construction28->0 wiki https://oldschool.runescape.wiki/w/Larupia_legs + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Construction28->0 2 ids 10041,10043. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10041,10043).
+
+---
+
+- **Wave89 req 10069 Spotted cape Construction40->0 (2 ids):** Active item-gameplay 10069 Spotted cape requirements Construction40->0 vs DB items-json 10069.json equipment requirements Construction40->0 wiki https://oldschool.runescape.wiki/w/Spotted_cape#Inventory + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Construction40->0 2 ids 10069,10073. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10069,10073).
+
+---
+
+- **Wave89 req 10071 Spottier cape Construction66->0 (2 ids):** Active item-gameplay 10071 Spottier cape requirements Construction66->0 vs DB items-json 10071.json equipment requirements Construction66->0 wiki https://oldschool.runescape.wiki/w/Spottier_cape#Inventory + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Construction66->0 2 ids 10071,10074. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10071,10074).
+
+---
+
+- **Wave89 req 10079 Green spiky vambraces Ranged40->0 (2 ids):** Active item-gameplay 10079 Green spiky vambraces requirements Ranged40->0 vs DB items-json 10079.json equipment requirements Ranged40->0 wiki https://oldschool.runescape.wiki/w/Green_spiky_vambraces + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged40->0 2 ids 10079,10282. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10079,10282).
+
+---
+
+- **Wave89 req 11828 Armadyl chestplate Defence70->0,Ranged70->0 (2 ids):** Active item-gameplay 11828 Armadyl chestplate requirements Defence70->0,Ranged70->0 vs DB items-json 11828.json equipment requirements Defence70->0,Ranged70->0 wiki https://oldschool.runescape.wiki/w/Armadyl_chestplate + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence70->0,Ranged70->0 2 ids 11828,11830. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11828,11830).
+
+---
+
+- **Wave89 req 11864 Slayer helmet Defence10->0 (2 ids):** Active item-gameplay 11864 Slayer helmet requirements Defence10->0 vs DB items-json 11864.json equipment requirements Defence10->0 wiki https://oldschool.runescape.wiki/w/Slayer_helmet + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence10->0 2 ids 11864,11865. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11864,11865).
+
+---
+
+- **Wave89 req 11959 Black chinchompa Ranged65->0 (2 ids):** Active item-gameplay 11959 Black chinchompa requirements Ranged65->0 vs DB items-json 11959.json equipment requirements Ranged65->0 wiki https://oldschool.runescape.wiki/w/Black_chinchompa + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged65->0 2 ids 11959,12424. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11959,12424).
+
+---
+
+- **Wave89 req 12281 Mithril kiteshield (g) Defence20->0 (2 ids):** Active item-gameplay 12281 Mithril kiteshield (g) requirements Defence20->0 vs DB items-json 12281.json equipment requirements Defence20->0 wiki https://oldschool.runescape.wiki/w/Mithril_kiteshield_(g) + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence20->0 2 ids 12281,12291. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 12281,12291).
+
+---
+
+- **Wave89 req 12297 Black pickaxe Attack10->0 (2 ids):** Active item-gameplay 12297 Black pickaxe requirements Attack10->0 vs DB items-json 12297.json equipment requirements Attack10->0 wiki https://oldschool.runescape.wiki/w/Black_pickaxe + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack10->0 2 ids 12297,12375. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 12297,12375).
+
+---
+
+- **Wave89 req 8882 Bone bolts Ranged28->0 (1 ids):** Active item-gameplay 8882 Bone bolts requirements Ranged28->0 vs DB items-json 8882.json equipment requirements Ranged28->0 wiki https://oldschool.runescape.wiki/w/Bone_bolts + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged28->0 1 ids 8882. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 8882).
+
+---
+
+- **Wave89 req 8923 Witchwood icon Slayer35->0 (1 ids):** Active item-gameplay 8923 Witchwood icon requirements Slayer35->0 vs DB items-json 8923.json equipment requirements Slayer35->0 wiki https://oldschool.runescape.wiki/w/Witchwood_icon + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Slayer35->0 1 ids 8923. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 8923).
+
+---
+
+- **Wave89 req 9177 Iron crossbow Attack26->0,Ranged0->26 (1 ids):** Active item-gameplay 9177 Iron crossbow requirements Attack26->0,Ranged0->26 vs DB items-json 9177.json equipment requirements Attack26->0,Ranged0->26 wiki https://oldschool.runescape.wiki/w/Iron_crossbow + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack26->0,Ranged0->26 1 ids 9177. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9177).
+
+---
+
+- **Wave89 req 9629 Tyras helm Defence5->0 (1 ids):** Active item-gameplay 9629 Tyras helm requirements Defence5->0 vs DB items-json 9629.json equipment requirements Defence5->0 wiki https://oldschool.runescape.wiki/w/Tyras_helm + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence5->0 1 ids 9629. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9629).
+
+---
+
+- **Wave89 req 9749 Attack hood Attack99->0 (1 ids):** Active item-gameplay 9749 Attack hood requirements Attack99->0 vs DB items-json 9749.json equipment requirements Attack99->0 wiki https://oldschool.runescape.wiki/w/Attack_hood + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack99->0 1 ids 9749. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9749).
+
+---
+
+- **Wave89 req 9752 Strength hood Strength99->0 (1 ids):** Active item-gameplay 9752 Strength hood requirements Strength99->0 vs DB items-json 9752.json equipment requirements Strength99->0 wiki https://oldschool.runescape.wiki/w/Strength_hood + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Strength99->0 1 ids 9752. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9752).
+
+---
+
+- **Wave89 req 9758 Ranging hood Ranged99->0 (1 ids):** Active item-gameplay 9758 Ranging hood requirements Ranged99->0 vs DB items-json 9758.json equipment requirements Ranged99->0 wiki https://oldschool.runescape.wiki/w/Ranging_hood + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged99->0 1 ids 9758. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9758).
+
+---
+
+- **Wave89 req 9761 Prayer hood Prayer99->0 (1 ids):** Active item-gameplay 9761 Prayer hood requirements Prayer99->0 vs DB items-json 9761.json equipment requirements Prayer99->0 wiki https://oldschool.runescape.wiki/w/Prayer_hood + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Prayer99->0 1 ids 9761. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9761).
+
+---
+
+- **Wave89 req 9764 Magic hood Magic99->0 (1 ids):** Active item-gameplay 9764 Magic hood requirements Magic99->0 vs DB items-json 9764.json equipment requirements Magic99->0 wiki https://oldschool.runescape.wiki/w/Magic_hood + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Magic99->0 1 ids 9764. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9764).
+
+---
+
+- **Wave89 req 9770 Hitpoints hood Hitpoints99->0 (1 ids):** Active item-gameplay 9770 Hitpoints hood requirements Hitpoints99->0 vs DB items-json 9770.json equipment requirements Hitpoints99->0 wiki https://oldschool.runescape.wiki/w/Hitpoints_hood + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Hitpoints99->0 1 ids 9770. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9770).
+
+---
+
+- **Wave89 req 9944 Bomber jacket Defence0->40 (1 ids):** Active item-gameplay 9944 Bomber jacket requirements Defence0->40 vs DB items-json 9944.json equipment requirements Defence0->40 wiki https://oldschool.runescape.wiki/w/Bomber_jacket + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence0->40 1 ids 9944. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 9944).
+
+---
+
+- **Wave89 req 10085 Black spiky vambraces Ranged70->0 (1 ids):** Active item-gameplay 10085 Black spiky vambraces requirements Ranged70->0 vs DB items-json 10085.json equipment requirements Ranged70->0 wiki https://oldschool.runescape.wiki/w/Black_spiky_vambraces + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged70->0 1 ids 10085. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10085).
+
+---
+
+- **Wave89 req 10146 Orange salamander Attack50->0,Ranged50->0,Magic50->0 (1 ids):** Active item-gameplay 10146 Orange salamander requirements Attack50->0,Ranged50->0,Magic50->0 vs DB items-json 10146.json equipment requirements Attack50->0,Ranged50->0,Magic50->0 wiki https://oldschool.runescape.wiki/w/Orange_salamander + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack50->0,Ranged50->0,Magic50->0 1 ids 10146. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10146).
+
+---
+
+- **Wave89 req 10147 Red salamander Attack60->0,Ranged60->0,Magic60->0 (1 ids):** Active item-gameplay 10147 Red salamander requirements Attack60->0,Ranged60->0,Magic60->0 vs DB items-json 10147.json equipment requirements Attack60->0,Ranged60->0,Magic60->0 wiki https://oldschool.runescape.wiki/w/Red_salamander + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack60->0,Ranged60->0,Magic60->0 1 ids 10147. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10147).
+
+---
+
+- **Wave89 req 10148 Black salamander Attack70->0,Ranged70->0,Magic70->0 (1 ids):** Active item-gameplay 10148 Black salamander requirements Attack70->0,Ranged70->0,Magic70->0 vs DB items-json 10148.json equipment requirements Attack70->0,Ranged70->0,Magic70->0 wiki https://oldschool.runescape.wiki/w/Black_salamander + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack70->0,Ranged70->0,Magic70->0 1 ids 10148. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10148).
+
+---
+
+- **Wave89 req 10149 Swamp lizard Attack30->0,Ranged30->0,Magic30->0 (1 ids):** Active item-gameplay 10149 Swamp lizard requirements Attack30->0,Ranged30->0,Magic30->0 vs DB items-json 10149.json equipment requirements Attack30->0,Ranged30->0,Magic30->0 wiki https://oldschool.runescape.wiki/w/Swamp_lizard + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack30->0,Ranged30->0,Magic30->0 1 ids 10149. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10149).
+
+---
+
+- **Wave89 req 10280 Willow comp bow Ranged20->0 (1 ids):** Active item-gameplay 10280 Willow comp bow requirements Ranged20->0 vs DB items-json 10280.json equipment requirements Ranged20->0 wiki https://oldschool.runescape.wiki/w/Willow_comp_bow + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged20->0 1 ids 10280. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10280).
+
+---
+
+- **Wave89 req 10547 Healer hat Defence45->0 (1 ids):** Active item-gameplay 10547 Healer hat requirements Defence45->0 vs DB items-json 10547.json equipment requirements Defence45->0 wiki https://oldschool.runescape.wiki/w/Healer_hat#Normal + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence45->0 1 ids 10547. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10547).
+
+---
+
+- **Wave89 req 10555 Penance skirt Defence40->0,Ranged60->0 (1 ids):** Active item-gameplay 10555 Penance skirt requirements Defence40->0,Ranged60->0 vs DB items-json 10555.json equipment requirements Defence40->0,Ranged60->0 wiki https://oldschool.runescape.wiki/w/Penance_skirt#Normal + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence40->0,Ranged60->0 1 ids 10555. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10555).
+
+---
+
+- **Wave89 req 10581 Keris Attack50->0 (1 ids):** Active item-gameplay 10581 Keris requirements Attack50->0 vs DB items-json 10581.json equipment requirements Attack50->0 wiki https://oldschool.runescape.wiki/w/Keris#Unpoisoned + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack50->0 1 ids 10581. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 10581).
+
+---
+
+- **Wave89 req 11200 Dwarven helmet Defence50->0 (1 ids):** Active item-gameplay 11200 Dwarven helmet requirements Defence50->0 vs DB items-json 11200.json equipment requirements Defence50->0 wiki https://oldschool.runescape.wiki/w/Dwarven_helmet + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Defence50->0 1 ids 11200. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11200).
+
+---
+
+- **Wave89 req 11259 Magic butterfly net Construction17->0 (1 ids):** Active item-gameplay 11259 Magic butterfly net requirements Construction17->0 vs DB items-json 11259.json equipment requirements Construction17->0 wiki https://oldschool.runescape.wiki/w/Magic_butterfly_net + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Construction17->0 1 ids 11259. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11259).
+
+---
+
+- **Wave89 req 11748 New crystal bow (i) Ranged70->0,Agility50->0 (1 ids):** Active item-gameplay 11748 New crystal bow (i) requirements Ranged70->0,Agility50->0 vs DB items-json 11748.json equipment requirements Ranged70->0,Agility50->0 wiki https://oldschool.runescape.wiki/w/Crystal_bow_(i)#New + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Ranged70->0,Agility50->0 1 ids 11748. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 11748).
+
+---
+
+- **Wave89 req 12377 Adamant cane Attack28->0 (1 ids):** Active item-gameplay 12377 Adamant cane requirements Attack28->0 vs DB items-json 12377.json equipment requirements Attack28->0 wiki https://oldschool.runescape.wiki/w/Adamant_cane + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Attack28->0 1 ids 12377. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 12377).
+
+---
+
+- **Wave89 req 12422 3rd Age wand Magic65->0 (1 ids):** Active item-gameplay 12422 3rd Age wand requirements Magic65->0 vs DB items-json 12422.json equipment requirements Magic65->0 wiki https://oldschool.runescape.wiki/w/3rd_Age_wand + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Magic65->0 1 ids 12422. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 12422).
+
+---
+
+- **Wave89 req 12437 3rd Age cloak Prayer65->0 (1 ids):** Active item-gameplay 12437 3rd Age cloak requirements Prayer65->0 vs DB items-json 12437.json equipment requirements Prayer65->0 wiki https://oldschool.runescape.wiki/w/3rd_Age_cloak + data/items/items-skill-requirements.json. Loader not copying missing requirements allows low level to wield via EquipPacketListener 119-133 gate bypass. Bulk hybrid chunk 8608-12504 Prayer65->0 1 ids 12437. — triage via scout read-only audit (see 05_Audit_Log.md; IDs 12437).
+
+---
